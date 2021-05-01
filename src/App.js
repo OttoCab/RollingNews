@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Navegacion from './components/common/Navegacion';
+import Footer from './components/common/Footer';
+import Inicio from './components/Inicio';
+import PgADM from './components/ADM/PgADM';
+import Contacto from './components/Contacto';
+import ADN from './components/ADN';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navegacion></Navegacion>
+      <Switch>
+        <Route exact path="/">
+          <Inicio></Inicio>
+        </Route>
+        <Route exact path="/adm">
+          <PgADM></PgADM>
+        </Route>
+        <Route exact path="/contact">
+          <Contacto></Contacto>
+        </Route>
+        <Route exact path="/adn">
+          <ADN></ADN>
+        </Route>
+        {/* Dejo un Route para lo que sera CATEGORIA, no se donde va */}
+        <Route></Route> 
+      </Switch>
+      <Footer></Footer>
+    </Router>
   );
 }
 
