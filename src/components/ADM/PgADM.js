@@ -1,10 +1,11 @@
 import React from 'react';
+import {Container} from 'react-bootstrap'
 
 const PgADM = () => {
     return (
-        <div>
-            <h1>Pagina de Administacion</h1>
-        </div>
+        <Container>
+            <h1 className= "text-center">Bienvenido Administrador</h1>
+        </Container>
     );
 };
 

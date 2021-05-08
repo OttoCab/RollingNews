@@ -8,6 +8,7 @@ import PgADM from './components/ADM/PgADM';
 import Contacto from './components/Contacto';
 import ADN from './components/ADN';
 import "bootstrap/dist/css/bootstrap.min.css";
+import AgregarNoticia from './components/ADM/AgregarNoticia';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
         <Route exact path="/">
           <Inicio></Inicio>
         </Route>
-        <Route exact path="/adm">
-          <PgADM></PgADM>
+        <Route exact path="/ADM">
+          <AgregarNoticia></AgregarNoticia>
         </Route>
         <Route exact path="/contact">
           <Contacto></Contacto>
