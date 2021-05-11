@@ -1,0 +1,36 @@
+{
+  "News": [
+    {
+      "categoriaNoticia": "Deporte",
+      "tituloNoticia": "Voley",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "11/05/2021",
+      "contenidoNoticia": "Fundarte el gana la final a Monteros",
+      "id": 1
+    },
+    {
+      "categoriaNoticia": "Tecnología",
+      "tituloNoticia": "Procesadores",
+      "autorNoticia": "florencia norry",
+      "fechaNoticia": "11/05/21",
+      "contenidoNoticia": "procesadores caros",
+      "id": 2
+    },
+    {
+      "categoriaNoticia": "Salud",
+      "tituloNoticia": "Covid",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "11/05/2021",
+      "contenidoNoticia": "segunda etapa covid",
+      "id": 3
+    },
+    {
+      "categoriaNoticia": "Fotografía",
+      "tituloNoticia": "Fin de semana ",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "11/05/2021",
+      "contenidoNoticia": "salidas para el fin de semana",
+      "id": 4
+    }
+  ]
+}

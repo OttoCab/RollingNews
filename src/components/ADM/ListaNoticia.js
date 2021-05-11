@@ -1,11 +1,16 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import ItemNoticia from "./ItemNoticia";
 
-const ListaNoticia = () => {
+const ListaNoticia = (props) => {
   return (
-    <section className="row">
-       <ItemNoticia></ItemNoticia>
-    </section>
+    <Container>
+      <section className="row">
+        {props.noticias.map((nota, indice) => (
+          <ItemNoticia key={indice} dato={nota}></ItemNoticia>
+        ))}
+      </section>
+    </Container>
   );
 };
 
