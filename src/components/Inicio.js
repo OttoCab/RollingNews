@@ -1,10 +1,12 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+
 
 const Inicio = () => {
     return (
-        <div>
-            <h1>Pagina de Inicio</h1>
-        </div>
+        <Container className="my-5">
+            <h1>Ultima hora...</h1>
+        </Container>
     );
 };
 
