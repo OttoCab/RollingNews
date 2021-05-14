@@ -7,7 +7,7 @@ const ListaNoticia = (props) => {
     <Container>
       <section className="row">
         {props.noticias.map((nota, indice) => (
-          <ItemNoticia key={indice} dato={nota}></ItemNoticia>
+          <ItemNoticia key={indice} dato={nota} consultarAPI={props.consultarAPI}></ItemNoticia>
         ))}
       </section>
     </Container>

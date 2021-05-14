@@ -11,6 +11,7 @@ import React from 'react';
 import PgADM from './components/PgADM';
 
 function App() {
+  const URL = process.env.REACT_APP_API_URL;
   const [noticias, setNoticias] = useState([]);
 
   useEffect(()=>{
@@ -19,7 +20,7 @@ function App() {
 
   const consultarAPI = async()=>{
     try{
-      const respuesta = await fetch('http://localhost:3004/News');
+      const respuesta = await fetch(URL);
       console.log(respuesta);
       if(respuesta.status === 200){
         const listaNoticias = await respuesta.json();
@@ -38,7 +39,7 @@ function App() {
           <PgADM></PgADM>
         </Route>
         <Route exact path="/ADM">
-          <ListaNoticia noticias={noticias}></ListaNoticia>
+          <ListaNoticia noticias={noticias} consultarAPI={consultarAPI}></ListaNoticia>
         </Route>
         <Route exact path="/ADM/nuevo">
           <AgregarNoticia consultarAPI = {consultarAPI}></AgregarNoticia>
