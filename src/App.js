@@ -1,17 +1,14 @@
 
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Navegacion from './components/common/Navegacion';
+import NavegacionAdmin from './components/ADM/NavegacionAdmin';
 import Footer from './components/common/Footer';
-import Inicio from './components/Inicio';
-import PgADM from './components/ADM/PgADM';
-import Contacto from './components/Contacto';
-import ADN from './components/ADN';
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListaNoticia from './components/ADM/ListaNoticia';
 import AgregarNoticia from './components/ADM/AgregarNoticia';
 import {useState, useEffect} from 'react';
 import React from 'react';
+import PgADM from './components/PgADM';
 
 function App() {
   const [noticias, setNoticias] = useState([]);
@@ -22,7 +19,7 @@ function App() {
 
   const consultarAPI = async()=>{
     try{
-      const respuesta = await fetch('http://localhost:3005/News');
+      const respuesta = await fetch('http://localhost:3004/News');
       console.log(respuesta);
       if(respuesta.status === 200){
         const listaNoticias = await respuesta.json();
@@ -35,22 +32,16 @@ function App() {
 
   return (
     <Router>
-      <Navegacion></Navegacion>
+      <NavegacionAdmin></NavegacionAdmin>
       <Switch>
-        <Route exact path="/">
-          <Inicio></Inicio> 
+      <Route exact path="/">
+          <PgADM></PgADM>
         </Route>
         <Route exact path="/ADM">
           <ListaNoticia noticias={noticias}></ListaNoticia>
         </Route>
         <Route exact path="/ADM/nuevo">
-          <AgregarNoticia></AgregarNoticia>
-        </Route>
-        <Route exact path="/contact">
-          <Contacto></Contacto>
-        </Route>
-        <Route exact path="/adn">
-          <ADN></ADN>
+          <AgregarNoticia consultarAPI = {consultarAPI}></AgregarNoticia>
         </Route>
         {/* Dejo un Route para lo que sera CATEGORIA, no se donde va */}
         <Route></Route> 

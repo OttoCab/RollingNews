@@ -9,7 +9,6 @@ const AgregarNoticia = (props) => {
   const [fechaNoticia, setFechaNoticia] = useState("");
   const [contenidoNoticia, setContenidoNoticia] = useState("");
   const [error, setError] = useState(false);
-  const URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,7 +42,7 @@ const AgregarNoticia = (props) => {
           },
           body: JSON.stringify(noticia),
         };
-        const respuesta = await fetch('http://localhost:3005/News', enviarNoticia);
+        const respuesta = await fetch('http://localhost:3004/News', enviarNoticia);
         console.log(respuesta);
         if (respuesta.status === 201) {
           Swal.fire(
@@ -51,6 +50,8 @@ const AgregarNoticia = (props) => {
             "Se agrego un nuevo producto!",
             "success"
           );
+          //actualiza la lista de noticias
+          props.consultarAPI();
         }
       } catch (error) {
         console.log(error);
