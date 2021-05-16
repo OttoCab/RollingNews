@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import Swal from 'sweetalert2';
+import {Link} from 'react-router-dom';
 
 const ItemNoticia = (props) => {
   const eliminarNoticia = (idNoticia) =>{
@@ -62,8 +63,8 @@ const ItemNoticia = (props) => {
               </Card.Body>
             </div>
           <section className="d-flex flex-column">
+            <Link className="btn btn-warning text-light" to={'/ADM/editar/'+ props.dato.id}>Editar</Link>
             <Button variant="primary" className="my-2" onClick={()=>eliminarNoticia(props.dato.id)}>Eliminar</Button>
-            <Button variant="primary" className="my-2">Editar</Button>
             <Button variant="primary" className="my-2">Destacar</Button>
           </section>
             </div>

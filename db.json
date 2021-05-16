@@ -55,6 +55,30 @@
       "fechaNoticia": "13/05/21",
       "contenidoNoticia": "asdasdasdasdasdasdasdasd",
       "id": 7
+    },
+    {
+      "categoria": "actualidad",
+      "id": 8
+    },
+    {
+      "categoria": "actualidad",
+      "id": 9
+    },
+    {
+      "categoria": "actualidad",
+      "id": 10
+    },
+    {
+      "categoria": "nuevo",
+      "id": 11
+    },
+    {
+      "categoria": "gatitos",
+      "id": 12
+    },
+    {
+      "categoria": "gatitos",
+      "id": 13
     }
   ]
 }

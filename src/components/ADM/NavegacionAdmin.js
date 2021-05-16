@@ -12,6 +12,8 @@ const Navegacion = () => {
           <NavLink className="nav-link" exact={true} to='/' >Inicio</NavLink>
           <NavLink className="nav-link" exact={true} to='/ADM/nuevo'>Agregar Noticias</NavLink>
           <NavLink className="nav-link" exact={true} to='/ADM'>Lista Noticias</NavLink>
+          <NavLink className="nav-link" exact={true} to='/ADM/nuevaCategoria'>Agregar Categorias</NavLink>
+          <NavLink className="nav-link" exact={true} to='/ADM/Categorias'>Lista Categorias</NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
