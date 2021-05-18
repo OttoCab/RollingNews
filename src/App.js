@@ -1,59 +1,73 @@
-
-import './App.css';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Navegacion from './components/common/Navegacion';
-import Footer from './components/common/Footer';
-import Inicio from './components/Inicio';
-import PgADM from './components/ADM/PgADM';
-import Contacto from './components/Contacto';
-import ADN from './components/ADN';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NavegacionAdmin from "./components/ADM/NavegacionAdmin";
+import Footer from "./components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ListaNoticia from './components/ADM/ListaNoticia';
-import AgregarNoticia from './components/ADM/AgregarNoticia';
-import {useState, useEffect} from 'react';
-import React from 'react';
+import ListaNoticia from "./components/ADM/ListaNoticia";
+import AgregarNoticia from "./components/ADM/AgregarNoticia";
+import AgregarCategoria from "./components/ADM/AgregarCategoria";
+import ListaCategorias from "./components/ADM/ListaCategorias";
+import EditarNoticia from "./components/ADM/EditarNoticia";
+import { useState, useEffect } from "react";
+import React from "react";
+import PgADM from "./components/PgADM";
+import Error404 from './components/Error404'
 
 function App() {
+  const URL = process.env.REACT_APP_API_URL;
+  const URLCat = process.env.REACT_APP_API_URL2;
   const [noticias, setNoticias] = useState([]);
+  const [Categorias, setCategoria] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     consultarAPI();
-  },[])
+  }, []);
 
-  const consultarAPI = async()=>{
-    try{
-      const respuesta = await fetch('http://localhost:3005/News');
+  const consultarAPI = async () => {
+    try {
+      const respuesta = await fetch(URL);
+      const respuesta2 = await fetch(URLCat);
       console.log(respuesta);
-      if(respuesta.status === 200){
+      console.log(respuesta2);
+      if (respuesta.status === 200) {
         const listaNoticias = await respuesta.json();
+        const listaCategorias = await respuesta2.json();
         setNoticias(listaNoticias);
+        setCategoria(listaCategorias);
       }
-    }catch(error){
+    } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <Router>
-      <Navegacion></Navegacion>
+      <NavegacionAdmin></NavegacionAdmin>
       <Switch>
         <Route exact path="/">
-          <Inicio></Inicio> 
+          <PgADM></PgADM>
         </Route>
-        <Route exact path="/ADM">
-          <ListaNoticia noticias={noticias}></ListaNoticia>
+        <Route exact path="/Noticias">
+          <ListaNoticia
+            noticias={noticias}
+            consultarAPI={consultarAPI}
+          ></ListaNoticia>
         </Route>
-        <Route exact path="/ADM/nuevo">
-          <AgregarNoticia></AgregarNoticia>
+        <Route exact path="/Noticia/nuevo">
+          <AgregarNoticia consultarAPI={consultarAPI}></AgregarNoticia>
         </Route>
-        <Route exact path="/contact">
-          <Contacto></Contacto>
+        <Route exact path="/Noticia/editar/:idNoticia">
+          <EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>
         </Route>
-        <Route exact path="/adn">
-          <ADN></ADN>
+        <Route exact path="/Categorias/nuevaCategoria">
+          <AgregarCategoria consultarAPI={consultarAPI}></AgregarCategoria>
         </Route>
-        {/* Dejo un Route para lo que sera CATEGORIA, no se donde va */}
-        <Route></Route> 
+        <Route exact path="/Categorias">
+          <ListaCategorias Categorias={Categorias}></ListaCategorias>
+        </Route>
+        <Route path='*'>
+          <Error404></Error404>
+        </Route>
       </Switch>
       <Footer></Footer>
     </Router>

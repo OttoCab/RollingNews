@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
+import './admin.css';
 
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
@@ -43,7 +44,7 @@ const AgregarNoticia = (props) => {
           },
           body: JSON.stringify(noticia),
         };
-        const respuesta = await fetch('http://localhost:3005/News', enviarNoticia);
+        const respuesta = await fetch(URL, enviarNoticia);
         console.log(respuesta);
         if (respuesta.status === 201) {
           Swal.fire(
@@ -51,6 +52,8 @@ const AgregarNoticia = (props) => {
             "Se agrego un nuevo producto!",
             "success"
           );
+          //actualiza la lista de noticias
+          props.consultarAPI();
         }
       } catch (error) {
         console.log(error);
