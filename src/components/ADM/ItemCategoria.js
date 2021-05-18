@@ -5,10 +5,12 @@ const ItemCategoria = (props) => {
   return (
     <ListGroup.Item className="d-flex justify-content-between">
       <p>
-        {props.dato.categoria}
+        {
+          props.dato.nombreCategoria
+        }
       </p>
       <div>
-      <Button variant="warning">Ver</Button>
+      <Button variant="success">Ver</Button>
       </div>
     </ListGroup.Item>
   );

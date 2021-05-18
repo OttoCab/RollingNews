@@ -14,45 +14,32 @@ import React from 'react';
 import PgADM from './components/PgADM';
 
 function App() {
-  const URL = process.env.REACT_APP_API_URL;
-  const URLCat =process.env.REACT_APP_API_URL;
+  // const URL = process.env.REACT_APP_API_URL;
+  // const URLCat =process.env.REACT_APP_API_URL;
   const [noticias, setNoticias] = useState([]);
-  const [nombreCategoria, setNombreCategoria] = useState([]);
+  const [Categorias, setCategoria] = useState([]);
 
   useEffect(()=>{
     consultarAPI();
   },[])
 
-  useEffect(()=>{
-    consultarAPICat();
-  },[])
-
-
   const consultarAPI = async()=>{
     try{
-      const respuesta = await fetch(URL);
+      const respuesta = await fetch('http://localhost:3004/News');
+      const respuesta2 = await fetch('http://localhost:3004/Categorias');
       console.log(respuesta);
+      console.log(respuesta2);
       if(respuesta.status === 200){
         const listaNoticias = await respuesta.json();
+        const listaCategorias= await respuesta2.json();
         setNoticias(listaNoticias);
+        setCategoria(listaCategorias);
       }
     }catch(error){
       console.log(error);
     }
   }
 
-  const consultarAPICat = async()=>{
-    try{
-      const respuesta2 = await fetch(URLCat);
-      console.log(respuesta2);
-      if(respuesta2.status === 200){
-        const listaCategorias = await respuesta2.json();
-        setNombreCategoria(listaCategorias);
-      }
-    }catch(error){
-      console.log(error);
-    }
-  }
   return (
     <Router>
       <NavegacionAdmin></NavegacionAdmin>
@@ -70,10 +57,10 @@ function App() {
           <EditarNoticia consultarAPI = {consultarAPI}></EditarNoticia>
         </Route>
         <Route exact path="/Categorias/nuevaCategoria">
-          <AgregarCategoria></AgregarCategoria>
+          <AgregarCategoria consultarAPI={consultarAPI}></AgregarCategoria>
         </Route>
         <Route exact path="/Categorias">
-          <ListaCategorias></ListaCategorias>
+          <ListaCategorias Categorias={Categorias}></ListaCategorias>
         </Route>
         {/* Dejo un Route para lo que sera CATEGORIA, no se donde va */}
         <Route></Route> 

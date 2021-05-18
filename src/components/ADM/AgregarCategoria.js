@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 
-const AgregarCategoria = () => {
+const AgregarCategoria = (props) => {
   const [nombreCategoria, setNombreCategoria] = useState("");
   const [error, setError] = useState(false);
 
@@ -35,6 +35,8 @@ const AgregarCategoria = () => {
             "Se agrego una nueva categoria !",
             "success"
           );
+          //se actualiza la lista de categorias
+          props.consultarAPI();
         }
       }catch(error){
         console.log(error);

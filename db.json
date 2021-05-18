@@ -121,6 +121,14 @@
     {
       "nombreCategoria": "prueba3",
       "id": 4
+    },
+    {
+      "nombreCategoria": "covid",
+      "id": 5
+    },
+    {
+      "nombreCategoria": "futbol",
+      "id": 6
     }
   ]
 }
