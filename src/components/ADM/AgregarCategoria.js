@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 const AgregarCategoria = (props) => {
   const [nombreCategoria, setNombreCategoria] = useState("");
   const [error, setError] = useState(false);
+  const URLCat =process.env.REACT_APP_API_URL2;
 
   const handleSubmit = async (e)=>{
     e.preventDefault();
@@ -27,7 +28,7 @@ const AgregarCategoria = (props) => {
           },
           body:JSON.stringify(categoria)
         }
-        const respuesta = await fetch('http://localhost:3004/Categorias', enviarCategoria);
+        const respuesta = await fetch(URLCat, enviarCategoria);
         console.log(respuesta); 
         if(respuesta.status === 201){
           Swal.fire(

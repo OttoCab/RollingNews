@@ -12,7 +12,6 @@ const ListaCategorias = (props) => {
             <ItemCategoria
               key={indice}
               dato={nombreCat}
-              
             ></ItemCategoria>
           ))}
       </ListGroup>

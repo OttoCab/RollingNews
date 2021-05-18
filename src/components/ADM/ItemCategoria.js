@@ -8,6 +8,7 @@ const ItemCategoria = (props) => {
         {
           props.dato.nombreCategoria
         }
+        
       </p>
       <div>
       <Button variant="success">Ver</Button>

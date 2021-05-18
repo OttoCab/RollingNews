@@ -14,8 +14,8 @@ import React from 'react';
 import PgADM from './components/PgADM';
 
 function App() {
-  // const URL = process.env.REACT_APP_API_URL;
-  // const URLCat =process.env.REACT_APP_API_URL;
+  const URL = process.env.REACT_APP_API_URL;
+  const URLCat =process.env.REACT_APP_API_URL2;
   const [noticias, setNoticias] = useState([]);
   const [Categorias, setCategoria] = useState([]);
 
@@ -25,8 +25,8 @@ function App() {
 
   const consultarAPI = async()=>{
     try{
-      const respuesta = await fetch('http://localhost:3004/News');
-      const respuesta2 = await fetch('http://localhost:3004/Categorias');
+      const respuesta = await fetch(URL);
+      const respuesta2 = await fetch(URLCat);
       console.log(respuesta);
       console.log(respuesta2);
       if(respuesta.status === 200){
@@ -61,9 +61,7 @@ function App() {
         </Route>
         <Route exact path="/Categorias">
           <ListaCategorias Categorias={Categorias}></ListaCategorias>
-        </Route>
-        {/* Dejo un Route para lo que sera CATEGORIA, no se donde va */}
-        <Route></Route> 
+          </Route> 
       </Switch>
       <Footer></Footer>
     </Router>

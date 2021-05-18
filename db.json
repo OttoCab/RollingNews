@@ -41,75 +41,15 @@
       "id": 5
     },
     {
-      "categoriaNoticia": "Actualidad",
-      "tituloNoticia": "Deportes extremos",
-      "autorNoticia": "cosmi",
-      "fechaNoticia": "13/05/2021",
-      "contenidoNoticia": "sahfkjshfkljdshfkljsdhkjfad",
-      "id": 6
-    },
-    {
       "categoriaNoticia": "Tecnología",
       "tituloNoticia": "mouses",
       "autorNoticia": "Cosmito",
       "fechaNoticia": "13/05/21",
       "contenidoNoticia": "asdasdasdasdasdasdasdasd",
       "id": 7
-    },
-    {
-      "categoria": "actualidad",
-      "id": 8
-    },
-    {
-      "categoria": "actualidad",
-      "id": 9
-    },
-    {
-      "categoria": "actualidad",
-      "id": 10
-    },
-    {
-      "categoria": "nuevo",
-      "id": 11
-    },
-    {
-      "categoria": "gatitos",
-      "id": 12
-    },
-    {
-      "categoria": "gatitos",
-      "id": 13
-    },
-    {
-      "categoria": "prueba",
-      "id": 14
-    },
-    {
-      "categoria": "prueba2",
-      "id": 15
-    },
-    {
-      "nombreCategoria": "nnnnnnn",
-      "id": 16
-    },
-    {
-      "nombreCategoria": "nnnnn",
-      "id": 17
-    },
-    {
-      "nombreCategoria": "qqqqq",
-      "id": 18
-    },
-    {
-      "nombreCategoria": "qqq",
-      "id": 19
     }
   ],
   "Categorias": [
-    {
-      "nombreCategoria": "actualidad",
-      "id": 1
-    },
     {
       "nombreCategoria": "deporte",
       "id": 2
@@ -119,16 +59,16 @@
       "id": 3
     },
     {
-      "nombreCategoria": "prueba3",
-      "id": 4
-    },
-    {
-      "nombreCategoria": "covid",
-      "id": 5
-    },
-    {
-      "nombreCategoria": "futbol",
+      "nombreCategoria": "qqq",
       "id": 6
+    },
+    {
+      "nombreCategoria": "nuevo",
+      "id": 7
+    },
+    {
+      "nombreCategoria": "nuevoooooo",
+      "id": 8
     }
   ]
 }
