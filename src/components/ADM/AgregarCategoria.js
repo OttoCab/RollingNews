@@ -2,44 +2,41 @@ import React, { useState } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 
-const AgregarCategoria = (props) => {
-  const [categoria, setCategoria] = useState("");
+const AgregarCategoria = () => {
+  const [nombreCategoria, setNombreCategoria] = useState("");
   const [error, setError] = useState(false);
-  const URL = process.env.REACT_APP_API_URL;
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    if (categoria.trim() === "") {
+  const handleSubmit = async (e)=>{
+    e.preventDefault();
+    //validacion de datos 
+    if(nombreCategoria.trim() === ""){
       setError(true);
       return;
-    } else {
+    }else{
       setError(false);
-      // objeto
-      const cat = {
-        categoria,
-      };
-      console.log(cat);
-
-      try {
+      //se crea el objeto de las categorias
+      const categoria = {
+        nombreCategoria
+      }
+      console.log(categoria);
+      try{
         const enviarCategoria = {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(cat),
-        };
-        const respuesta = await fetch(URL, enviarCategoria);
-        console.log(respuesta);
-        if (respuesta.status === 201) {
+          body:JSON.stringify(categoria)
+        }
+        const respuesta = await fetch('http://localhost:3004/Categorias', enviarCategoria);
+        console.log(respuesta); 
+        if(respuesta.status === 201){
           Swal.fire(
             "Categoria agregada!",
-            "Se agrego una nueva Categoria!",
+            "Se agrego una nueva categoria !",
             "success"
           );
-          //actualiza la lista de noticias
-          props.consultarAPI();
         }
-      } catch (error) {
+      }catch(error){
         console.log(error);
         Swal.fire(
           "Ocurrio un error!",
@@ -47,27 +44,28 @@ const AgregarCategoria = (props) => {
           "error"
         );
       }
+
     }
   };
 
   return (
-    <Container>
-      <h1 className="text-center my-4">Agregar Categoria</h1>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group>
+    <Container className="my-5">
+      <Form className="shadow-lg p-3 mb-5 bg-body rounded w-75 m-auto" onSubmit={handleSubmit}>
+        <h1 className="text-center my-4">Agregar una Categoria</h1>
+        <Form.Group className="">
           <Form.Label>Nombre de la Categoria</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Categoria"
-            onChange={(e) => setCategoria(e.target.value)}
+            placeholder="Actualidad, Deporte..."
+            onChange={(e) => setNombreCategoria(e.target.value)}
           />
         </Form.Group>
         <Button variant="primary" type="submit">
           Guardar
         </Button>
-        {error === true ? (
-          <Alert variant="warning">El campo es obligatorio</Alert>
-        ) : null}
+        {
+          (error === true)?(<Alert variant="warning">Todos los campos son obligatorios</Alert>):(null )
+        } 
       </Form>
     </Container>
   );

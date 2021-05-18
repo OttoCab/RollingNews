@@ -79,6 +79,48 @@
     {
       "categoria": "gatitos",
       "id": 13
+    },
+    {
+      "categoria": "prueba",
+      "id": 14
+    },
+    {
+      "categoria": "prueba2",
+      "id": 15
+    },
+    {
+      "nombreCategoria": "nnnnnnn",
+      "id": 16
+    },
+    {
+      "nombreCategoria": "nnnnn",
+      "id": 17
+    },
+    {
+      "nombreCategoria": "qqqqq",
+      "id": 18
+    },
+    {
+      "nombreCategoria": "qqq",
+      "id": 19
+    }
+  ],
+  "Categorias": [
+    {
+      "nombreCategoria": "actualidad",
+      "id": 1
+    },
+    {
+      "nombreCategoria": "deporte",
+      "id": 2
+    },
+    {
+      "nombreCategoria": "prueba2",
+      "id": 3
+    },
+    {
+      "nombreCategoria": "prueba3",
+      "id": 4
     }
   ]
 }

@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ListaNoticia from './components/ADM/ListaNoticia';
 import AgregarNoticia from './components/ADM/AgregarNoticia';
 import AgregarCategoria from './components/ADM/AgregarCategoria';
-import Categorias from './components/ADM/Categorias';
+import ListaCategorias from './components/ADM/ListaCategorias';
 import EditarNoticia from './components/ADM/EditarNoticia';
 import {useState, useEffect} from 'react';
 import React from 'react';
@@ -15,30 +15,44 @@ import PgADM from './components/PgADM';
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
+  const URLCat =process.env.REACT_APP_API_URL;
   const [noticias, setNoticias] = useState([]);
-  const [categoria, setCategoria] = useState([]);
+  const [nombreCategoria, setNombreCategoria] = useState([]);
 
   useEffect(()=>{
     consultarAPI();
   },[])
 
+  useEffect(()=>{
+    consultarAPICat();
+  },[])
+
+
   const consultarAPI = async()=>{
     try{
-      const respuesta1 = await fetch(URL);
       const respuesta = await fetch(URL);
       console.log(respuesta);
       if(respuesta.status === 200){
         const listaNoticias = await respuesta.json();
         setNoticias(listaNoticias);
-      }if(respuesta1.status === 200){
-        const listaCategorias = await respuesta1.json();
-        setCategoria(listaCategorias);
       }
     }catch(error){
       console.log(error);
     }
   }
 
+  const consultarAPICat = async()=>{
+    try{
+      const respuesta2 = await fetch(URLCat);
+      console.log(respuesta2);
+      if(respuesta2.status === 200){
+        const listaCategorias = await respuesta2.json();
+        setNombreCategoria(listaCategorias);
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
   return (
     <Router>
       <NavegacionAdmin></NavegacionAdmin>
@@ -55,11 +69,11 @@ function App() {
         <Route exact path="/ADM/editar/:idNoticia">
           <EditarNoticia consultarAPI = {consultarAPI}></EditarNoticia>
         </Route>
-        <Route exact path="/ADM/nuevaCategoria">
-          <AgregarCategoria consultarAPI = {consultarAPI}></AgregarCategoria>
+        <Route exact path="/Categorias/nuevaCategoria">
+          <AgregarCategoria></AgregarCategoria>
         </Route>
-        <Route exact path="/ADM/Categorias">
-          <Categorias categoria={categoria}></Categorias>
+        <Route exact path="/Categorias">
+          <ListaCategorias></ListaCategorias>
         </Route>
         {/* Dejo un Route para lo que sera CATEGORIA, no se donde va */}
         <Route></Route> 
