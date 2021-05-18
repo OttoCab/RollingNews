@@ -1,5 +1,7 @@
 import React from "react";
 import { ListGroup, Button } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const ItemCategoria = (props) => {
   return (
@@ -11,7 +13,9 @@ const ItemCategoria = (props) => {
         
       </p>
       <div>
-      <Button variant="success">Ver</Button>
+      <Button variant="success">
+      <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+        </Button>
       </div>
     </ListGroup.Item>
   );

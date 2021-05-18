@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { useParams } from "react-router-dom";
+import { useParams, withRouter } from "react-router-dom";
+import { campoRequerido } from "../common/helpers";
 
-const EditarNoticia = () => {
+//withRouter redirecciona
+const EditarNoticia = (props) => {
   console.log(useParams().idNoticia);
   const codNoticia = useParams().idNoticia;
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
@@ -30,7 +32,45 @@ const EditarNoticia = () => {
     }
   }, []);
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // let CategoriaModificada = (categoria === '')?(noticia.categoriaNoticia):(categoria);
+    // console.log(tituloNoticiaRef.current.value);
+    if (
+      campoRequerido(tituloNoticiaRef.current.value) &&
+      (autorNoticiaRef.current.value) &&
+      (fechaNoticiaRef.current.value) &&
+      (contenidoNoticiaRef.current.value)
+    ) {
+      setError(false);
+      try {
+        const noticiaModificada = {
+          tituloNoticia: tituloNoticiaRef.current.value,
+          autorNoticia: autorNoticiaRef.current.value,
+          fechaNoticia: fechaNoticiaRef.current.value,
+          contenidoNoticia: contenidoNoticiaRef.current.value
+        };
+        const respuesta = await fetch(URL, {
+          method: 'PUT',
+          headers: {"Content-Type":"application/json"},
+          body: JSON.stringify(noticiaModificada)
+        });
+        if(respuesta.status === 200){
+          Swal.fire(
+            "Noticia Modificada!",
+            "Se actualizaron los datos de la noticia!",
+            "success"
+          )
+          props.consultarAPI();
+          props.history.push('/ADM');
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      setError(true);
+    }
+  };
   return (
     <Container>
       <h1 className="text-center my-4">Editar Noticias</h1>
@@ -106,4 +146,4 @@ const EditarNoticia = () => {
   );
 };
 
-export default EditarNoticia;
+export default withRouter(EditarNoticia);

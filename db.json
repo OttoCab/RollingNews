@@ -1,9 +1,8 @@
 {
   "News": [
     {
-      "categoriaNoticia": "Deporte",
-      "tituloNoticia": "Voley",
-      "autorNoticia": "Florencia Norry",
+      "tituloNoticia": "Voley Femenino",
+      "autorNoticia": "Florencia Norry ",
       "fechaNoticia": "11/05/2021",
       "contenidoNoticia": "Fundarte el gana la final a Monteros",
       "id": 1
@@ -39,14 +38,6 @@
       "fechaNoticia": "11/05/21",
       "contenidoNoticia": "Fue una sorpresa recibir el Palermo de Plata en mi deporte, considerando que todo el equipo y en forma individual respondía a las diferentes expectativas.\nContanos un poco del equipo femenino de vóley y de la actividad.\nEs un equipo que se formo hace años, siempre tratando de que se incorpore gente nueva y jovén. Al compartir el entrenamiento con los chicos, la verdad, se forma realmente un grupo muy lindo y muy humano.",
       "id": 5
-    },
-    {
-      "categoriaNoticia": "Tecnología",
-      "tituloNoticia": "mouses",
-      "autorNoticia": "Cosmito",
-      "fechaNoticia": "13/05/21",
-      "contenidoNoticia": "asdasdasdasdasdasdasdasd",
-      "id": 7
     }
   ],
   "Categorias": [
