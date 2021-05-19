@@ -6,7 +6,7 @@ const Error404 = () => {
   return (
     <Container>
       <section className="text-center">
-        <img src={error404} className="error"/>
+        <img src={error404} className="error" alt="Error 404, sitio no encontrado"/>
       </section>
     </Container>
   );
