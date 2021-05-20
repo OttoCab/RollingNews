@@ -54,7 +54,7 @@ function App() {
           ></ListaNoticia>
         </Route>
         <Route exact path="/Noticia/nuevo">
-          <AgregarNoticia consultarAPI={consultarAPI}></AgregarNoticia>
+          <AgregarNoticia consultarAPI={consultarAPI} Categorias={Categorias}></AgregarNoticia>
         </Route>
         <Route exact path="/Noticia/editar/:idNoticia">
           <EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>
@@ -65,7 +65,7 @@ function App() {
         <Route exact path="/Categorias">
           <ListaCategorias Categorias={Categorias}></ListaCategorias>
         </Route>
-        <Route path='*'>
+       <Route path='*'>
           <Error404></Error404>
         </Route>
       </Switch>

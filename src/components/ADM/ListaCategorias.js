@@ -5,8 +5,8 @@ import ItemCategoria from "./ItemCategoria";
 const ListaCategorias = (props) => {
   return (
     <Container>
-        <h1 className="text-center my-4">Lista de Categorias</h1>
-      <ListGroup className="my-5">
+        <h1 className="text-center my-4 fuente">Lista de Categorias</h1>
+      <ListGroup className="my-5 fuente">
       {props.Categorias
           .map((nombreCat, indice) => (
             <ItemCategoria

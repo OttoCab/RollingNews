@@ -1,34 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useState} from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 import './admin.css';
 
+
+
+
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
+  const [idCategoriaNoticia, setidCategoriaNoticia] = useState(0);
   const [tituloNoticia, setTituloNoticia] = useState("");
   const [autorNoticia, setAutorNoticia] = useState("");
   const [fechaNoticia, setFechaNoticia] = useState("");
   const [contenidoNoticia, setContenidoNoticia] = useState("");
   const [error, setError] = useState(false);
   const URL = process.env.REACT_APP_API_URL;
+  const URLCat =process.env.REACT_APP_API_URL2;
+  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (
-      categoriaNoticia.trim() === "" ||
+      // categoriaNoticia.trim() === "" ||
       tituloNoticia.trim() === "" ||
       autorNoticia.trim() === "" ||
       fechaNoticia.trim() === "" ||
       contenidoNoticia.trim() === ""
     ){
-      setError(true);
+      setError(true); 
       return;
     } else {
       setError(false);
       // objeto
       const noticia = {
         categoriaNoticia,
+        idCategoriaNoticia,
         tituloNoticia,
         autorNoticia,
         fechaNoticia,
@@ -37,12 +45,22 @@ const AgregarNoticia = (props) => {
       console.log(noticia);
 
       try {
+        console.log("noticiaID", noticia);
+        console.log("las categorias :", props.Categorias);
+        const resultadoCat = props.Categorias.find((categoria)=>{
+        
+         return categoria.id == idCategoriaNoticia;
+        });
+        console.log(resultadoCat.nombreCategoria,"RESULTADOCAT");
+        const nombreC = resultadoCat.nombreCategoria && resultadoCat.nombreCategoria;
+        // setCategoriaNoticia(nombreC);
+   
         const enviarNoticia = {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(noticia),
+          body: JSON.stringify({...noticia,categoriaNoticia:nombreC}),
         };
         const respuesta = await fetch(URL, enviarNoticia);
         console.log(respuesta);
@@ -68,40 +86,36 @@ const AgregarNoticia = (props) => {
 
   return (
     <Container>
-      <h1 className="text-center my-4">Agregar Noticias</h1>
+      
+      <h1 className="text-center my-4 fuente">Alta de  Noticias</h1>
       <Form
         className="my-4 shadow p-3 mb-5 bg-body rounded"
         onSubmit={handleSubmit}
       >
-        <Form.Group controlId="exampleForm.SelectCustom">
+     <Form.Group className="fuente">
           <Form.Label>Seleccione la Categoria</Form.Label>
           <Form.Control
             as="select"
             custom
-            onChange={(e) => setCategoriaNoticia(e.target.value)}
-          >
-            <option>Seleccionar</option>
-            <option>Actualidad</option>
-            <option>Espectaculo</option>
-            <option>Tecnología</option>
-            <option>Deportes</option>
-            <option>Política</option>
-            <option>Economía</option>
-            <option>Salud</option>
-            <option>Fotografía</option>
+            onChange={(e) => setidCategoriaNoticia(e.target.value)}
+              // setidCategoriaNoticia(e.target.value)}
+            >
+            {props.Categorias.map((opcion, indice) => (
+              <option value={opcion.id} key={indice}>{opcion.nombreCategoria}</option>
+              ))}
           </Form.Control>
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label>Titulo</Form.Label>
+        <Form.Group className="fuente">
+          <Form.Label> Titulo</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ingrese el Titulo de la Noticia"
             onChange={(e) => setTituloNoticia(e.target.value)}
           />
         </Form.Group>
-        <Form.Group>
-          <Form.Label>Autor</Form.Label>
+        <Form.Group className="fuente">
+          <Form.Label > Autor</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ingrese al Autor de la Noticia"
@@ -109,24 +123,24 @@ const AgregarNoticia = (props) => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Seleccione una Fecha</Form.Label>
+          <Form.Label className="fuente">Seleccione una Fecha</Form.Label>
           <Form.Control
             type="text"
             onChange={(e) => setFechaNoticia(e.target.value)}
           />
         </Form.Group>
         <Form.Group>
-          <Form.File label="Seleccione una Imagen" />
+          <Form.File className="fuente" label="Seleccione una Imagen" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Contenido</Form.Label>
+          <Form.Label className="fuente">Contenido</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
             onChange={(e) => setContenidoNoticia(e.target.value)}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" className="my-4">
+        <Button variant="primary" type="submit" className="my-4 fuente">
           Guardar
         </Button>
         {

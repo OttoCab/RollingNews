@@ -51,13 +51,11 @@ const ItemNoticia = (props) => {
       <CardGroup>
         <Card>
           <div className="d-flex align-items-center justify-content-between mx-3">
-            <div>
-              <Card.Img variant="top" src="holder.js/100px160" />
-            </div>
+            
             <div>
               <Card.Body>
                 <Card.Title>
-                  <span className="font-weight-bold">
+                  <span className="font-weight-bold fuente">
                     {props.dato.tituloNoticia}
                   </span>
                 </Card.Title>
@@ -69,7 +67,7 @@ const ItemNoticia = (props) => {
             <section className="d-flex flex-column">
               <Link
                 className="btn btn-info text-light"
-                to={"/ADM/editar/" + props.dato.id}
+                to={"/Noticia/editar/" + props.dato.id}
               >
                 <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
               </Link>

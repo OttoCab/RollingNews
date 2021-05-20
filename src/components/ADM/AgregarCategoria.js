@@ -54,8 +54,8 @@ const AgregarCategoria = (props) => {
   return (
     <Container className="my-5">
       <Form className="shadow-lg p-3 mb-5 bg-body rounded w-75 m-auto" onSubmit={handleSubmit}>
-        <h1 className="text-center my-4">Agregar una Categoria</h1>
-        <Form.Group className="">
+        <h1 className="text-center my-4 fuente">Agregar una Categoria</h1>
+        <Form.Group className="fuente">
           <Form.Label>Nombre de la Categoria</Form.Label>
           <Form.Control
             type="text"
@@ -63,7 +63,7 @@ const AgregarCategoria = (props) => {
             onChange={(e) => setNombreCategoria(e.target.value)}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="fuente">
           Guardar
         </Button>
         {

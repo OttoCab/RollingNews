@@ -5,12 +5,13 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const ItemCategoria = (props) => {
   return (
-    <ListGroup.Item className="d-flex justify-content-between">
+    <ListGroup.Item className="d-flex justify-content-between shadow p-3 bg-body rounded my-2">
       <p>
-        {
+      <span className="font-weight-bold">
+      {
           props.dato.nombreCategoria
         }
-        
+      </span>
       </p>
       <div>
       <Button variant="success">

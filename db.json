@@ -1,65 +1,54 @@
 {
   "News": [
     {
-      "tituloNoticia": "Voley Femenino",
-      "autorNoticia": "Florencia Norry ",
-      "fechaNoticia": "11/05/2021",
-      "contenidoNoticia": "Fundarte el gana la final a Monteros",
-      "id": 1
-    },
-    {
-      "categoriaNoticia": "Tecnología",
-      "tituloNoticia": "Procesadores",
-      "autorNoticia": "florencia norry",
-      "fechaNoticia": "11/05/21",
-      "contenidoNoticia": "procesadores caros",
+      "categoriaNoticia": "actualidad",
+      "idCategoriaNoticia": 0,
+      "tituloNoticia": "Cosmito",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "19/05/2021",
+      "contenidoNoticia": "odas las personas que tienen un gato como compañero de vida saben que siempre anda buscando una caja o cualquier lugar cerrado donde pueda acurrucarse y estar tranquilo.\n\nNo le importa el tamaño, la forma ni el color mientras sea un espacio delimitado. Una atracción que, según un experimento casero, se extiende hasta las cajas imaginarias.\n\nCuando hablamos de cajas imaginarias nos referimos a rectángulos en dos dimensiones, es decir marcados en el suelo con cinta adhesiva. Pero, ¿cuál es la razón de esta atracción?\n\nEsto es lo que ha querido responder una investigación publicada en Applied Animal Behaviour Science (AAPS).",
       "id": 2
     },
     {
-      "categoriaNoticia": "Salud",
-      "tituloNoticia": "Covid",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "11/05/2021",
-      "contenidoNoticia": "segunda etapa covid",
+      "categoriaNoticia": "deporte",
+      "idCategoriaNoticia": 0,
+      "tituloNoticia": "Voley Femenino",
+      "autorNoticia": "Florencia",
+      "fechaNoticia": "19/05/2021",
+      "contenidoNoticia": "Luego de la victoria en condición de visitante ante River, llegó el turno de medirse ante Club Rosario y las Guerreras culminaron la fase regular con una victoria por 3-1 en el Polideportivo Quinquela Martín. Candela Salinas fue la máxima anotadora del encuentro con 18 puntos.\n\nAdemás, las dirigidas por Eduardo Allona finalizaron esta etapa como líderes de  la Zona A con puntaje ideal. En cuanto al desarrollo del partido, el Xeneize que presentó un equipo alternativo, se llevó el primer set sin sobresaltos.\n\nPudieron imponer sus condiciones y con cierta comodidad se ponían en ventaja. Ya en el segundo set, el cotejo comenzó a emparejarse y en una definición muy luchada desde principio a fin, Boca se puso 2-0 arriba.",
       "id": 3
     },
     {
-      "categoriaNoticia": "Fotografía",
-      "tituloNoticia": "Fin de semana ",
+      "categoriaNoticia": "Espectaculo",
+      "idCategoriaNoticia": "3",
+      "tituloNoticia": "Cines",
       "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "11/05/2021",
-      "contenidoNoticia": "salidas para el fin de semana",
+      "fechaNoticia": "20/05/2021",
+      "contenidoNoticia": "stamos muy contentos de poder verte nuevamente frente a la gran pantalla!\nPara que podamos cuidarnos entre todos, te pedimos que nos ayudes a respetar las siguientes normas de cuidado e higiene:\n\n* RESPETÁ TU BUTACA\n\n* SENTATE JUNTO A TUS CONTACTOS DIRECTOS\n\n* USÁ TU TAPABOCAS EN TODO MOMENTO. SÓLO PODÉS QUITÁRTELO CUANDO ESTÉS CONSUMIENDO ALIMENTOS O BEBIDAS\n\n* CUANDO TERMINE LA FUNCIÓN, LLEVATE TUS RESIDUOS Y ARROJALOS EN LOS CESTOS DEL HALL\n\n* MANTENÉ EL DISTANCIAMIENTO SOCIAL SIEMPRE.\n\n* HIGIENIZÁ TUS MANOS DE FORMA FRECUENTE CON AGUA Y JABON O ALCOHOL EN GEL\n\n* COMPRÁ TUS ENTRADAS ONLINE Y HACÉ MENOS FILAS EN EL CINE.\n\nGracias!",
       "id": 4
     },
     {
-      "categoriaNoticia": "Deportes",
-      "tituloNoticia": "Voley",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "11/05/21",
-      "contenidoNoticia": "Fue una sorpresa recibir el Palermo de Plata en mi deporte, considerando que todo el equipo y en forma individual respondía a las diferentes expectativas.\nContanos un poco del equipo femenino de vóley y de la actividad.\nEs un equipo que se formo hace años, siempre tratando de que se incorpore gente nueva y jovén. Al compartir el entrenamiento con los chicos, la verdad, se forma realmente un grupo muy lindo y muy humano.",
+      "categoriaNoticia": "Espectaculo",
+      "idCategoriaNoticia": "3",
+      "tituloNoticia": "Estrenos",
+      "autorNoticia": "Carlos Mocsary",
+      "fechaNoticia": "20/05/2021",
+      "contenidoNoticia": "Algunos de los mayores éxitos de la historia del cine han venido del género de terror, ya que no suelen ser necesarios grandes presupuestos para sacar adelante películas que conquisten al público. Vienen rápidamente a la memoria títulos como 'La noche de Halloween', 'El proyecto de la bruja de Blair',  'Paranormal Activity' o 'Saw', que es la que ahora nos interesa.\n\n'Saw' logró superar los 100 millones de dólares de recaudación mundial cuando su presupuesto apenas superaba el millón. Lógico que durante un buen tiempo se estrenase una secuela cada año. La saga pareció morir en 2010, pero siete años más tarde hubo un primer intento de relanzarla que no tuvo continuidad. Veremos qué sucede en el caso de 'Spiral: Saw', una fallida cinta impulsada por Chris Rock que llega este viernes 21 de mayo a los cines españoles.",
       "id": 5
     }
   ],
   "Categorias": [
     {
       "nombreCategoria": "deporte",
+      "id": 1
+    },
+    {
+      "nombreCategoria": "actualidad",
       "id": 2
     },
     {
-      "nombreCategoria": "prueba2",
+      "nombreCategoria": "Espectaculo",
       "id": 3
-    },
-    {
-      "nombreCategoria": "qqq",
-      "id": 6
-    },
-    {
-      "nombreCategoria": "nuevo",
-      "id": 7
-    },
-    {
-      "nombreCategoria": "nuevoooooo",
-      "id": 8
     }
   ]
 }

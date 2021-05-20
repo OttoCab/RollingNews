@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;500&display=swap');
 .error{
     width: 60%;
     height: 60%;
 }
+
+form{
+    background-color: #F5F5F5;
+}
+
+.fuente{
+    font-family: 'KoHo', sans-serif;
+}
+

@@ -6,7 +6,8 @@ const ListaNoticia = (props) => {
   const [buscar, setBuscar] = useState("");
   return (
     <Container>
-      <InputGroup className="my-3 w-25">
+      <h1 className="text-center my-4 fuente">Lista de Noticias</h1>
+      <InputGroup className="my-3 w-25 fuente">
         <InputGroup.Prepend>
           <InputGroup.Text          
             onChange={(e) => {
