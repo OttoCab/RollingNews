@@ -1,7 +1,7 @@
 import React from "react";
-import {Navbar, Nav} from 'react-bootstrap';
-import {NavLink} from 'react-router-dom';
-
+import { Navbar, Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import Cotizador from '../ADM/Cotizador';
 const Navegacion = () => {
   return (
     <Navbar bg="info" variant="dark" expand="lg">
@@ -15,6 +15,7 @@ const Navegacion = () => {
           <NavLink className="nav-link" exact={true} to='/adn'>Acerca de Nosotros</NavLink>
         </Nav>
       </Navbar.Collapse>
+      <Cotizador></Cotizador>
     </Navbar>
   );
 };
