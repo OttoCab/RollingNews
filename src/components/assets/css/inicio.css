@@ -1,0 +1,31 @@
+.texts-small {
+    font-size: 80%;
+}
+
+.texts-large {
+    font-size: 135%;
+}
+
+.covidBox {
+    line-height: 20px;
+}
+
+.bolder-numbers {
+    font-size: 160%;
+    font-weight: bolder;
+}
+
+
+/* recordar que las Media Queries deben quedar al final de la hoja */
+
+@media (max-width: 490px) {
+    .scale-texts {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 407px) {
+    .scale-texts {
+        font-size: 65%;
+    }
+}

@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import PgADM from "./components/PgADM";
 import Error404 from './components/Error404'
+import Inicio from './components/Inicio.js';
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
@@ -45,7 +46,7 @@ function App() {
       <NavegacionAdmin></NavegacionAdmin>
       <Switch>
         <Route exact path="/">
-          <PgADM></PgADM>
+          <Inicio></Inicio>
         </Route>
         <Route exact path="/Noticias">
           <ListaNoticia
