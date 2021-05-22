@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, {useState} from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 import './admin.css';
@@ -15,7 +15,7 @@ const AgregarNoticia = (props) => {
   const [contenidoNoticia, setContenidoNoticia] = useState("");
   const [error, setError] = useState(false);
   const URL = process.env.REACT_APP_API_URL;
-  const URLCat =process.env.REACT_APP_API_URL2;
+  // const URLCat =process.env.REACT_APP_API_URL2;
   
 
 
@@ -51,9 +51,8 @@ const AgregarNoticia = (props) => {
         
          return categoria.id == idCategoriaNoticia;
         });
-        console.log(resultadoCat.nombreCategoria,"RESULTADOCAT");
-        const nombreC = resultadoCat.nombreCategoria && resultadoCat.nombreCategoria;
-        // setCategoriaNoticia(nombreC);
+        const nombreC = resultadoCat.nombreCategoria;
+        setCategoriaNoticia(nombreC);
    
         const enviarNoticia = {
           method: "POST",
@@ -63,7 +62,7 @@ const AgregarNoticia = (props) => {
           body: JSON.stringify({...noticia,categoriaNoticia:nombreC}),
         };
         const respuesta = await fetch(URL, enviarNoticia);
-        console.log(respuesta);
+        console.log(nombreC, "GUARDADA");
         if (respuesta.status === 201) {
           Swal.fire(
             "Producto agregado!",
@@ -86,7 +85,6 @@ const AgregarNoticia = (props) => {
 
   return (
     <Container>
-      
       <h1 className="text-center my-4 fuente">Alta de  Noticias</h1>
       <Form
         className="my-4 shadow p-3 mb-5 bg-body rounded"

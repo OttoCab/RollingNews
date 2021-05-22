@@ -7,7 +7,7 @@ const Navegacion = () => {
   return (
     <Navbar bg="danger" variant="dark" expand="lg">
       <Navbar.Brand href="/">
-        <img src={logo}></img>
+        <img src={logo} alt="logo del RollongNews"></img>
 
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

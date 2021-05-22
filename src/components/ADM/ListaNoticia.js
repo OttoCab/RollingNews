@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, InputGroup, FormControl } from "react-bootstrap";
 import ItemNoticia from "./ItemNoticia";
 
 const ListaNoticia = (props) => {
-  const [buscar, setBuscar] = useState("");
+  // const [buscar, setBuscar] = useState("");
   return (
     <Container>
       <h1 className="text-center my-4 fuente">Lista de Noticias</h1>
       <InputGroup className="my-3 w-25 fuente">
         <InputGroup.Prepend>
           <InputGroup.Text          
-            onChange={(e) => {
-              setBuscar(e.target.value);
-            }}
+            // onChange={(e) => {
+            //   setBuscar(e.target.value);
+            // }}
           >
             Buscar
           </InputGroup.Text>

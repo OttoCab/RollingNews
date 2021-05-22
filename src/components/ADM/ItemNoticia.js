@@ -51,7 +51,6 @@ const ItemNoticia = (props) => {
       <CardGroup>
         <Card>
           <div className="d-flex align-items-center justify-content-between mx-3">
-            
             <div>
               <Card.Body>
                 <Card.Title>

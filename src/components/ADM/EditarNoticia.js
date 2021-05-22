@@ -8,11 +8,11 @@ import { campoRequerido } from "../common/helpers";
 const EditarNoticia = (props) => {
   const codNoticia = useParams().idNoticia;
   console.log(useParams().idNoticia);
-  const [categoriaNoticia, setCategoriaNoticia] = useState("");
+  // const [categoriaNoticia, setCategoriaNoticia] = useState("");
   const [error, setError] = useState(false);
   const [noticia, setNoticia] = useState({});
   const URL = process.env.REACT_APP_API_URL + "/" + codNoticia;
-  const URLCat =process.env.REACT_APP_API_URL2;
+  // const URLCat =process.env.REACT_APP_API_URL2;
   //variables de referencia
   const categoriaNoticiaRef = useRef("");
   const tituloNoticiaRef = useRef("");
@@ -20,34 +20,23 @@ const EditarNoticia = (props) => {
   const fechaNoticiaRef = useRef("0");
   const contenidoNoticiaRef = useRef("");
 
-
- 
   useEffect(async () => {
     try {
       const respuesta = await fetch(URL);
       if (respuesta.status === 200) {
         const noticiaSolicitada = await respuesta.json();
         setNoticia(noticiaSolicitada);
-
-        // const respuestaCategoria = await fetch(URLCat);
-        // const categoriaSolicitada = await respuestaCategoria.json();
-        // const categoriaFinal = categoriaSolicitada.find(categoria=>categoria.id===noticiaSolicitada.idcategoria);
-        // setCategoriaNoticia(categoriaFinal.nombreCategoria);    
-
-      }
-      
+        console.log(noticiaSolicitada.categoriaNoticia);
+        console.log(noticiaSolicitada, "NOTICIA");
+      }  
     } catch (error) {
       console.log(error);
       Swal.fire("Ocurrio un error!", "Intentelo de nuevo mas tarde!", "error");
     }
   }, []);
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // let CategoriaModificada = (categoria === '')?(noticia.categoriaNoticia):(categoria);
-    // console.log(tituloNoticiaRef.current.value);
     if (
       campoRequerido(categoriaNoticiaRef.current.value)&&
       (tituloNoticiaRef.current.value) &&
@@ -92,14 +81,14 @@ const EditarNoticia = (props) => {
         className="my-4 shadow p-3 mb-5 bg-body rounded"
         onSubmit={handleSubmit}
       >
-        <Form.Group controlId="exampleForm.SelectCustom">
-          <Form.Label>Seleccione la Categoria</Form.Label>
+        <Form.Group>
+          <Form.Label>Categoria</Form.Label>
           <Form.Control
             type="text"
-            // defaultValue={categoriaNoticia}
-            // ref={categoriaNoticiaRef}
+            defaultValue={noticia.categoriaNoticia}
+            ref={categoriaNoticiaRef}
+            readOnly 
           >
-           
           </Form.Control>
         </Form.Group>
 

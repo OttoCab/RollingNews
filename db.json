@@ -2,21 +2,12 @@
   "News": [
     {
       "categoriaNoticia": "actualidad",
-      "idCategoriaNoticia": 0,
+      "idCategoriaNoticia": "2",
       "tituloNoticia": "Cosmito",
       "autorNoticia": "Florencia Norry",
       "fechaNoticia": "19/05/2021",
       "contenidoNoticia": "odas las personas que tienen un gato como compañero de vida saben que siempre anda buscando una caja o cualquier lugar cerrado donde pueda acurrucarse y estar tranquilo.\n\nNo le importa el tamaño, la forma ni el color mientras sea un espacio delimitado. Una atracción que, según un experimento casero, se extiende hasta las cajas imaginarias.\n\nCuando hablamos de cajas imaginarias nos referimos a rectángulos en dos dimensiones, es decir marcados en el suelo con cinta adhesiva. Pero, ¿cuál es la razón de esta atracción?\n\nEsto es lo que ha querido responder una investigación publicada en Applied Animal Behaviour Science (AAPS).",
       "id": 2
-    },
-    {
-      "categoriaNoticia": "deporte",
-      "idCategoriaNoticia": 0,
-      "tituloNoticia": "Voley Femenino",
-      "autorNoticia": "Florencia",
-      "fechaNoticia": "19/05/2021",
-      "contenidoNoticia": "Luego de la victoria en condición de visitante ante River, llegó el turno de medirse ante Club Rosario y las Guerreras culminaron la fase regular con una victoria por 3-1 en el Polideportivo Quinquela Martín. Candela Salinas fue la máxima anotadora del encuentro con 18 puntos.\n\nAdemás, las dirigidas por Eduardo Allona finalizaron esta etapa como líderes de  la Zona A con puntaje ideal. En cuanto al desarrollo del partido, el Xeneize que presentó un equipo alternativo, se llevó el primer set sin sobresaltos.\n\nPudieron imponer sus condiciones y con cierta comodidad se ponían en ventaja. Ya en el segundo set, el cotejo comenzó a emparejarse y en una definición muy luchada desde principio a fin, Boca se puso 2-0 arriba.",
-      "id": 3
     },
     {
       "categoriaNoticia": "Espectaculo",
@@ -35,6 +26,24 @@
       "fechaNoticia": "20/05/2021",
       "contenidoNoticia": "Algunos de los mayores éxitos de la historia del cine han venido del género de terror, ya que no suelen ser necesarios grandes presupuestos para sacar adelante películas que conquisten al público. Vienen rápidamente a la memoria títulos como 'La noche de Halloween', 'El proyecto de la bruja de Blair',  'Paranormal Activity' o 'Saw', que es la que ahora nos interesa.\n\n'Saw' logró superar los 100 millones de dólares de recaudación mundial cuando su presupuesto apenas superaba el millón. Lógico que durante un buen tiempo se estrenase una secuela cada año. La saga pareció morir en 2010, pero siete años más tarde hubo un primer intento de relanzarla que no tuvo continuidad. Veremos qué sucede en el caso de 'Spiral: Saw', una fallida cinta impulsada por Chris Rock que llega este viernes 21 de mayo a los cines españoles.",
       "id": 5
+    },
+    {
+      "categoriaNoticia": "deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "River le Gana a Boca",
+      "autorNoticia": "Carlos Mocsary",
+      "fechaNoticia": "asdasd",
+      "contenidoNoticia": "qawqwewqe",
+      "id": 6
+    },
+    {
+      "categoriaNoticia": "deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "River le Gana a Boca",
+      "autorNoticia": "Carlos Mocsary",
+      "fechaNoticia": "asdasd",
+      "contenidoNoticia": "qawqwewqe",
+      "id": 7
     }
   ],
   "Categorias": [

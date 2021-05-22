@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import PgADM from "./components/PgADM";
 import Error404 from './components/Error404'
+import DetalleCategoria from './components/ADM/DetalleCategoria'
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
@@ -64,6 +65,9 @@ function App() {
         </Route>
         <Route exact path="/Categorias">
           <ListaCategorias Categorias={Categorias}></ListaCategorias>
+        </Route>
+        <Route exact path="/Categorias/detalleCategoria/:idCategoriaNoticia">
+          <DetalleCategoria noticias={noticias} Categorias={Categorias}></DetalleCategoria>
         </Route>
        <Route path='*'>
           <Error404></Error404>
