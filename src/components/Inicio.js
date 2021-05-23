@@ -3,13 +3,18 @@ import { Card, Button, Container, Carousel, CardDeck } from 'react-bootstrap';
 import DefectoImg from './assets/img/defecto800x600.jpg';
 import Defectowide from './assets/img/defecto-wide800x394.jpg';
 import DefectoMini from './assets/img/defecto281x160.jpg';
-import './assets/css/inicio.css';
 import covidimg from './assets/img/covid-icon.svg';
+import adBanner1 from './assets/img/adv-banner1.jpg';
+import adBanner2 from './assets/img/adv-banner2.jpg';
+import adBanner3 from './assets/img/adv-banner3.jpg';
+import adBanner4 from './assets/img/adv-banner4.gif';
+import './assets/css/inicio.css';
+import error404 from './Error404';
 
 
 const Inicio = () => {
     return (
-        <Container className="my-5 base-container ">
+        <Container className="my-5 base-container">
             <h1>Ultima hora...</h1>
             <section className="row texts-small scale-texts mb-5">
                 <div className="col-lg-7 col-sm-12">
@@ -52,6 +57,9 @@ const Inicio = () => {
                 </div>
             </section>
             <hr/>
+            <div className="my-3">
+                <Card.Img src={adBanner1}></Card.Img>
+            </div>
             <section className="mt-5">
                 <div>
                     {/*Banner con información sobre el avance del Covid*/}
@@ -128,103 +136,102 @@ const Inicio = () => {
                 </div>
             </section>
             <hr className="my-5"/>
-            <section>
-                <Card className="shadow containerAnimation">
-                    <h4 className="font-weight-bold ml-3 mt-2"><i>Política</i></h4>
-                    <CardDeck className="container my-3">
-                        <Card className="cardAnimation">
+            <section className="row">
+                <div className="col-lg-9 col-sm-12 texts-small">
+                    <Card className="shadow containerAnimation">
+                        <h4 className="font-weight-bold ml-3 mt-2"><i>Política</i></h4>
+                        <CardDeck className="container my-3">
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
                             <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card className="cardAnimation">
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </CardDeck>
+                    </Card>
+                    <Card className="shadow my-3 containerAnimation">
+                        <h4 className="font-weight-bold ml-3 mt-2"><i>Salud</i></h4>
+                        <CardDeck className="container my-3">
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
                             <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card className="cardAnimation">
-                        <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </CardDeck>
-                </Card>
-                <Card className="shadow my-5 containerAnimation">
-                    <h4 className="font-weight-bold ml-3 mt-2"><i>Salud</i></h4>
-                    <CardDeck className="container my-3">
-                        <Card className="cardAnimation">
-                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card className="cardAnimation">
-                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card className="cardAnimation">
-                        <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </CardDeck>
-                </Card>
-                <Card className="shadow containerAnimation">
-                    <h4 className="font-weight-bold ml-3 mt-2"><i>Economía</i></h4>
-                    <CardDeck className="container my-3">
-                        <Card className="cardAnimation">
-                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card className="cardAnimation">
-                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                        <Card className="cardAnimation">
-                        <Card.Img variant="top" src={DefectoMini}></Card.Img>
-                            <Card.Body>
-                                <Card.Text>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </CardDeck>
-                </Card>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </CardDeck>
+                    </Card>
+                    <Card className="shadow containerAnimation">
+                        <h4 className="font-weight-bold ml-3 mt-2"><i>Economía</i></h4>
+                        <CardDeck className="container my-3">
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card>
+                                <Card.Img src={adBanner3}></Card.Img>
+                            </Card>
+                        </CardDeck>
+                    </Card>
+                </div>
+                <div className="col-lg-3 non-display">
+                    <img className="w-100" src={adBanner4}></img>
+                </div>
             </section>
         </Container>
     );

@@ -51,6 +51,12 @@
 
 /* recordar que las Media Queries deben quedar al final de la hoja */
 
+@media (max-width: 992px) {
+    .non-display {
+        display: none;
+    }
+}
+
 @media (max-width: 490px) {
     .scale-texts {
         font-size: 70%;
