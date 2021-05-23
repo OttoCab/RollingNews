@@ -46,21 +46,20 @@
     },
     {
       "categoriaNoticia": "actualidad",
-      "idCategoriaNoticia": "2",
       "tituloNoticia": "saasdas",
       "autorNoticia": "asdasd",
-      "fechaNoticia": "dasdla",
-      "contenidoNoticia": "las de ",
+      "fechaNoticia": "23/05/2021",
+      "contenidoNoticia": "las de wwwwwwwwwwwwwwwwwwwwww",
       "id": 9
     },
     {
       "categoriaNoticia": "Espectaculo",
       "idCategoriaNoticia": "3",
-      "tituloNoticia": "werwer",
-      "autorNoticia": "erewr",
-      "fechaNoticia": "werewr",
-      "contenidoNoticia": "las de ",
-      "id": 10
+      "tituloNoticia": "Cines",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "23/05/2021",
+      "contenidoNoticia": "sdasdasdsadsad",
+      "id": 11
     }
   ],
   "Categorias": [
@@ -79,6 +78,10 @@
     {
       "nombreCategoria": "Covid-19",
       "id": 4
+    },
+    {
+      "nombreCategoria": "nueva",
+      "id": 5
     }
   ]
 }

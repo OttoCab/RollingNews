@@ -1,0 +1,70 @@
+.texts-small {
+    font-size: 80%;
+}
+
+.texts-large {
+    font-size: 130%;
+}
+
+.covidBox {
+    line-height: 20px;
+}
+
+.bolder-numbers {
+    font-size: 160%;
+    font-weight: bolder;
+}
+
+.customButton {
+    border: none;
+    border-radius: 25px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB 51%, #1F1C2C 100%)
+}
+
+.advice {
+    font-size: 125%;
+}
+
+.hidingCard {
+    border: none;
+}
+
+.cardAnimation {
+    transition: 200ms;
+}
+
+.cardAnimation:hover {
+    scale: 1.1;
+}
+
+.containerAnimation {
+    transition: 1000ms;
+}
+
+.containerAnimation:hover {
+    background-color: #fcdede;
+}
+
+
+/* recordar que las Media Queries deben quedar al final de la hoja */
+
+@media (max-width: 992px) {
+    .non-display {
+        display: none;
+    }
+}
+
+@media (max-width: 490px) {
+    .scale-texts {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 407px) {
+    .scale-texts {
+        font-size: 65%;
+    }
+}
