@@ -3,7 +3,7 @@
 }
 
 .texts-large {
-    font-size: 135%;
+    font-size: 130%;
 }
 
 .covidBox {
@@ -30,6 +30,22 @@
 
 .hidingCard {
     border: none;
+}
+
+.cardAnimation {
+    transition: 200ms;
+}
+
+.cardAnimation:hover {
+    scale: 1.1;
+}
+
+.containerAnimation {
+    transition: 1000ms;
+}
+
+.containerAnimation:hover {
+    background-color: #fcdede;
 }
 
 

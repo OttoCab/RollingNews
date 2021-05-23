@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, Button, Container, Carousel } from 'react-bootstrap';
-import DefectoImg from './assets/img/defecto.jpg';
-import Defectowide from './assets/img/defecto-wide.jpg';
+import { Card, Button, Container, Carousel, CardDeck } from 'react-bootstrap';
+import DefectoImg from './assets/img/defecto800x600.jpg';
+import Defectowide from './assets/img/defecto-wide800x394.jpg';
+import DefectoMini from './assets/img/defecto281x160.jpg';
 import './assets/css/inicio.css';
 import covidimg from './assets/img/covid-icon.svg';
 
@@ -13,6 +14,8 @@ const Inicio = () => {
             <section className="row texts-small scale-texts mb-5">
                 <div className="col-lg-7 col-sm-12">
                     <Card className="card shadow">
+                        {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
+                        tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
                         <Card.Img src={DefectoImg} alt="No se encontró imagen"></Card.Img>
                         <div className="card-img-overlay d-flex align-items-end">
                             <div className="flex-column">
@@ -25,6 +28,8 @@ const Inicio = () => {
                 </div>
                 <div className="col-lg-5 col-sm-12">
                     <div className="card text-dark my-sm-5 my-lg-0 my-3 shadow">
+                        {/*La imagen de las cards secundarias deben tener una resolución exacta de 800 x 394, si la imagen
+                        tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
                         <img src={Defectowide} alt="No se encontró imagen"></img>
                         <div className="card-img-overlay d-flex align-items-end">
                             <div>
@@ -49,35 +54,36 @@ const Inicio = () => {
             <hr/>
             <section className="mt-5">
                 <div>
+                    {/*Banner con información sobre el avance del Covid*/}
                     <Card className="shadow bg-dark-gray">
                         <Card.Body className="row justify-content-between flex-sm-wrap covidBox">
-                            <div className="col-2 pl-3 pt-3 text-center">
+                            <div className="col-lg-2 col-md-12 pl-3 pt-3 text-center">
                                 <p className="texts-large"><b>Coronavirus en Tucumán</b></p>
                                 <p className="texts-small text-secondary">Actualizado el: 19/05/2021</p>
                             </div>
-                            <div className="col-2 text-center">
+                            <div className="col-lg-2 col-md-12 text-center">
                                 <p className="text-danger font-weight-bold">Contagios</p>
                                 <p className="bolder-numbers">115.267</p>
                                 <p className="text-secondary texts-small font-weight-bolder">878 nuevos</p>
                             </div>
-                            <div className="col-2 text-center">
+                            <div className="col-lg-2 col-md-12 text-center">
                                 <p className="text-danger font-weight-bold">Vacunados</p>
                                 <p className="bolder-numbers">267.826</p>
                                 <p className="text-secondary texts-small font-weight-bolder">7.497 nuevos</p>
                             </div>
-                            <div className="col-2 text-center">
+                            <div className="col-lg-2 col-md-12 text-center">
                                 <p className="text-danger font-weight-bold">Recuperados</p>
                                 <p className="bolder-numbers">104.307</p>
                                 <p className="text-secondary texts-small font-weight-bolder">533 nuevos</p>
                             </div>
-                            <div className="col-2 text-center">
+                            <div className="col-lg-2 col-md-12 text-center">
                                 <p className="text-danger font-weight-bold">Fallecidos</p>
                                 <p className="bolder-numbers">1.946</p>
                                 <p className="text-secondary texts-small font-weight-bolder">9 nuevos</p>
                             </div>
                         </Card.Body>
                     </Card>
-                    {/*Aquí inicia la card con consejos sobre Covid. Su estructura se compone de una card, un carousel y cards dentro de cada item de carousel*/}
+                    {/*Banner con consejos sobre Covid con animación de transición*/}
                     <Card className="shadow d-flex bg-dark-gray">
                         <Card.Body className="row align-items-center">
                             <div className="col-3 text-center">
@@ -120,6 +126,105 @@ const Inicio = () => {
                         </Card.Body>
                     </Card>
                 </div>
+            </section>
+            <hr className="my-5"/>
+            <section>
+                <Card className="shadow containerAnimation">
+                    <h4 className="font-weight-bold ml-3 mt-2"><i>Política</i></h4>
+                    <CardDeck className="container my-3">
+                        <Card className="cardAnimation">
+                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className="cardAnimation">
+                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className="cardAnimation">
+                        <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </CardDeck>
+                </Card>
+                <Card className="shadow my-5 containerAnimation">
+                    <h4 className="font-weight-bold ml-3 mt-2"><i>Salud</i></h4>
+                    <CardDeck className="container my-3">
+                        <Card className="cardAnimation">
+                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className="cardAnimation">
+                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className="cardAnimation">
+                        <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </CardDeck>
+                </Card>
+                <Card className="shadow containerAnimation">
+                    <h4 className="font-weight-bold ml-3 mt-2"><i>Economía</i></h4>
+                    <CardDeck className="container my-3">
+                        <Card className="cardAnimation">
+                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className="cardAnimation">
+                            <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card className="cardAnimation">
+                        <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                            <Card.Body>
+                                <Card.Text>
+                                    This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </CardDeck>
+                </Card>
             </section>
         </Container>
     );
