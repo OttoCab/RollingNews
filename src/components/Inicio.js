@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Card, Button, Container, Carousel } from 'react-bootstrap';
 import DefectoImg from './assets/img/defecto.jpg';
 import Defectowide from './assets/img/defecto-wide.jpg';
 import './assets/css/inicio.css';
-import { Card, Button } from 'react-bootstrap';
+import covidimg from './assets/img/covid-icon.svg';
 
 
 const Inicio = () => {
@@ -18,7 +18,7 @@ const Inicio = () => {
                             <div className="flex-column">
                             <Card.Title>Título de la noticia</Card.Title>
                             <Card.Text className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus illum quo saepe illo voluptates nobis quae sed. Pariatur quidem voluptas possimus cupiditate autem ut dolorem officiis animi illum atque maiores, ducimus vel veritatis voluptate perferendis asperiores omnis nemo commodi soluta obcaecati modi accusamus quos saepe exercitationem. Soluta, nobis voluptate.</Card.Text>
-                            <Button variant="outline-danger">Ver más...</Button>
+                            <Button variant="outline-danger" className="customButton">Ver más...</Button>
                             </div>
                         </div>
                     </Card>
@@ -30,7 +30,7 @@ const Inicio = () => {
                             <div>
                                 <h5>Título de la noticia</h5>
                                 <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus illum quo saepe illo voluptates nobis quae sed.</p>
-                                <button className="btn btn-outline-danger">Ver más...</button>
+                                <Button variant="outline-danger" className="customButton">Ver más...</Button>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const Inicio = () => {
                             <div>
                                 <h5>Título de la noticia</h5>
                                 <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus illum quo saepe illo voluptates nobis quae sed.</p>
-                                <button className="btn btn-outline-danger">Ver más...</button>
+                                <Button variant="outline-danger" className="customButton">Ver más...</Button>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ const Inicio = () => {
             <hr/>
             <section className="mt-5">
                 <div>
-                    <Card className="shadow">
+                    <Card className="shadow bg-dark-gray">
                         <Card.Body className="row justify-content-between flex-sm-wrap covidBox">
                             <div className="col-2 pl-3 pt-3 text-center">
                                 <p className="texts-large"><b>Coronavirus en Tucumán</b></p>
@@ -75,7 +75,48 @@ const Inicio = () => {
                                 <p className="bolder-numbers">1.946</p>
                                 <p className="text-secondary texts-small font-weight-bolder">9 nuevos</p>
                             </div>
-
+                        </Card.Body>
+                    </Card>
+                    {/*Aquí inicia la card con consejos sobre Covid. Su estructura se compone de una card, un carousel y cards dentro de cada item de carousel*/}
+                    <Card className="shadow d-flex bg-dark-gray">
+                        <Card.Body className="row align-items-center">
+                            <div className="col-3 text-center">
+                                <img src={covidimg}></img>
+                            </div>
+                            <div className="col-8">
+                                <h2 className="font-weight-bolder mb-4">¡Cuidate!</h2>
+                                <hr/>
+                                <Carousel fade controls={false}>
+                                    <Carousel.Item interval={9000}>
+                                        <Card className="hidingCard">
+                                            <Card.Body>
+                                                <p className="advice"><b>Utiliza cubrebocas, evitarás contagiarte tú, a tus seres queridos y a las personas que te rodean</b></p>
+                                            </Card.Body>
+                                        </Card>
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={9000}>
+                                        <Card className="hidingCard">
+                                            <Card.Body>
+                                                <p className="advice"><b>Lávate las manos. Una completa higiene de las manos reduce en gran medida el riesgo de contagio</b></p>
+                                            </Card.Body>
+                                        </Card>
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={9000}>
+                                        <Card className="hidingCard">
+                                            <Card.Body>
+                                                <p className="advice"><b>Mantén las distancias. Evita espacios concurridos, procura mantener al menos 1 metro de distancia de otras personas</b></p>
+                                            </Card.Body>
+                                        </Card>
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={9000}>
+                                        <Card className="hidingCard">
+                                            <Card.Body>
+                                                <p className="advice"><b>Entre todos podemos hacer que esta pandemia termine. ¡Cuidate! no te conviertas en un número más en el marcador</b></p>
+                                            </Card.Body>
+                                        </Card>
+                                    </Carousel.Item>
+                                </Carousel>
+                            </div>
                         </Card.Body>
                     </Card>
                 </div>

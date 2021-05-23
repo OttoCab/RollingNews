@@ -15,6 +15,23 @@
     font-weight: bolder;
 }
 
+.customButton {
+    border: none;
+    border-radius: 25px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB 51%, #1F1C2C 100%)
+}
+
+.advice {
+    font-size: 125%;
+}
+
+.hidingCard {
+    border: none;
+}
+
 
 /* recordar que las Media Queries deben quedar al final de la hoja */
 
