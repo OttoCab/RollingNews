@@ -5,7 +5,7 @@ import Defectowide from './assets/img/defecto-wide800x394.jpg';
 import DefectoMini from './assets/img/defecto281x160.jpg';
 import covidimg from './assets/img/covid-icon.svg';
 import adBanner1 from './assets/img/adv-banner1.jpg';
-import adBanner2 from './assets/img/adv-banner2.jpg';
+import adBanner2 from './assets/img/adv-banner2.gif';
 import adBanner3 from './assets/img/adv-banner3.jpg';
 import adBanner4 from './assets/img/adv-banner4.gif';
 import './assets/css/inicio.css';
@@ -139,7 +139,7 @@ const Inicio = () => {
             <section className="row">
                 <div className="col-lg-9 col-sm-12 texts-small">
                     <Card className="shadow containerAnimation">
-                        <h4 className="font-weight-bold ml-3 mt-2"><i>Política</i></h4>
+                        <h4 className="font-weight-bold ml-3 mt-2"><i>Actualidad</i></h4>
                         <CardDeck className="container my-3">
                             <Card className="cardAnimation">
                                 <Card.Img variant="top" src={DefectoMini}></Card.Img>
@@ -225,6 +225,73 @@ const Inicio = () => {
                             </Card>
                             <Card>
                                 <Card.Img src={adBanner3}></Card.Img>
+                            </Card>
+                        </CardDeck>
+                    </Card>
+                    <Card className="shadow containerAnimation mt-3">
+                        <h4 className="font-weight-bold ml-3 mt-2"><i>Política</i></h4>
+                        <CardDeck className="container my-3">
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </CardDeck>
+                    </Card>
+                    <div className="my-3">
+                        <Card.Img src={adBanner2}></Card.Img>
+                    </div>
+                    <Card className="shadow containerAnimation">
+                        <h4 className="font-weight-bold ml-3 mt-2"><i>Deportes</i></h4>
+                        <CardDeck className="container my-3">
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card className="cardAnimation">
+                                <Card.Img variant="top" src={DefectoMini}></Card.Img>
+                                <Card.Body>
+                                    <Card.Text className="scale-texts">
+                                        This is a wider card with supporting text below as a natural lead-in to
+                                        additional content. This content is a little bit longer.
+                                    </Card.Text>
+                                </Card.Body>
                             </Card>
                         </CardDeck>
                     </Card>
