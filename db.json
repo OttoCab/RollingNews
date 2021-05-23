@@ -29,21 +29,38 @@
     },
     {
       "categoriaNoticia": "deporte",
-      "idCategoriaNoticia": "1",
       "tituloNoticia": "River le Gana a Boca",
       "autorNoticia": "Carlos Mocsary",
-      "fechaNoticia": "asdasd",
-      "contenidoNoticia": "qawqwewqe",
+      "fechaNoticia": "22/05/21",
+      "contenidoNoticia": "carlos noknasofaslkfhlasdfhdaf",
       "id": 6
     },
     {
-      "categoriaNoticia": "deporte",
-      "idCategoriaNoticia": "1",
-      "tituloNoticia": "River le Gana a Boca",
-      "autorNoticia": "Carlos Mocsary",
-      "fechaNoticia": "asdasd",
-      "contenidoNoticia": "qawqwewqe",
-      "id": 7
+      "categoriaNoticia": "Covid-19",
+      "idCategoriaNoticia": "4",
+      "tituloNoticia": "Covid -19 fase 1",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "23/05/2021",
+      "contenidoNoticia": "La COVID-19 afecta de distintas maneras en función de cada persona. La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada, y se recuperan sin necesidad de hospitalización.",
+      "id": 8
+    },
+    {
+      "categoriaNoticia": "actualidad",
+      "idCategoriaNoticia": "2",
+      "tituloNoticia": "saasdas",
+      "autorNoticia": "asdasd",
+      "fechaNoticia": "dasdla",
+      "contenidoNoticia": "las de ",
+      "id": 9
+    },
+    {
+      "categoriaNoticia": "Espectaculo",
+      "idCategoriaNoticia": "3",
+      "tituloNoticia": "werwer",
+      "autorNoticia": "erewr",
+      "fechaNoticia": "werewr",
+      "contenidoNoticia": "las de ",
+      "id": 10
     }
   ],
   "Categorias": [
@@ -58,6 +75,10 @@
     {
       "nombreCategoria": "Espectaculo",
       "id": 3
+    },
+    {
+      "nombreCategoria": "Covid-19",
+      "id": 4
     }
   ]
 }
