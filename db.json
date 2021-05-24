@@ -60,6 +60,35 @@
       "fechaNoticia": "23/05/2021",
       "contenidoNoticia": "sdasdasdsadsad",
       "id": 11
+    },
+    {
+      "categoriaNoticia": "Espectaculo",
+      "idCategoriaNoticia": "3",
+      "tituloNoticia": "aasdasd",
+      "autorNoticia": "asdasdsad",
+      "fechaNoticia": "asdsad",
+      "contenidoNoticia": "asdasd",
+      "id": 12
+    },
+    {
+      "categoriaNoticia": "deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "aaa",
+      "autorNoticia": "aaa",
+      "fechaNoticia": "aaa",
+      "imagenNoticia": "",
+      "contenidoNoticia": "aaaaa",
+      "id": 13
+    },
+    {
+      "categoriaNoticia": "deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "sss",
+      "autorNoticia": "ssss",
+      "fechaNoticia": "defecto281x160.jpg",
+      "imagenNoticia": "",
+      "contenidoNoticia": "sss",
+      "id": 14
     }
   ],
   "Categorias": [

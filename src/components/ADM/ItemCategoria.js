@@ -5,7 +5,6 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const ItemCategoria = (props) => {
-  console.log(props);
   return (
     <ListGroup.Item className="d-flex justify-content-between shadow p-3 bg-body rounded my-2">
       <p>

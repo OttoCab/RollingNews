@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import ItemNoticia from "./ItemNoticia";
 import {useParams} from 'react-router-dom';
 
@@ -12,7 +12,7 @@ const DetalleCategoria = (props) => {
     <Container>
       <section className="row">
       {categoriaNFiltradas.map((detalleCat, indice) => (
-            <ItemNoticia
+        <ItemNoticia
               key={indice}
               dato={detalleCat}
               Categorias={props.Categorias}
@@ -20,6 +20,7 @@ const DetalleCategoria = (props) => {
           ))}
       </section>
     </Container>
+  
   );
 };
 

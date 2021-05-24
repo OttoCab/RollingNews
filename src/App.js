@@ -10,7 +10,6 @@ import ListaCategorias from "./components/ADM/ListaCategorias";
 import EditarNoticia from "./components/ADM/EditarNoticia";
 import { useState, useEffect } from "react";
 import React from "react";
-import PgADM from "./components/PgADM";
 import Error404 from './components/Error404'
 import DetalleCategoria from './components/ADM/DetalleCategoria'
 import Inicio from './components/Inicio.js';

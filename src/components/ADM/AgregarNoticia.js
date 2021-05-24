@@ -1,10 +1,7 @@
 import React, {useState} from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
-import './admin.css';
-
-
-
+import '../assets/css/admin.css';
 
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
@@ -12,13 +9,12 @@ const AgregarNoticia = (props) => {
   const [tituloNoticia, setTituloNoticia] = useState("");
   const [autorNoticia, setAutorNoticia] = useState("");
   const [fechaNoticia, setFechaNoticia] = useState("");
+  const [imagenNoticia, setImagenNoticia] = useState("");
   const [contenidoNoticia, setContenidoNoticia] = useState("");
   const [error, setError] = useState(false);
   const URL = process.env.REACT_APP_API_URL;
   // const URLCat =process.env.REACT_APP_API_URL2;
   
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,6 +23,7 @@ const AgregarNoticia = (props) => {
       tituloNoticia.trim() === "" ||
       autorNoticia.trim() === "" ||
       fechaNoticia.trim() === "" ||
+      // imagenNoticia.trim() === ""||
       contenidoNoticia.trim() === ""
     ){
       setError(true); 
@@ -40,6 +37,7 @@ const AgregarNoticia = (props) => {
         tituloNoticia,
         autorNoticia,
         fechaNoticia,
+        imagenNoticia,
         contenidoNoticia,
       };
       console.log(noticia);
@@ -94,10 +92,12 @@ const AgregarNoticia = (props) => {
           <Form.Label>Seleccione la Categoria</Form.Label>
           <Form.Control
             as="select"
+            placeholder="seleccione..."
             custom
             onChange={(e) => setidCategoriaNoticia(e.target.value)}
               // setidCategoriaNoticia(e.target.value)}
             >
+              <option>Seleccionar. . .</option>
             {props.Categorias.map((opcion, indice) => (
               <option value={opcion.id} key={indice}>{opcion.nombreCategoria}</option>
               ))}
@@ -127,9 +127,19 @@ const AgregarNoticia = (props) => {
             onChange={(e) => setFechaNoticia(e.target.value)}
           />
         </Form.Group>
+
+
         <Form.Group>
-          <Form.File className="fuente" label="Seleccione una Imagen" />
+          <Form.Label className="fuente">Seleccione una Imagen</Form.Label>
+          <Form.Control
+            type="text"
+            onChange={(e) => setFechaNoticia(e.target.value)}
+          />
         </Form.Group>
+
+
+
+
         <Form.Group>
           <Form.Label className="fuente">Contenido</Form.Label>
           <Form.Control
