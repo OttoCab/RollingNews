@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, InputGroup, FormControl } from "react-bootstrap";
 import ItemNoticia from "./ItemNoticia";
 
 const ListaNoticia = (props) => {
+  const [buscar, setBuscar] = useState("");
+
   return (
     <Container>
       <h1 className="text-center my-4 fuente">Lista de Noticias</h1>
@@ -11,13 +13,19 @@ const ListaNoticia = (props) => {
           <InputGroup.Text>Buscar</InputGroup.Text>
         </InputGroup.Prepend>
         <FormControl
-          placeholder="Ingrese una categoria"
-          // onChange={handleBuscador}
-        />
+          placeholder="Ingresar una palabra"
+          onChange={(e)=>setBuscar(e.target.value)}
+          />
       </InputGroup>
       <section className="row">
         {
-          props.noticias.map((nota, indice) => (
+          props.noticias.filter((palabra)=>{
+            if(buscar == ""){
+              return palabra
+            }else if(palabra.contenidoNoticia.toLowerCase().includes(buscar.toLowerCase())){
+              return palabra
+            }
+          }).map((nota, indice) => (
             <ItemNoticia
               key={indice}
               dato={nota}

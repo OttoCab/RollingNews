@@ -3,10 +3,10 @@ import { Container} from "react-bootstrap";
 import ItemNoticia from "./ItemNoticia";
 import {useParams} from 'react-router-dom';
 
-
 const DetalleCategoria = (props) => {
   const {idCategoriaNoticia} = useParams();
   const categoriaNFiltradas = props.noticias.filter((nota)=> nota.idCategoriaNoticia === idCategoriaNoticia);
+  
 
   return (
     <Container>

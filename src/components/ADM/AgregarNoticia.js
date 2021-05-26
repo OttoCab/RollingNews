@@ -137,9 +137,6 @@ const AgregarNoticia = (props) => {
           />
         </Form.Group>
 
-
-
-
         <Form.Group>
           <Form.Label className="fuente">Contenido</Form.Label>
           <Form.Control
