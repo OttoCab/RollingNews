@@ -1,61 +1,9 @@
 {
   "News": [
-    {
-      "categoriaNoticia": "actualidad",
-      "idCategoriaNoticia": "2",
-      "tituloNoticia": "Cosmito",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "19/05/2021",
-      "contenidoNoticia": "odas las personas que tienen un gato como compañero de vida saben que siempre anda buscando una caja o cualquier lugar cerrado donde pueda acurrucarse y estar tranquilo.\n\nNo le importa el tamaño, la forma ni el color mientras sea un espacio delimitado. Una atracción que, según un experimento casero, se extiende hasta las cajas imaginarias.\n\nCuando hablamos de cajas imaginarias nos referimos a rectángulos en dos dimensiones, es decir marcados en el suelo con cinta adhesiva. Pero, ¿cuál es la razón de esta atracción?\n\nEsto es lo que ha querido responder una investigación publicada en Applied Animal Behaviour Science (AAPS).",
-      "id": 2
-    },
-    {
+      {
       "categoriaNoticia": "Espectaculo",
       "idCategoriaNoticia": "3",
-      "tituloNoticia": "Cines",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "20/05/2021",
-      "contenidoNoticia": "stamos muy contentos de poder verte nuevamente frente a la gran pantalla!\nPara que podamos cuidarnos entre todos, te pedimos que nos ayudes a respetar las siguientes normas de cuidado e higiene:\n\n* RESPETÁ TU BUTACA\n\n* SENTATE JUNTO A TUS CONTACTOS DIRECTOS\n\n* USÁ TU TAPABOCAS EN TODO MOMENTO. SÓLO PODÉS QUITÁRTELO CUANDO ESTÉS CONSUMIENDO ALIMENTOS O BEBIDAS\n\n* CUANDO TERMINE LA FUNCIÓN, LLEVATE TUS RESIDUOS Y ARROJALOS EN LOS CESTOS DEL HALL\n\n* MANTENÉ EL DISTANCIAMIENTO SOCIAL SIEMPRE.\n\n* HIGIENIZÁ TUS MANOS DE FORMA FRECUENTE CON AGUA Y JABON O ALCOHOL EN GEL\n\n* COMPRÁ TUS ENTRADAS ONLINE Y HACÉ MENOS FILAS EN EL CINE.\n\nGracias!",
-      "id": 4
-    },
-    {
-      "categoriaNoticia": "Espectaculo",
-      "idCategoriaNoticia": "3",
-      "tituloNoticia": "Estrenos",
-      "autorNoticia": "Carlos Mocsary",
-      "fechaNoticia": "20/05/2021",
-      "contenidoNoticia": "Algunos de los mayores éxitos de la historia del cine han venido del género de terror, ya que no suelen ser necesarios grandes presupuestos para sacar adelante películas que conquisten al público. Vienen rápidamente a la memoria títulos como 'La noche de Halloween', 'El proyecto de la bruja de Blair',  'Paranormal Activity' o 'Saw', que es la que ahora nos interesa.\n\n'Saw' logró superar los 100 millones de dólares de recaudación mundial cuando su presupuesto apenas superaba el millón. Lógico que durante un buen tiempo se estrenase una secuela cada año. La saga pareció morir en 2010, pero siete años más tarde hubo un primer intento de relanzarla que no tuvo continuidad. Veremos qué sucede en el caso de 'Spiral: Saw', una fallida cinta impulsada por Chris Rock que llega este viernes 21 de mayo a los cines españoles.",
-      "id": 5
-    },
-    {
-      "categoriaNoticia": "deporte",
-      "tituloNoticia": "River le Gana a Boca",
-      "autorNoticia": "Carlos Mocsary",
-      "fechaNoticia": "22/05/21",
-      "contenidoNoticia": "carlos noknasofaslkfhlasdfhdaf",
-      "id": 6
-    },
-    {
-      "categoriaNoticia": "Covid-19",
-      "idCategoriaNoticia": "4",
-      "tituloNoticia": "Covid -19 fase 1",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "23/05/2021",
-      "contenidoNoticia": "La COVID-19 afecta de distintas maneras en función de cada persona. La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada, y se recuperan sin necesidad de hospitalización.",
-      "id": 8
-    },
-    {
-      "categoriaNoticia": "actualidad",
-      "tituloNoticia": "saasdas",
-      "autorNoticia": "asdasd",
-      "fechaNoticia": "23/05/2021",
-      "contenidoNoticia": "las de wwwwwwwwwwwwwwwwwwwwww",
-      "id": 9
-    },
-    {
-      "categoriaNoticia": "Espectaculo",
-      "idCategoriaNoticia": "3",
-      "tituloNoticia": "Cines",
+      "tituloNoticia": "Prueba-1",
       "autorNoticia": "Florencia Norry",
       "fechaNoticia": "23/05/2021",
       "contenidoNoticia": "sdasdasdsadsad",
@@ -64,16 +12,16 @@
     {
       "categoriaNoticia": "Espectaculo",
       "idCategoriaNoticia": "3",
-      "tituloNoticia": "aasdasd",
+      "tituloNoticia": "Prueba-2",
       "autorNoticia": "asdasdsad",
       "fechaNoticia": "asdsad",
       "contenidoNoticia": "asdasd",
       "id": 12
     },
     {
-      "categoriaNoticia": "deporte",
+      "categoriaNoticia": "Deporte",
       "idCategoriaNoticia": "1",
-      "tituloNoticia": "aaa",
+      "tituloNoticia": "Prueba-3",
       "autorNoticia": "aaa",
       "fechaNoticia": "aaa",
       "imagenNoticia": "",
@@ -81,11 +29,11 @@
       "id": 13
     },
     {
-      "categoriaNoticia": "deporte",
+      "categoriaNoticia": "Deporte",
       "idCategoriaNoticia": "1",
-      "tituloNoticia": "sss",
+      "tituloNoticia": "Prueba-4",
       "autorNoticia": "ssss",
-      "fechaNoticia": "defecto281x160.jpg",
+      "fechaNoticia": "",
       "imagenNoticia": "",
       "contenidoNoticia": "sss",
       "id": 14
@@ -93,11 +41,11 @@
   ],
   "Categorias": [
     {
-      "nombreCategoria": "deporte",
+      "nombreCategoria": "Deporte",
       "id": 1
     },
     {
-      "nombreCategoria": "actualidad",
+      "nombreCategoria": "Actualidad",
       "id": 2
     },
     {
