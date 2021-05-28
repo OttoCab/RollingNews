@@ -46,7 +46,7 @@ function App() {
       <NavegacionAdmin></NavegacionAdmin>
       <Switch>
         <Route exact path="/">
-          <Inicio></Inicio>
+          <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
         </Route>
         <Route exact path="/Noticias">
           <ListaNoticia
