@@ -3,6 +3,7 @@ import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 import '../assets/css/admin.css';
 
+
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
   const [idCategoriaNoticia, setidCategoriaNoticia] = useState(0);
@@ -95,7 +96,6 @@ const AgregarNoticia = (props) => {
             placeholder="seleccione..."
             custom
             onChange={(e) => setidCategoriaNoticia(e.target.value)}
-              // setidCategoriaNoticia(e.target.value)}
             >
               <option>Seleccionar. . .</option>
             {props.Categorias.map((opcion, indice) => (
@@ -123,17 +123,17 @@ const AgregarNoticia = (props) => {
         <Form.Group>
           <Form.Label className="fuente">Seleccione una Fecha</Form.Label>
           <Form.Control
-            type="text"
+            type="date"
+            size="sm"
+            olaceholder="dd/mm/aa"
             onChange={(e) => setFechaNoticia(e.target.value)}
           />
         </Form.Group>
-
-
         <Form.Group>
           <Form.Label className="fuente">Seleccione una Imagen</Form.Label>
           <Form.Control
             type="text"
-            onChange={(e) => setFechaNoticia(e.target.value)}
+            onChange={(e) => setImagenNoticia(e.target.value)}
           />
         </Form.Group>
 
