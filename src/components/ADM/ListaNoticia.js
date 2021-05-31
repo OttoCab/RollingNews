@@ -20,7 +20,7 @@ const ListaNoticia = (props) => {
       <section className="row">
         {
           props.noticias.filter((palabra)=>{
-            if(buscar == ""){
+            if(buscar === ""){
               return palabra
             }else if(palabra.contenidoNoticia.toLowerCase().includes(buscar.toLowerCase())){
               return palabra

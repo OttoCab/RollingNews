@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Card, Button, Container, Carousel, CardDeck } from "react-bootstrap";
 import DefectoImg from "./assets/img/defecto800x600.jpg";
 import Defectowide from "./assets/img/defecto-wide800x394.jpg";
-import DefectoMini from "./assets/img/defecto281x160.jpg";
+// import DefectoMini from "./assets/img/defecto281x160.jpg";
 import covidimg from "./assets/img/covid-icon.svg";
 import adBanner1 from "./assets/img/adv-banner1.jpg";
 import adBanner2 from "./assets/img/adv-banner2.gif";
-import adBanner3 from "./assets/img/adv-banner3.jpg";
+// import adBanner3 from "./assets/img/adv-banner3.jpg";
 import adBanner4 from "./assets/img/adv-banner4.gif";
 import "./assets/css/inicio.css";
 // import error404 from "./Error404";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import ItemNoticiaInicio from "./ADM/ItemNoticiaInicio";
+// import ItemNoticia from './ADM/ItemNoticia';
+import actualidad from '../components/assets/img/actualidad.jpg'
+import politica from '../components/assets/img/politica.jpg'
+import economia from '../components/assets/img/economia.jpg'
 
 const Inicio = (props) => {
 
@@ -23,18 +27,18 @@ const Inicio = (props) => {
           <Card className="card shadow">
             {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-            <Card.Img src={DefectoImg} alt="No se encontró imagen"></Card.Img>
+            <Card.Img  src={politica} alt="No se encontró imagen"></Card.Img>
             <div className="card-img-overlay d-flex align-items-end">
               <div className="flex-column">
-                <Card.Title>Título de la noticia</Card.Title>
-                <Card.Text className="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique accusamus illum quo saepe illo voluptates nobis quae
-                  sed. Pariatur quidem voluptas possimus cupiditate autem ut
-                  dolorem officiis animi illum atque maiores, ducimus vel
-                  veritatis voluptate perferendis asperiores omnis nemo commodi
-                  soluta obcaecati modi accusamus quos saepe exercitationem.
-                  Soluta, nobis voluptate.
+                <Card.Title><h3 className="text-light">El gobierno bonaerense confirmó que el domingo se terminará el confinamiento estricto.</h3></Card.Title>
+                <Card.Text className="card-text text-light">
+                <h5>
+                Se podrá circular libremente durante el día sin permiso. Comercios no esenciales, bares y restaurantes podrán atender
+                 al público de acuerdo a los protocolos vigentes en cada municipio
+                 El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que no habrá 
+                 cambios con respecto a la hoja de ruta prevista en el DNU presidencial que impuso el 
+                 último confinamiento estricto..
+                </h5>
                 </Card.Text>
                 <Button variant="outline-danger" className="customButton">
                   Ver más...
@@ -47,15 +51,16 @@ const Inicio = (props) => {
           <div className="card text-dark my-sm-5 my-lg-0 my-3 shadow">
             {/*La imagen de las cards secundarias deben tener una resolución exacta de 800 x 394, si la imagen
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-            <img src={Defectowide} alt="No se encontró imagen"></img>
+            <img src={actualidad} alt="No se encontró imagen"></img>
             <div className="card-img-overlay d-flex align-items-end">
               <div>
-                <h5>Título de la noticia</h5>
-                <p className="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique accusamus illum quo saepe illo voluptates nobis quae
-                  sed.
-                </p>
+                <h3 className="text-light">Covid-19</h3>
+                <h5 className="card-text text-light">
+                A principios de mayo, el país superó los 3 millones de contagiados: actualmente la cifra llega a 3.663.215. Se produjeron 76.135 
+                muertes por COVID-19. El número de recuperados llega a 3.219.474, mientras 
+                que los casos activos pasaron a ser 367.606.
+                
+                </h5>
                 <Button variant="outline-danger" className="customButton">
                   Ver más...
                 </Button>
@@ -63,15 +68,16 @@ const Inicio = (props) => {
             </div>
           </div>
           <div className="card text-dark my-sm-5 my-lg-0 mt-lg-4 shadow">
-            <img src={Defectowide} alt="No se encontró imagen"></img>
+            <img src={economia} alt="No se encontró imagen"></img>
             <div className="card-img-overlay d-flex align-items-end">
               <div>
-                <h5>Título de la noticia</h5>
-                <p className="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique accusamus illum quo saepe illo voluptates nobis quae
-                  sed.
-                </p>
+                <h3 className="text-light">Cepo a las exportaciones de carne</h3>
+                <h5 className="card-text text-light">
+               la Mesa de Enlace endurece su reclamo y 
+                extiende el paro hasta el miércoles próximoLos dirigentes que representan a los
+                 productores no consiguieron hasta el momento que el Gobierno deje sin efecto las 
+                 restricciones para exportar
+                </h5>
                 <Button variant="outline-danger" className="customButton">
                   Ver más...
                 </Button>

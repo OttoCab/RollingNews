@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 import '../assets/css/admin.css';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
@@ -95,7 +98,6 @@ const AgregarNoticia = (props) => {
             placeholder="seleccione..."
             custom
             onChange={(e) => setidCategoriaNoticia(e.target.value)}
-              // setidCategoriaNoticia(e.target.value)}
             >
               <option>Seleccionar. . .</option>
             {props.Categorias.map((opcion, indice) => (
@@ -123,27 +125,34 @@ const AgregarNoticia = (props) => {
         <Form.Group>
           <Form.Label className="fuente">Seleccione una Fecha</Form.Label>
           <Form.Control
-            type="text"
+            type="date"
+            size="sm"
+            olaceholder="dd/mm/aa"
             onChange={(e) => setFechaNoticia(e.target.value)}
           />
         </Form.Group>
-
-
         <Form.Group>
           <Form.Label className="fuente">Seleccione una Imagen</Form.Label>
           <Form.Control
             type="text"
-            onChange={(e) => setFechaNoticia(e.target.value)}
+            onChange={(e) => setImagenNoticia(e.target.value)}
           />
         </Form.Group>
 
         <Form.Group>
           <Form.Label className="fuente">Contenido</Form.Label>
-          <Form.Control
+          <CKEditor 
+          editor={ClassicEditor}
+          onChange={(e, editor) => setContenidoNoticia(editor.getData())}
+          // onChange={(e, editor) => setContenidoNoticia(e.target.value)}
+          >
+
+          </CKEditor>
+          {/* <Form.Control 
             as="textarea"
             rows={3}
-            onChange={(e) => setContenidoNoticia(e.target.value)}
-          />
+            
+          /> */}
         </Form.Group>
         <Button variant="primary" type="submit" className="my-4 fuente">
           Guardar
