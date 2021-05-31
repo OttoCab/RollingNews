@@ -163,6 +163,14 @@
       "imagenNoticia": "fsdf",
       "contenidoNoticia": "<p>pruenba 2 <strong>ffgergerg</strong><i>ergergrg</i></p>",
       "id": 29
+    },
+    {
+      "categoriaNoticia": "Video Juegos",
+      "tituloNoticia": "Se lanza Uncharted 4 para PC",
+      "autorNoticia": "Otto Cabanillas",
+      "fechaNoticia": "2021-05-31",
+      "contenidoNoticia": "<p>Prueba</p>",
+      "id": 30
     }
   ],
   "Categorias": [
@@ -193,6 +201,14 @@
     {
       "nombreCategoria": "Politica",
       "id": 7
+    },
+    {
+      "nombreCategoria": "Video Juegos",
+      "id": 8
+    },
+    {
+      "nombreCategoria": "Libros",
+      "id": 9
     }
   ]
 }
