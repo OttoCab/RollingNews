@@ -13,6 +13,10 @@ import React from "react";
 import Error404 from './components/Error404'
 import DetalleCategoria from './components/ADM/DetalleCategoria'
 import Inicio from './components/Inicio.js';
+import Login from './components/ADM/Login.js';
+import ADN from './components/ADN.js';
+import Contacto from './components/Contacto.js';
+
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
@@ -69,7 +73,19 @@ function App() {
         <Route exact path="/Categorias/detalleCategoria/:idCategoriaNoticia">
           <DetalleCategoria noticias={noticias} Categorias={Categorias}></DetalleCategoria>
         </Route>
-       <Route path='*'>
+        <Route exact path='/Login'>
+          <Login></Login>
+        </Route>
+        <Route exact path='/Login'>
+          <Login></Login>
+        </Route>
+        <Route exact path='/ADN'>
+          <ADN></ADN>
+        </Route>
+        <Route exact path='/Contacto'>
+          <Contacto></Contacto>
+        </Route>
+        <Route path='*'>
           <Error404></Error404>
         </Route>
       </Switch>

@@ -18,6 +18,9 @@ const Navegacion = () => {
           <NavLink className="nav-link" exact={true} to='/Noticias'>Lista Noticias</NavLink>
           <NavLink className="nav-link" exact={true} to='/Categorias/nuevaCategoria'>Agregar Categorias</NavLink>
           <NavLink className="nav-link" exact={true} to='/Categorias'>Lista Categorias</NavLink>
+          <NavLink className="nav-link" exact={true} to='/Login'>Login</NavLink>
+          <NavLink className="nav-link" exact={true} to='/ADN'>Acerca de Nosotros</NavLink>
+          <NavLink className="nav-link" exact={true} to='/Contacto'>Contactanos</NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
