@@ -8,8 +8,7 @@ import {
   faTrashAlt,
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
-import ItemNoticiaInicio from "./ItemNoticiaInicio";
-import Inicio from "../Inicio";
+import ReactHtmlParser from 'react-html-parser';
 
 const ItemNoticia = (props) => {
   const [destacado, setDestacado] = useState();
@@ -89,7 +88,7 @@ const ItemNoticia = (props) => {
                 </Card.Title>
                 <Card.Text>{props.dato.categoriaNoticia}</Card.Text>
 
-                <Card.Text>{props.dato.contenidoNoticia}</Card.Text>
+                <Card.Text>{ReactHtmlParser(props.dato.contenidoNoticia)}</Card.Text>
               </Card.Body>
             </div>
             <section className="d-flex flex-column">

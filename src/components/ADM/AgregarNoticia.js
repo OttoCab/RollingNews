@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 import '../assets/css/admin.css';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
 const AgregarNoticia = (props) => {
@@ -139,11 +141,18 @@ const AgregarNoticia = (props) => {
 
         <Form.Group>
           <Form.Label className="fuente">Contenido</Form.Label>
-          <Form.Control
+          <CKEditor 
+          editor={ClassicEditor}
+          onChange={(e, editor) => setContenidoNoticia(editor.getData())}
+          // onChange={(e, editor) => setContenidoNoticia(e.target.value)}
+          >
+
+          </CKEditor>
+          {/* <Form.Control 
             as="textarea"
             rows={3}
-            onChange={(e) => setContenidoNoticia(e.target.value)}
-          />
+            
+          /> */}
         </Form.Group>
         <Button variant="primary" type="submit" className="my-4 fuente">
           Guardar

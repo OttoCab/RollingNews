@@ -143,6 +143,26 @@
       "imagenNoticia": "actualidad",
       "contenidoNoticia": "actualidad",
       "id": 27
+    },
+    {
+      "categoriaNoticia": "actualidad",
+      "idCategoriaNoticia": "2",
+      "tituloNoticia": "PRUEB EDITOR",
+      "autorNoticia": "FLRO",
+      "fechaNoticia": "2021-04-27",
+      "imagenNoticia": "FDFSDF",
+      "contenidoNoticia": "<p>PRUEBA EDITORE<strong>DSFSDFSDFSDFSDFSDF</strong></p>",
+      "id": 28
+    },
+    {
+      "categoriaNoticia": "Economia",
+      "idCategoriaNoticia": "5",
+      "tituloNoticia": "PRUEBA 2 ",
+      "autorNoticia": "LKAJSLKajsd|",
+      "fechaNoticia": "2021-05-03",
+      "imagenNoticia": "fsdf",
+      "contenidoNoticia": "<p>pruenba 2 <strong>ffgergerg</strong><i>ergergrg</i></p>",
+      "id": 29
     }
   ],
   "Categorias": [
