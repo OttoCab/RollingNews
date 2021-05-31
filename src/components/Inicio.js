@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, Button, Container, Carousel, CardDeck } from "react-bootstrap";
-import DefectoImg from "./assets/img/defecto800x600.jpg";
-import Defectowide from "./assets/img/defecto-wide800x394.jpg";
+import { NavLink } from 'react-router-dom';
+// import DefectoImg from "./assets/img/defecto800x600.jpg";
+// import Defectowide from "./assets/img/defecto-wide800x394.jpg";
 // import DefectoMini from "./assets/img/defecto281x160.jpg";
 import covidimg from "./assets/img/covid-icon.svg";
 import adBanner1 from "./assets/img/adv-banner1.jpg";
@@ -22,74 +23,51 @@ const Inicio = (props) => {
   return (
     <Container className="my-5 base-container">
       <h1>Ultima hora...</h1>
-      <section className="row texts-small scale-texts mb-5">
-        <div className="col-lg-7 col-sm-12">
-          <Card className="card shadow">
-            {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
+            <section className="row texts-small scale-texts mb-5">
+                <div className="col-lg-7 col-sm-12">
+                    <Card className="customCard-main bg-dark text-light shadow">
+                        {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-            <Card.Img  src={politica} alt="No se encontró imagen"></Card.Img>
-            <div className="card-img-overlay d-flex align-items-end">
-              <div className="flex-column">
-                <Card.Title><h3 className="text-light">El gobierno bonaerense confirmó que el domingo se terminará el confinamiento estricto.</h3></Card.Title>
-                <Card.Text className="card-text text-light">
-                <h5>
-                Se podrá circular libremente durante el día sin permiso. Comercios no esenciales, bares y restaurantes podrán atender
-                 al público de acuerdo a los protocolos vigentes en cada municipio
-                 El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que no habrá 
-                 cambios con respecto a la hoja de ruta prevista en el DNU presidencial que impuso el 
-                 último confinamiento estricto..
-                </h5>
-                </Card.Text>
-                <Button variant="outline-danger" className="customButton">
-                  Ver más...
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </div>
-        <div className="col-lg-5 col-sm-12">
-          <div className="card text-dark my-sm-5 my-lg-0 my-3 shadow">
-            {/*La imagen de las cards secundarias deben tener una resolución exacta de 800 x 394, si la imagen
+                        <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
+                        <div className="card-img-overlay d-flex align-items-end">
+                            <div className="flex-column cardBackground px-3 py-2">
+                                <Card.Title>El gobierno bonaerense confirmó que el domingo se terminará el confinamiento estricto.</Card.Title>
+                                <Card.Text className="card-text">Se podrá circular libremente durante el día sin permiso. Comercios no esenciales, bares y restaurantes podrán atender al público de acuerdo a los protocolos vigentes en cada municipio.
+El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que no habrá cambios con respecto a la hoja de ruta prevista en el DNU presidencial que impuso el último confinamiento estricto.</Card.Text>
+                                <Button variant="outline-danger" className="customButton">Ver más...</Button>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+                <div className="col-lg-5 col-sm-12">
+                    <Card className="customCard-sub text-light bg-dark my-sm-5 my-lg-0 my-3 shadow">
+                        {/*La imagen de las cards secundarias deben tener una resolución exacta de 800 x 394, si la imagen
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-            <img src={actualidad} alt="No se encontró imagen"></img>
-            <div className="card-img-overlay d-flex align-items-end">
-              <div>
-                <h3 className="text-light">Covid-19</h3>
-                <h5 className="card-text text-light">
-                A principios de mayo, el país superó los 3 millones de contagiados: actualmente la cifra llega a 3.663.215. Se produjeron 76.135 
-                muertes por COVID-19. El número de recuperados llega a 3.219.474, mientras 
-                que los casos activos pasaron a ser 367.606.
-                
-                </h5>
-                <Button variant="outline-danger" className="customButton">
-                  Ver más...
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="card text-dark my-sm-5 my-lg-0 mt-lg-4 shadow">
-            <img src={economia} alt="No se encontró imagen"></img>
-            <div className="card-img-overlay d-flex align-items-end">
-              <div>
-                <h3 className="text-light">Cepo a las exportaciones de carne</h3>
-                <h5 className="card-text text-light">
-               la Mesa de Enlace endurece su reclamo y 
-                extiende el paro hasta el miércoles próximoLos dirigentes que representan a los
-                 productores no consiguieron hasta el momento que el Gobierno deje sin efecto las 
-                 restricciones para exportar
-                </h5>
-                <Button variant="outline-danger" className="customButton">
-                  Ver más...
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                        <Card.Img src={actualidad} alt="No se encontró imagen"></Card.Img>
+                        <div className="card-img-overlay d-flex align-items-end">
+                            <div className="cardBackground px-3 pt-2">
+                                <Card.Title>Covid-19</Card.Title>
+                                <Card.Text className="card-text">A principios de mayo, el país superó los 3 millones de contagiados: actualmente la cifra llega a 3.663.215. Se produjeron 76.135 muertes por COVID-19. El número de recuperados llega a 3.219.474, mientras que los casos activos pasaron a ser 367.606.</Card.Text>
+                                <Button variant="outline-danger" className="customButton">Ver más...</Button>
+                            </div>
+                        </div>
+                    </Card>
+                    <Card className="customCard-sub text-light bg-dark my-sm-5 my-lg-0 mt-lg-4 shadow">
+                        <Card.Img src={economia} alt="No se encontró imagen"></Card.Img>
+                        <div className="card-img-overlay d-flex align-items-end">
+                            <div className="cardBackground cardBackground px-3 py-2">
+                                <Card.Title>Cepo a las exportaciones de carne</Card.Title>
+                                <Card.Text className="card-text">La Mesa de Enlace endurece su reclamo y extiende el paro hasta el miércoles próximoLos dirigentes que representan a los productores no consiguieron hasta el momento que el Gobierno deje sin efecto las restricciones para exportar.</Card.Text>
+                                <Button variant="outline-danger" className="customButton">Ver más...</Button>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+            </section>
       <hr />
-      <div className="my-3">
+      <NavLink className="my-3" to="*">
         <Card.Img src={adBanner1}></Card.Img>
-      </div>
+      </NavLink>
       <section className="mt-5">
         <div>
           {/*Banner con información sobre el avance del Covid*/}
@@ -208,7 +186,7 @@ const Inicio = (props) => {
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
-                if(cat.idCategoriaNoticia =="2"){
+                if(cat.idCategoriaNoticia ==="2"){
                   return cat
                 }
               })
@@ -222,12 +200,12 @@ const Inicio = (props) => {
             </CardDeck>
           </Card>
           <Card className="shadow my-3 containerAnimation">
-            <h4 className="font-weight-bold ml-3 mt-2">
+            <h4 className="font-weight-bold ml-4 mt-2">
               <i>Salud</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
-                if(cat.idCategoriaNoticia =="6"){
+                if(cat.idCategoriaNoticia ==="6"){
                   return cat
                 }
               })
@@ -241,12 +219,12 @@ const Inicio = (props) => {
             </CardDeck>
           </Card>
           <Card className="shadow containerAnimation">
-            <h4 className="font-weight-bold ml-3 mt-2">
+            <h4 className="font-weight-bold ml-4 mt-2">
               <i>Economía</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
-                if(cat.idCategoriaNoticia =="5"){
+                if(cat.idCategoriaNoticia ==="5"){
                   return cat
                 }
               })
@@ -260,12 +238,12 @@ const Inicio = (props) => {
             </CardDeck>
           </Card>
           <Card className="shadow containerAnimation mt-3">
-            <h4 className="font-weight-bold ml-3 mt-2">
+            <h4 className="font-weight-bold ml-4 mt-2">
               <i>Política</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
-                if(cat.idCategoriaNoticia =="7"){
+                if(cat.idCategoriaNoticia ==="7"){
                   return cat
                 }
               })
@@ -278,16 +256,18 @@ const Inicio = (props) => {
               ))}
             </CardDeck>
           </Card>
-          <div className="my-3">
-            <Card.Img src={adBanner2}></Card.Img>
-          </div>
+          <NavLink to="*">
+            <div className="my-3" >
+              <Card.Img src={adBanner2}></Card.Img>
+            </div>
+          </NavLink>
           <Card className="shadow containerAnimation">
             <h4 className="font-weight-bold ml-3 mt-2">
               <i>Deportes</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
-                if(cat.idCategoriaNoticia =="1"){
+                if(cat.idCategoriaNoticia ==="1"){
                   return cat
                 }
               })
@@ -301,9 +281,9 @@ const Inicio = (props) => {
             </CardDeck>
           </Card>
         </div>
-        <div className="col-lg-3 non-display">
+        <NavLink className="col-lg-3 non-display" to="*">
           <img className="w-100" src={adBanner4}></img>
-        </div>
+        </NavLink>
       </section>
     </Container>
   );

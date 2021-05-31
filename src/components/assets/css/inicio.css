@@ -20,8 +20,18 @@
     border-radius: 25px;
 }
 
-.btn-grad {
-    background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB 51%, #1F1C2C 100%)
+.customCard-main {
+    height: 29.8rem;
+}
+
+.customCard-sub {
+    height: 13.7rem;
+}
+
+.cardBackground {
+    background-color: #343a40cc;
+    box-shadow: rgba(0, 0, 0, 0.411);
+    border-radius: 0.8rem;
 }
 
 .advice {
@@ -48,12 +58,40 @@
     background-color: #fcdede;
 }
 
+.imagen {
+    opacity: 0.7;
+}
+
 
 /* recordar que las Media Queries deben quedar al final de la hoja */
+
+@media (max-width: 1200px) {
+    .customCard-main {
+        height: 24.9rem;
+    }
+    .customCard-sub {
+        height: 11.4rem;
+    }
+}
 
 @media (max-width: 992px) {
     .non-display {
         display: none;
+    }
+    .customCard-sub {
+        height: 21.3rem;
+    }
+    .customCard-main {
+        height: 32.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .customCard-sub {
+        height: 15.7rem;
+    }
+    .customCard-main {
+        height: 23.9rem;
     }
 }
 
@@ -67,7 +105,4 @@
     .scale-texts {
         font-size: 65%;
     }
-}
-.imagen{
-    opacity: 0.7;
 }
