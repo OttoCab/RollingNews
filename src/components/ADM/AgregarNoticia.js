@@ -8,7 +8,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
-  const [idCategoriaNoticia, setidCategoriaNoticia] = useState(0);
+  const [idCategoriaNoticia, setidCategoriaNoticia] = useState("");
   const [tituloNoticia, setTituloNoticia] = useState("");
   const [autorNoticia, setAutorNoticia] = useState("");
   const [fechaNoticia, setFechaNoticia] = useState("");
@@ -50,7 +50,7 @@ const AgregarNoticia = (props) => {
         console.log("las categorias :", props.Categorias);
         const resultadoCat = props.Categorias.find((categoria)=>{
         
-         return categoria.id == idCategoriaNoticia;
+         return categoria._id == idCategoriaNoticia;
         });
         const nombreC = resultadoCat.nombreCategoria;
         setCategoriaNoticia(nombreC);
@@ -101,7 +101,7 @@ const AgregarNoticia = (props) => {
             >
               <option>Seleccionar. . .</option>
             {props.Categorias.map((opcion, indice) => (
-              <option value={opcion.id} key={indice}>{opcion.nombreCategoria}</option>
+              <option value={opcion._id} key={indice}>{opcion.nombreCategoria}</option>
               ))}
           </Form.Control>
         </Form.Group>

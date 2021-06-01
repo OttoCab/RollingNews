@@ -37,7 +37,7 @@ const ItemNoticia = (props) => {
               "La noticia fue correctamente eliminada",
               "success"
             );
-            //se actualiza los datos de la api para mostrar
+            //se actualiza los noticias de la api para mostrar
             props.consultarAPI();
           }
         } catch (error) {
@@ -83,25 +83,25 @@ const ItemNoticia = (props) => {
               <Card.Body>
                 <Card.Title>
                   <span className="font-weight-bold fuente">
-                    {props.dato.tituloNoticia}
+                    {props.noticia.tituloNoticia}
                   </span>
                 </Card.Title>
-                <Card.Text>{props.dato.categoriaNoticia}</Card.Text>
+                <Card.Text>{props.noticia.categoriaNoticia}</Card.Text>
 
-                <Card.Text>{ReactHtmlParser(props.dato.contenidoNoticia)}</Card.Text>
+                <Card.Text>{ReactHtmlParser(props.noticia.contenidoNoticia)}</Card.Text>
               </Card.Body>
             </div>
             <section className="d-flex flex-column">
               <Link
                 className="btn btn-info text-light"
-                to={"/Noticia/editar/" + props.dato.id}
+                to={"/Noticia/editar/" + props.noticia._id}
               >
                 <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
               </Link>
               <Button
                 variant="danger"
                 className="my-2"
-                onClick={() => eliminarNoticia(props.dato.id)}
+                onClick={() => eliminarNoticia(props.noticia._id)}
               >
                 <FontAwesomeIcon
                   icon={faTrashAlt}
@@ -110,14 +110,14 @@ const ItemNoticia = (props) => {
               <Button variant="success" className="my-2">
                 <FontAwesomeIcon
                   icon={faHighlighter}
-                  onClick={() => destacarNoticia(props.dato.id)}
+                  onClick={() => destacarNoticia(props.noticia.id)}
                 ></FontAwesomeIcon>
               </Button>
             </section>
           </div>
           <Card.Footer>
             <small className="text-muted">
-              {props.dato.autorNoticia} {props.dato.fechaNoticia}
+              {props.noticia.autorNoticia} {props.noticia.fechaNoticia}
             </small>
           </Card.Footer>
         </Card>

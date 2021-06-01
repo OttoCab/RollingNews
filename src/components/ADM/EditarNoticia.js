@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { useParams, withRouter } from "react-router-dom";
-import { campoRequerido } from "../common/helpers";
+import { campoRequerido } from "../common/helpers.js";
 
 //withRouter redirecciona
 const EditarNoticia = (props) => {
-  const codNoticia = useParams().idNoticia;
-  console.log(useParams().idNoticia);
+  const codNoticia = useParams().id;
+  console.log(codNoticia);
   // const [categoriaNoticia, setCategoriaNoticia] = useState("");
   const [error, setError] = useState(false);
   const [noticia, setNoticia] = useState({});
