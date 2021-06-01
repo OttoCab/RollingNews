@@ -16,6 +16,7 @@ import Login from './components/ADM/Login.js';
 import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
+import Detalles from "./components/Detalles";
 
 
 function App() {
@@ -57,6 +58,10 @@ function App() {
             noticias={noticias}
             consultarAPI={consultarAPI}
           ></ListaNoticia>
+        </Route>
+        <Route exact path='/Detalles'>
+        {/*Ruta remporal, es solo para poder visualizarla y maquetarla*/}
+          <Detalles></Detalles>
         </Route>
         <Route exact path="/Noticia/nuevo">
           <AgregarNoticia
