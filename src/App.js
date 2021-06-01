@@ -88,9 +88,6 @@ function App() {
         <Route exact path="/contact">
           <Contacto></Contacto>
         </Route>
-        <Route exact path="/adn">
-          <ADN></ADN>
-        </Route>
         <Route exact path='/Login'>
           <Login></Login>
         </Route>
