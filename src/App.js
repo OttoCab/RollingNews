@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavegacionAdmin from "./components/ADM/NavegacionAdmin";
 import Footer from "./components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListaNoticia from "./components/ADM/ListaNoticia";
@@ -16,6 +15,7 @@ import Inicio from './components/Inicio.js';
 import Login from './components/ADM/Login.js';
 import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
+import Navegacion from "./components/common/Navegacion";
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <Router>
-      <NavegacionAdmin></NavegacionAdmin>
+      <Navegacion></Navegacion>
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
@@ -59,7 +59,10 @@ function App() {
           ></ListaNoticia>
         </Route>
         <Route exact path="/Noticia/nuevo">
-          <AgregarNoticia consultarAPI={consultarAPI} Categorias={Categorias}></AgregarNoticia>
+          <AgregarNoticia
+            consultarAPI={consultarAPI}
+            Categorias={Categorias}
+          ></AgregarNoticia>
         </Route>
         <Route exact path="/Noticia/editar/:idNoticia">
           <EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>
@@ -71,10 +74,16 @@ function App() {
           <ListaCategorias Categorias={Categorias}></ListaCategorias>
         </Route>
         <Route exact path="/Categorias/detalleCategoria/:idCategoriaNoticia">
-          <DetalleCategoria noticias={noticias} Categorias={Categorias}></DetalleCategoria>
+          <DetalleCategoria
+            noticias={noticias}
+            Categorias={Categorias}
+          ></DetalleCategoria>
         </Route>
-        <Route exact path='/Login'>
-          <Login></Login>
+        <Route exact path="/contact">
+          <Contacto></Contacto>
+        </Route>
+        <Route exact path="/adn">
+          <ADN></ADN>
         </Route>
         <Route exact path='/Login'>
           <Login></Login>

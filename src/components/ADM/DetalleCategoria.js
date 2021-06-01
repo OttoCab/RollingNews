@@ -7,7 +7,6 @@ const DetalleCategoria = (props) => {
   const {idCategoriaNoticia} = useParams();
   const categoriaNFiltradas = props.noticias.filter((nota)=> nota.idCategoriaNoticia === idCategoriaNoticia);
   
-
   return (
     <Container>
       <section className="row">

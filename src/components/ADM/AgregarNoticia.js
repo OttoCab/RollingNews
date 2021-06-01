@@ -8,7 +8,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
-  const [idCategoriaNoticia, setidCategoriaNoticia] = useState(0);
+  const [idCategoriaNoticia, setidCategoriaNoticia] = useState();
   const [tituloNoticia, setTituloNoticia] = useState("");
   const [autorNoticia, setAutorNoticia] = useState("");
   const [fechaNoticia, setFechaNoticia] = useState("");
