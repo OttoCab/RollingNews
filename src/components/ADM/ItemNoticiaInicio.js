@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import DefectoMini from "../assets/img/defecto281x160.jpg";
 import imagenNoticias from '../assets/img/imagenNoticias.jpg'
 
 const ItemNoticiaInicio = (props) => {

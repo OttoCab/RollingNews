@@ -48,7 +48,7 @@ function App() {
 
   return (
     <Router>
-      <Navegacion></Navegacion>
+      <Navegacion Categorias={Categorias}></Navegacion>
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
