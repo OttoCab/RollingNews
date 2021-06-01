@@ -1,8 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../img/logo.svg";
-
 
 const Navegacion = (props) => {
   return (
@@ -41,16 +40,16 @@ const Navegacion = (props) => {
           </NavDropdown>
           <NavDropdown title="Categorias">
             {props.Categorias.map((option, indice) => (
-                <NavDropdown.Item key={indice}>
-                  {option.nombreCategoria}
-                </NavDropdown.Item>
+              <NavDropdown.Item key={indice}>
+                {option.nombreCategoria}
+              </NavDropdown.Item>
             ))}
           </NavDropdown>
           {/* <NavLink className="nav-link" exact={true} to='/Noticia/nuevo'>Agregar Noticias</NavLink>
           <NavLink className="nav-link" exact={true} to='/Noticias'>Lista Noticias</NavLink>
           <NavLink className="nav-link" exact={true} to='/Categorias/nuevaCategoria'>Agregar Categorias</NavLink>
           <NavLink className="nav-link" exact={true} to='/Categorias'>Lista Categorias</NavLink> */}
-          <NavLink className="nav-link" exact={true} to="/contact">
+          <NavLink className="nav-link" exact={true} to="/contacto">
             Contacto
           </NavLink>
           <NavLink className="nav-link" exact={true} to="/adn">
@@ -58,8 +57,12 @@ const Navegacion = (props) => {
           </NavLink>
         </Nav>
         <Nav>
-          <Nav.Link href="/">Registrar</Nav.Link>
-          <Nav.Link href="#deets">SUSCRIBIRSE</Nav.Link>
+          <NavLink className="nav-link" exact={true} to="/registrarse">
+            Registrarse
+          </NavLink>
+          <NavLink className="nav-link" exact={true} to="/suscripcion">
+            SUSCRIBIRSE
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

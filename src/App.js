@@ -17,6 +17,7 @@ import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
 import Detalles from "./components/Detalles";
+import Suscripcion from './components/Suscripcion';
 
 
 function App() {
@@ -85,7 +86,7 @@ function App() {
             Categorias={Categorias}
           ></DetalleCategoria>
         </Route>
-        <Route exact path="/contact">
+        <Route exact path="/contacto">
           <Contacto></Contacto>
         </Route>
         <Route exact path='/Login'>
@@ -94,8 +95,8 @@ function App() {
         <Route exact path='/ADN'>
           <ADN></ADN>
         </Route>
-        <Route exact path='/Contacto'>
-          <Contacto></Contacto>
+        <Route exact path='/suscripcion'>
+          <Suscripcion></Suscripcion>
         </Route>
         <Route path='*'>
           <Error404></Error404>
