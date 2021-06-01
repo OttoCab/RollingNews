@@ -20,7 +20,6 @@ const AgregarNoticia = (props) => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (
       // categoriaNoticia.trim() === "" ||
       tituloNoticia.trim() === "" ||
@@ -50,7 +49,7 @@ const AgregarNoticia = (props) => {
         console.log("las categorias :", props.Categorias);
         const resultadoCat = props.Categorias.find((categoria)=>{
         
-         return categoria._id == idCategoriaNoticia;
+         return categoria.id == idCategoriaNoticia;
         });
         const nombreC = resultadoCat.nombreCategoria;
         setCategoriaNoticia(nombreC);
@@ -97,15 +96,13 @@ const AgregarNoticia = (props) => {
             as="select"
             placeholder="seleccione..."
             custom
-            onChange={(e) => setidCategoriaNoticia(e.target.value)}
-            >
+            onChange={(e) => setidCategoriaNoticia(e.target.value)}>
               <option>Seleccionar. . .</option>
-            {props.Categorias.map((opcion, indice) => (
-              <option value={opcion._id} key={indice}>{opcion.nombreCategoria}</option>
+            {props.Categorias.map((categoria, indice) => (
+              <option value={categoria.id} key={indice}>{categoria.nombreCategoria}</option>
               ))}
           </Form.Control>
         </Form.Group>
-
         <Form.Group className="fuente">
           <Form.Label> Titulo</Form.Label>
           <Form.Control

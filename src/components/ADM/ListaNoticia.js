@@ -25,10 +25,10 @@ const ListaNoticia = (props) => {
             }else if(palabra.contenidoNoticia.toLowerCase().includes(buscar.toLowerCase())){
               return palabra
             }
-          }).map((noticia) => (
+          }).map((nota, indice) => (
             <ItemNoticia
-              key={noticia._id}
-              noticia={noticia}
+              key={indice}
+              dato={nota}
               consultarAPI={props.consultarAPI}
             ></ItemNoticia>
           ))}
