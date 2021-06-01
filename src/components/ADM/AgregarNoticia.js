@@ -5,7 +5,6 @@ import '../assets/css/admin.css';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
   const [idCategoriaNoticia, setidCategoriaNoticia] = useState(0);
