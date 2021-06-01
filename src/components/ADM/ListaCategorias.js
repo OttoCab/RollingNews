@@ -8,10 +8,10 @@ const ListaCategorias = (props) => {
         <h1 className="text-center my-4 fuente">Lista de Categorias</h1>
       <ListGroup className="my-5 fuente">
       {props.Categorias
-          .map((nombreCat, indice) => (
+          .map((categoria) => (
             <ItemCategoria
-              key={indice}
-              dato={nombreCat}
+              key={categoria._id}
+              categoria={categoria}
             ></ItemCategoria>
           ))}
       </ListGroup>
