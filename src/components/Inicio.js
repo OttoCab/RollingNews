@@ -22,7 +22,7 @@ const Inicio = (props) => {
 
   return (
     <Container className="my-5 base-container">
-      <h1>Ultima hora...</h1>
+      <h1 className="titles">Ultima hora...</h1>
             <section className="row texts-small scale-texts mb-5">
                 <div className="col-lg-7 col-sm-12">
                     <Card className="customCard-main bg-dark text-light shadow">
@@ -115,7 +115,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
           <Card className="shadow d-flex bg-dark-gray">
             <Card.Body className="row align-items-center">
               <div className="col-3 text-center">
-                <img src={covidimg}></img>
+                <img src={covidimg} className="covidIcon"></img>
               </div>
               <div className="col-8">
                 <h2 className="font-weight-bolder mb-4">¡Cuidate!</h2>
@@ -181,8 +181,8 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
       <section className="row">
         <div className="col-lg-9 col-sm-12 texts-small">
           <Card className="shadow containerAnimation col-sm-12 my-3">
-            <h4 className="font-weight-bold ml-3 mt-2">
-              <i>Actualidad</i>
+            <h4 className="font-weight-bold mt-2">
+              <i className="titles">Actualidad</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
@@ -200,8 +200,8 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
             </CardDeck>
           </Card>
           <Card className="shadow my-3 containerAnimation">
-            <h4 className="font-weight-bold ml-4 mt-2">
-              <i>Salud</i>
+            <h4 className="font-weight-bold ml-2 mt-2">
+              <i className="titles">Salud</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
@@ -219,31 +219,12 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
             </CardDeck>
           </Card>
           <Card className="shadow containerAnimation">
-            <h4 className="font-weight-bold ml-4 mt-2">
-              <i>Economía</i>
+            <h4 className="font-weight-bold ml-2 mt-2">
+              <i className="titles">Economía</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
                 if(cat.idCategoriaNoticia ==="5"){
-                  return cat
-                }
-              })
-              .map((detalleCat, indice) => (
-                <ItemNoticiaInicio
-                  key={indice}
-                  dato={detalleCat}
-                  Categorias={props.Categorias}
-                ></ItemNoticiaInicio>
-              ))}
-            </CardDeck>
-          </Card>
-          <Card className="shadow containerAnimation mt-3">
-            <h4 className="font-weight-bold ml-4 mt-2">
-              <i>Política</i>
-            </h4>
-            <CardDeck className="container my-3 row">
-              {props.noticias.filter((cat)=>{
-                if(cat.idCategoriaNoticia ==="7"){
                   return cat
                 }
               })
@@ -261,9 +242,28 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
               <Card.Img src={adBanner2}></Card.Img>
             </div>
           </NavLink>
-          <Card className="shadow containerAnimation">
-            <h4 className="font-weight-bold ml-3 mt-2">
-              <i>Deportes</i>
+          <Card className="shadow containerAnimation mt-3">
+            <h4 className="font-weight-bold ml-2 mt-2">
+              <i className="titles">Política</i>
+            </h4>
+            <CardDeck className="container my-3 row">
+              {props.noticias.filter((cat)=>{
+                if(cat.idCategoriaNoticia ==="7"){
+                  return cat
+                }
+              })
+              .map((detalleCat, indice) => (
+                <ItemNoticiaInicio
+                  key={indice}
+                  dato={detalleCat}
+                  Categorias={props.Categorias}
+                ></ItemNoticiaInicio>
+              ))}
+            </CardDeck>
+          </Card>
+          <Card className="shadow containerAnimation mt-3">
+            <h4 className="font-weight-bold ml-2 mt-2">
+              <i className="titles">Deportes</i>
             </h4>
             <CardDeck className="container my-3 row">
               {props.noticias.filter((cat)=>{
@@ -280,6 +280,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
               ))}
             </CardDeck>
           </Card>
+          <Button className="mt-4" variant="outline-danger btn-grad" block><h5>Ver todas las categorías</h5></Button>
         </div>
         <NavLink className="col-lg-3 non-display" to="*">
           <img className="w-100" src={adBanner4}></img>

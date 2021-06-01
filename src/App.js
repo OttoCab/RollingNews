@@ -13,6 +13,7 @@ import React from "react";
 import Error404 from './components/Error404'
 import DetalleCategoria from './components/ADM/DetalleCategoria'
 import Inicio from './components/Inicio.js';
+import Detalles from "./components/Detalles";
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
@@ -53,6 +54,10 @@ function App() {
             noticias={noticias}
             consultarAPI={consultarAPI}
           ></ListaNoticia>
+        </Route>
+        <Route exact path='/Detalles'>
+        {/*Ruta remporal, es solo para poder visualizarla y maquetarla*/}
+          <Detalles></Detalles>
         </Route>
         <Route exact path="/Noticia/nuevo">
           <AgregarNoticia consultarAPI={consultarAPI} Categorias={Categorias}></AgregarNoticia>
