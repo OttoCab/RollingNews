@@ -20,7 +20,6 @@ const AgregarNoticia = (props) => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (
       // categoriaNoticia.trim() === "" ||
       tituloNoticia.trim() === "" ||
@@ -97,15 +96,13 @@ const AgregarNoticia = (props) => {
             as="select"
             placeholder="seleccione..."
             custom
-            onChange={(e) => setidCategoriaNoticia(e.target.value)}
-            >
+            onChange={(e) => setidCategoriaNoticia(e.target.value)}>
               <option>Seleccionar. . .</option>
             {props.Categorias.map((opcion, indice) => (
               <option value={opcion.id} key={indice}>{opcion.nombreCategoria}</option>
               ))}
           </Form.Control>
         </Form.Group>
-
         <Form.Group className="fuente">
           <Form.Label> Titulo</Form.Label>
           <Form.Control
@@ -147,8 +144,8 @@ const AgregarNoticia = (props) => {
           <CKEditor 
           editor={ClassicEditor}
           onChange={(e, editor) => setContenidoNoticia(editor.getData())}
+          required
           >
-            required
           </CKEditor>
         </Form.Group>
         <Button variant="primary" type="submit" className="my-4 fuente">

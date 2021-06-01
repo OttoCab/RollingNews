@@ -62,6 +62,7 @@ function App() {
           <AgregarNoticia
             consultarAPI={consultarAPI}
             Categorias={Categorias}
+            noticias={noticias}
           ></AgregarNoticia>
         </Route>
         <Route exact path="/Noticia/editar/:idNoticia">

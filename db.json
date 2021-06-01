@@ -171,6 +171,16 @@
       "fechaNoticia": "2021-05-31",
       "contenidoNoticia": "<p>Prueba</p>",
       "id": 30
+    },
+    {
+      "categoriaNoticia": "Deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "asdfasdf",
+      "autorNoticia": "asdfsadf",
+      "fechaNoticia": "2021-05-29",
+      "imagenNoticia": "",
+      "contenidoNoticia": "<p>asdfasfasdf</p>",
+      "id": 31
     }
   ],
   "Categorias": [
