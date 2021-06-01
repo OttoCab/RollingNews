@@ -30,7 +30,7 @@
     {
       "categoriaNoticia": "Espectaculo",
       "idCategoriaNoticia": "3",
-      "tituloNoticia": "Cines",
+      "tituloNoticia": "Prueba-1",
       "autorNoticia": "Florencia Norry",
       "fechaNoticia": "23/05/2021",
       "contenidoNoticia": "sdasdasdsadsad",
@@ -115,7 +115,7 @@
       "id": 24
     },
     {
-      "categoriaNoticia": "deporte",
+      "categoriaNoticia": "Deporte",
       "idCategoriaNoticia": "1",
       "tituloNoticia": "Gerónimo Rulli, el héroe de Villarreal en la conquista de la Europa League: convirtió su penal y atajó el de De Gea",
       "autorNoticia": "Florencia Norry",
@@ -125,7 +125,7 @@
       "id": 25
     },
     {
-      "categoriaNoticia": "deporte",
+      "categoriaNoticia": "Deporte",
       "idCategoriaNoticia": "1",
       "tituloNoticia": "River: murió el chofer del ómnibus que trasladaba a los jugadores a los partidos",
       "autorNoticia": "Florencia Norry",
@@ -163,15 +163,33 @@
       "imagenNoticia": "fsdf",
       "contenidoNoticia": "<p>pruenba 2 <strong>ffgergerg</strong><i>ergergrg</i></p>",
       "id": 29
+    },
+    {
+      "categoriaNoticia": "Video Juegos",
+      "tituloNoticia": "Se lanza Uncharted 4 para PC",
+      "autorNoticia": "Otto Cabanillas",
+      "fechaNoticia": "2021-05-31",
+      "contenidoNoticia": "<p>Prueba</p>",
+      "id": 30
+    },
+    {
+      "categoriaNoticia": "Deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "asdfasdf",
+      "autorNoticia": "asdfsadf",
+      "fechaNoticia": "2021-05-29",
+      "imagenNoticia": "",
+      "contenidoNoticia": "<p>asdfasfasdf</p>",
+      "id": 31
     }
   ],
   "Categorias": [
     {
-      "nombreCategoria": "deporte",
+      "nombreCategoria": "Deporte",
       "id": 1
     },
     {
-      "nombreCategoria": "actualidad",
+      "nombreCategoria": "Actualidad",
       "id": 2
     },
     {
@@ -193,6 +211,14 @@
     {
       "nombreCategoria": "Politica",
       "id": 7
+    },
+    {
+      "nombreCategoria": "Video Juegos",
+      "id": 8
+    },
+    {
+      "nombreCategoria": "Libros",
+      "id": 9
     }
   ]
 }

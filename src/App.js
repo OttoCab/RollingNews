@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavegacionAdmin from "./components/ADM/NavegacionAdmin";
+//import NavegacionAdmin from "./components/ADM/NavegacionAdmin";
 import Footer from "./components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListaNoticia from "./components/ADM/ListaNoticia";
@@ -10,9 +10,12 @@ import ListaCategorias from "./components/ADM/ListaCategorias";
 import EditarNoticia from "./components/ADM/EditarNoticia";
 import { useState, useEffect } from "react";
 import React from "react";
-import Error404 from './components/Error404'
-import DetalleCategoria from './components/ADM/DetalleCategoria'
-import Inicio from './components/Inicio.js';
+import Error404 from "./components/Error404";
+import DetalleCategoria from "./components/ADM/DetalleCategoria";
+import Inicio from "./components/Inicio.js";
+import Contacto from "./components/Contacto";
+import ADN from "./components/ADN";
+import Navegacion from "./components/common/Navegacion";
 import Detalles from "./components/Detalles";
 
 function App() {
@@ -44,7 +47,7 @@ function App() {
 
   return (
     <Router>
-      <NavegacionAdmin></NavegacionAdmin>
+      <Navegacion></Navegacion>
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
@@ -60,7 +63,11 @@ function App() {
           <Detalles></Detalles>
         </Route>
         <Route exact path="/Noticia/nuevo">
-          <AgregarNoticia consultarAPI={consultarAPI} Categorias={Categorias}></AgregarNoticia>
+          <AgregarNoticia
+            consultarAPI={consultarAPI}
+            Categorias={Categorias}
+            noticias={noticias}
+          ></AgregarNoticia>
         </Route>
         <Route exact path="/Noticia/editar/:idNoticia">
           <EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>
@@ -72,9 +79,18 @@ function App() {
           <ListaCategorias Categorias={Categorias}></ListaCategorias>
         </Route>
         <Route exact path="/Categorias/detalleCategoria/:idCategoriaNoticia">
-          <DetalleCategoria noticias={noticias} Categorias={Categorias}></DetalleCategoria>
+          <DetalleCategoria
+            noticias={noticias}
+            Categorias={Categorias}
+          ></DetalleCategoria>
         </Route>
-       <Route path='*'>
+        <Route exact path="/contact">
+          <Contacto></Contacto>
+        </Route>
+        <Route exact path="/adn">
+          <ADN></ADN>
+        </Route>
+        <Route path="*">
           <Error404></Error404>
         </Route>
       </Switch>

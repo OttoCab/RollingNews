@@ -14,12 +14,11 @@ import "./assets/css/inicio.css";
 // import { useParams } from "react-router-dom";
 import ItemNoticiaInicio from "./ADM/ItemNoticiaInicio";
 // import ItemNoticia from './ADM/ItemNoticia';
-import actualidad from '../components/assets/img/actualidad.jpg'
-import politica from '../components/assets/img/politica.jpg'
-import economia from '../components/assets/img/economia.jpg'
+import actualidad from "../components/assets/img/actualidad.jpg";
+import politica from "../components/assets/img/politica.jpg";
+import economia from "../components/assets/img/economia.jpg";
 
 const Inicio = (props) => {
-
   return (
     <Container className="my-5 base-container">
       <h1 className="titles">Ultima hora...</h1>
