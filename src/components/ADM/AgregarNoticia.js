@@ -143,13 +143,9 @@ const AgregarNoticia = (props) => {
           <Form.Label className="fuente">Contenido</Form.Label>
           <CKEditor 
           editor={ClassicEditor}
-<<<<<<< HEAD
-          onChange={(e, editor) => setContenidoNoticia(editor.getData())}>
-=======
           onChange={(e, editor) => setContenidoNoticia(editor.getData())}
           required
           >
->>>>>>> 4121a67dae5e06c9674e473bc95099271d574659
           </CKEditor>
         </Form.Group>
         <Button variant="primary" type="submit" className="my-4 fuente">
