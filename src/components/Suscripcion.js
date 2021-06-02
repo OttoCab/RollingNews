@@ -29,17 +29,6 @@ const Suscripcion = () => {
     e.target.reset()
 
 
-
-
-    // emailjs.sendForm("service_5z6qqnp","template_of2fgix",{
-    //   from_name: nombre,
-    //   to_name: "Administrador",
-    //   email: email,
-    //   });
-
-
-
-
     if (
       nombre.trim() === "" ||
       apellido.trim() === "" ||
