@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import Swal from 'sweetalert2';
+import emailjs from 'emailjs-com';
 
 const Suscripcion = () => {
   const [nombre, setNombre] = useState("");
@@ -15,6 +16,30 @@ const Suscripcion = () => {
 
   const handleSubmit = async (e) => { 
     e.preventDefault();
+    console.log("desde enviar email");
+
+    emailjs.sendForm('service_5z6qqnp', 'template_of2fgix', e.target, 'user_SCNjIfPVylGGEcXRytpin')
+
+    .then((result) => {
+       
+    }, (error) => {
+        alert(error.message)
+        
+    });
+    e.target.reset()
+
+
+
+
+    // emailjs.sendForm("service_5z6qqnp","template_of2fgix",{
+    //   from_name: nombre,
+    //   to_name: "Administrador",
+    //   email: email,
+    //   });
+
+
+
+
     if (
       nombre.trim() === "" ||
       apellido.trim() === "" ||
@@ -54,6 +79,7 @@ const Suscripcion = () => {
               placeholder="Juan"
                onChange={(e) => setNombre(e.target.value)}
                required
+               name="nombre"
             />
           </Form.Group>
 
@@ -64,6 +90,7 @@ const Suscripcion = () => {
               placeholder="Perez"
               onChange={(e) => setApellido(e.target.value)}
               required
+              name="apellido"
             />
           </Form.Group>
 
@@ -74,6 +101,7 @@ const Suscripcion = () => {
               placeholder="email@email"
               onChange={(e) => setEmail(e.target.value)}
               required
+              name="email"
             />
           </Form.Group>
 
