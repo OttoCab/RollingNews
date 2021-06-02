@@ -63,7 +63,7 @@ const Detalles = () => {
                             <hr/>
                             <li className="d-flex align-items-center itemAnimation">
                                 <img className="w-25" src={imgPrueba}></img>
-                                <h5 className="ml-3">Y una noticia más por las dudas.</h5>
+                                <h5 className="ml-3">Y una noticia más por aquí.</h5>
                             </li>
                             <li className="mt-4">
                                 <h5>Para ver más artículos también puedes <NavLink className="navigation" to="/Categorias">volver a categorías</NavLink></h5>
