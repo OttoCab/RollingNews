@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NavegacionAdmin from "./components/ADM/NavegacionAdmin";
 import Footer from "./components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListaNoticia from "./components/ADM/ListaNoticia";
@@ -10,9 +9,16 @@ import ListaCategorias from "./components/ADM/ListaCategorias";
 import EditarNoticia from "./components/ADM/EditarNoticia";
 import { useState, useEffect } from "react";
 import React from "react";
-import PgADM from "./components/PgADM";
 import Error404 from './components/Error404'
+import DetalleCategoria from './components/ADM/DetalleCategoria'
 import Inicio from './components/Inicio.js';
+import Login from './components/ADM/Login.js';
+import ADN from './components/ADN.js';
+import Contacto from './components/Contacto.js';
+import Navegacion from "./components/common/Navegacion";
+import Detalles from "./components/Detalles";
+import Suscripcion from './components/Suscripcion';
+
 
 function App() {
   const URL = process.env.REACT_APP_API_URL;
@@ -43,10 +49,10 @@ function App() {
 
   return (
     <Router>
-      <NavegacionAdmin></NavegacionAdmin>
+      <Navegacion Categorias={Categorias}></Navegacion>
       <Switch>
         <Route exact path="/">
-          <Inicio></Inicio>
+          <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
         </Route>
         <Route exact path="/Noticias">
           <ListaNoticia
@@ -54,8 +60,16 @@ function App() {
             consultarAPI={consultarAPI}
           ></ListaNoticia>
         </Route>
+        <Route exact path='/Detalles'>
+        {/*Ruta remporal, es solo para poder visualizarla y maquetarla*/}
+          <Detalles></Detalles>
+        </Route>
         <Route exact path="/Noticia/nuevo">
-          <AgregarNoticia consultarAPI={consultarAPI}></AgregarNoticia>
+          <AgregarNoticia
+            consultarAPI={consultarAPI}
+            Categorias={Categorias}
+            noticias={noticias}
+          ></AgregarNoticia>
         </Route>
         <Route exact path="/Noticia/editar/:idNoticia">
           <EditarNoticia consultarAPI={consultarAPI}></EditarNoticia>
@@ -65,6 +79,24 @@ function App() {
         </Route>
         <Route exact path="/Categorias">
           <ListaCategorias Categorias={Categorias}></ListaCategorias>
+        </Route>
+        <Route exact path="/Categorias/detalleCategoria/:idCategoriaNoticia">
+          <DetalleCategoria
+            noticias={noticias}
+            Categorias={Categorias}
+          ></DetalleCategoria>
+        </Route>
+        <Route exact path="/contacto">
+          <Contacto></Contacto>
+        </Route>
+        <Route exact path='/Login'>
+          <Login></Login>
+        </Route>
+        <Route exact path='/ADN'>
+          <ADN></ADN>
+        </Route>
+        <Route exact path='/suscripcion'>
+          <Suscripcion></Suscripcion>
         </Route>
         <Route path='*'>
           <Error404></Error404>

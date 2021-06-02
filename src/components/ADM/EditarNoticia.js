@@ -6,12 +6,13 @@ import { campoRequerido } from "../common/helpers";
 
 //withRouter redirecciona
 const EditarNoticia = (props) => {
-  console.log(useParams().idNoticia);
   const codNoticia = useParams().idNoticia;
-  const [categoriaNoticia, setCategoriaNoticia] = useState("");
+  console.log(useParams().idNoticia);
+  // const [categoriaNoticia, setCategoriaNoticia] = useState("");
   const [error, setError] = useState(false);
   const [noticia, setNoticia] = useState({});
   const URL = process.env.REACT_APP_API_URL + "/" + codNoticia;
+  // const URLCat =process.env.REACT_APP_API_URL2;
   //variables de referencia
   const categoriaNoticiaRef = useRef("");
   const tituloNoticiaRef = useRef("");
@@ -25,7 +26,9 @@ const EditarNoticia = (props) => {
       if (respuesta.status === 200) {
         const noticiaSolicitada = await respuesta.json();
         setNoticia(noticiaSolicitada);
-      }
+        console.log(noticiaSolicitada.categoriaNoticia);
+        console.log(noticiaSolicitada, "NOTICIA");
+      }  
     } catch (error) {
       console.log(error);
       Swal.fire("Ocurrio un error!", "Intentelo de nuevo mas tarde!", "error");
@@ -34,10 +37,9 @@ const EditarNoticia = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // let CategoriaModificada = (categoria === '')?(noticia.categoriaNoticia):(categoria);
-    // console.log(tituloNoticiaRef.current.value);
     if (
-      campoRequerido(tituloNoticiaRef.current.value) &&
+      campoRequerido(categoriaNoticiaRef.current.value)&&
+      (tituloNoticiaRef.current.value) &&
       (autorNoticiaRef.current.value) &&
       (fechaNoticiaRef.current.value) &&
       (contenidoNoticiaRef.current.value)
@@ -45,6 +47,7 @@ const EditarNoticia = (props) => {
       setError(false);
       try {
         const noticiaModificada = {
+          categoriaNoticia: categoriaNoticiaRef.current.value,
           tituloNoticia: tituloNoticiaRef.current.value,
           autorNoticia: autorNoticiaRef.current.value,
           fechaNoticia: fechaNoticiaRef.current.value,
@@ -62,7 +65,7 @@ const EditarNoticia = (props) => {
             "success"
           )
           props.consultarAPI();
-          props.history.push('/ADM');
+          props.history.push('/Noticias');
         }
       } catch (error) {
         console.log(error);
@@ -78,22 +81,14 @@ const EditarNoticia = (props) => {
         className="my-4 shadow p-3 mb-5 bg-body rounded"
         onSubmit={handleSubmit}
       >
-        <Form.Group controlId="exampleForm.SelectCustom">
-          <Form.Label>Seleccione la Categoria</Form.Label>
+        <Form.Group>
+          <Form.Label>Categoria</Form.Label>
           <Form.Control
-            as="select"
-            custom
-            onChange={(e) => setCategoriaNoticia(e.target.value)}
+            type="text"
+            defaultValue={noticia.categoriaNoticia}
+            ref={categoriaNoticiaRef}
+            readOnly 
           >
-            <option>Seleccionar</option>
-            <option>Actualidad</option>
-            <option>Espectaculo</option>
-            <option>Tecnología</option>
-            <option>Deportes</option>
-            <option>Política</option>
-            <option>Economía</option>
-            <option>Salud</option>
-            <option>Fotografía</option>
           </Form.Control>
         </Form.Group>
 

@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useState}from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrashAlt, faHighlighter } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faEdit,
+  faTrashAlt,
+  faHighlighter,
+} from "@fortawesome/free-solid-svg-icons";
+import ReactHtmlParser from 'react-html-parser';
 
 const ItemNoticia = (props) => {
+  const [destacado, setDestacado] = useState();
   const eliminarNoticia = (idNoticia) => {
     console.log(idNoticia);
     Swal.fire({
@@ -46,30 +51,50 @@ const ItemNoticia = (props) => {
       }
     });
   };
+
+  const destacarNoticia = (idN) => {
+    console.log(idN);
+    setDestacado(idN);
+    console.log(destacado);
+    Swal.fire({
+      title: "¿Va a destacar esta Noticia?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si!",
+      cancelButtonText: "No!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        console.log(destacado);
+      } else {
+        // faHighlighter.innerHTML = '';
+        // faHighlighter.variant="success";
+      }
+    });
+  };
+
   return (
     <div className="col-sm-12 my-3">
       <CardGroup>
         <Card>
           <div className="d-flex align-items-center justify-content-between mx-3">
             <div>
-              <Card.Img variant="top" src="holder.js/100px160" />
-            </div>
-            <div>
               <Card.Body>
                 <Card.Title>
-                  <span className="font-weight-bold">
+                  <span className="font-weight-bold fuente">
                     {props.dato.tituloNoticia}
                   </span>
                 </Card.Title>
                 <Card.Text>{props.dato.categoriaNoticia}</Card.Text>
 
-                <Card.Text>{props.dato.contenidoNoticia}</Card.Text>
+                <Card.Text>{ReactHtmlParser(props.dato.contenidoNoticia)}</Card.Text>
               </Card.Body>
             </div>
             <section className="d-flex flex-column">
               <Link
                 className="btn btn-info text-light"
-                to={"/ADM/editar/" + props.dato.id}
+                to={"/Noticia/editar/" + props.dato.id}
               >
                 <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
               </Link>
@@ -78,10 +103,15 @@ const ItemNoticia = (props) => {
                 className="my-2"
                 onClick={() => eliminarNoticia(props.dato.id)}
               >
-                <FontAwesomeIcon icon={faTrashAlt }></FontAwesomeIcon>    
+                <FontAwesomeIcon
+                  icon={faTrashAlt}
+                ></FontAwesomeIcon>
               </Button>
               <Button variant="success" className="my-2">
-              <FontAwesomeIcon icon={faHighlighter }></FontAwesomeIcon> 
+                <FontAwesomeIcon
+                  icon={faHighlighter}
+                  onClick={() => destacarNoticia(props.dato.id)}
+                ></FontAwesomeIcon>
               </Button>
             </section>
           </div>

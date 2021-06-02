@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
-import './Cotizador.css';
-
 
 const URL_MONEDAS = process.env.REACT_APP_API_MONEDAS;
 

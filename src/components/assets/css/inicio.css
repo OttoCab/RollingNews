@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+.titles {
+    font-family: 'Merriweather', serif;
+}
+
 .texts-small {
     font-size: 80%;
 }
 
 .texts-large {
-    font-size: 135%;
+    font-size: 130%;
 }
 
 .covidBox {
     line-height: 20px;
+}
+
+.covidIcon {
+    transition: 500ms;
+}
+
+.covidIcon:hover {
+    scale: 1.1;
+    rotate: 360deg;
 }
 
 .bolder-numbers {
@@ -15,8 +29,109 @@
     font-weight: bolder;
 }
 
+.customButton {
+    border: none;
+    border-radius: 25px;
+}
+
+.customCard-main {
+    height: 29.8rem;
+}
+
+.customCard-sub {
+    height: 13.7rem;
+}
+
+.cardBackground {
+    background-color: #343a40cc;
+    box-shadow: rgba(0, 0, 0, 0.411);
+    border-radius: 0.8rem;
+}
+
+.advice {
+    font-size: 125%;
+}
+
+.hidingCard {
+    border: none;
+}
+
+.cardAnimation {
+    transition: 200ms;
+}
+
+.cardAnimation:hover {
+    scale: 1.1;
+}
+
+.containerAnimation {
+    transition: 1000ms;
+}
+
+.containerAnimation:hover {
+    background-color: #fcdede;
+}
+
+.imagen {
+    opacity: 0.7;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.containerCotizador{
+    background-color: salmon;
+}
 
 /* recordar que las Media Queries deben quedar al final de la hoja */
+
+@media (max-width: 1200px) {
+    .customCard-main {
+        height: 24.9rem;
+    }
+    .customCard-sub {
+        height: 11.4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .non-display {
+        display: none;
+    }
+    .customCard-sub {
+        height: 21.3rem;
+    }
+    .customCard-main {
+        height: 32.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .customCard-sub {
+        height: 15.7rem;
+    }
+    .customCard-main {
+        height: 23.9rem;
+    }
+}
 
 @media (max-width: 490px) {
     .scale-texts {

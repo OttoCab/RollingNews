@@ -1,7 +1,7 @@
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import './Clima.css';
+import "../assets/css/clima.css";
 
 const URL_WEATHER = process.env.REACT_APP_API_WEATHER;
 

@@ -1,65 +1,213 @@
 {
   "News": [
     {
-      "tituloNoticia": "Voley Femenino",
-      "autorNoticia": "Florencia Norry ",
-      "fechaNoticia": "11/05/2021",
-      "contenidoNoticia": "Fundarte el gana la final a Monteros",
-      "id": 1
-    },
-    {
-      "categoriaNoticia": "Tecnología",
-      "tituloNoticia": "Procesadores",
-      "autorNoticia": "florencia norry",
-      "fechaNoticia": "11/05/21",
-      "contenidoNoticia": "procesadores caros",
-      "id": 2
-    },
-    {
-      "categoriaNoticia": "Salud",
-      "tituloNoticia": "Covid",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "11/05/2021",
-      "contenidoNoticia": "segunda etapa covid",
-      "id": 3
-    },
-    {
-      "categoriaNoticia": "Fotografía",
-      "tituloNoticia": "Fin de semana ",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "11/05/2021",
-      "contenidoNoticia": "salidas para el fin de semana",
+      "categoriaNoticia": "Espectaculo",
+      "tituloNoticia": "Cines",
+      "autorNoticia": "Florencia Norrycccc",
+      "fechaNoticia": "20/05/2021",
+      "contenidoNoticia": "stamos muy contentos de poder verte nuevamente frente a la gran pantalla!\nPara que podamos cuidarnos entre todos, te pedimos que nos ayudes a respetar las siguientes normas de cuidado e higiene:\n\n* RESPETÁ TU BUTACA\n\n* SENTATE JUNTO A TUS CONTACTOS DIRECTOS\n\n* USÁ TU TAPABOCAS EN TODO MOMENTO. SÓLO PODÉS QUITÁRTELO CUANDO ESTÉS CONSUMIENDO ALIMENTOS O BEBIDAS\n\n* CUANDO TERMINE LA FUNCIÓN, LLEVATE TUS RESIDUOS Y ARROJALOS EN LOS CESTOS DEL HALL\n\n* MANTENÉ EL DISTANCIAMIENTO SOCIAL SIEMPRE.\n\n* HIGIENIZÁ TUS MANOS DE FORMA FRECUENTE CON AGUA Y JABON O ALCOHOL EN GEL\n\n* COMPRÁ TUS ENTRADAS ONLINE Y HACÉ MENOS FILAS EN EL CINE.\n\nGracias!",
       "id": 4
     },
     {
-      "categoriaNoticia": "Deportes",
-      "tituloNoticia": "Voley",
-      "autorNoticia": "Florencia Norry",
-      "fechaNoticia": "11/05/21",
-      "contenidoNoticia": "Fue una sorpresa recibir el Palermo de Plata en mi deporte, considerando que todo el equipo y en forma individual respondía a las diferentes expectativas.\nContanos un poco del equipo femenino de vóley y de la actividad.\nEs un equipo que se formo hace años, siempre tratando de que se incorpore gente nueva y jovén. Al compartir el entrenamiento con los chicos, la verdad, se forma realmente un grupo muy lindo y muy humano.",
+      "categoriaNoticia": "Espectaculo",
+      "idCategoriaNoticia": "3",
+      "tituloNoticia": "Estrenos",
+      "autorNoticia": "Carlos Mocsary",
+      "fechaNoticia": "20/05/2021",
+      "contenidoNoticia": "Algunos de los mayores éxitos de la historia del cine han venido del género de terror, ya que no suelen ser necesarios grandes presupuestos para sacar adelante películas que conquisten al público. Vienen rápidamente a la memoria títulos como 'La noche de Halloween', 'El proyecto de la bruja de Blair',  'Paranormal Activity' o 'Saw', que es la que ahora nos interesa.\n\n'Saw' logró superar los 100 millones de dólares de recaudación mundial cuando su presupuesto apenas superaba el millón. Lógico que durante un buen tiempo se estrenase una secuela cada año. La saga pareció morir en 2010, pero siete años más tarde hubo un primer intento de relanzarla que no tuvo continuidad. Veremos qué sucede en el caso de 'Spiral: Saw', una fallida cinta impulsada por Chris Rock que llega este viernes 21 de mayo a los cines españoles.",
       "id": 5
+    },
+    {
+      "categoriaNoticia": "Covid-19",
+      "idCategoriaNoticia": "4",
+      "tituloNoticia": "Covid -19 fase 1",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "23/05/2021",
+      "contenidoNoticia": "La COVID-19 afecta de distintas maneras en función de cada persona. La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada, y se recuperan sin necesidad de hospitalización.",
+      "id": 8
+    },
+    {
+      "categoriaNoticia": "Espectaculo",
+      "idCategoriaNoticia": "3",
+      "tituloNoticia": "Prueba-1",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "23/05/2021",
+      "contenidoNoticia": "sdasdasdsadsad",
+      "id": 11
+    },
+    {
+      "categoriaNoticia": "actualidad",
+      "idCategoriaNoticia": "2",
+      "tituloNoticia": "Actualidad",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "25/05/21",
+      "imagenNoticia": "",
+      "contenidoNoticia": "actualidad",
+      "id": 15
+    },
+    {
+      "categoriaNoticia": "Salud",
+      "idCategoriaNoticia": "6",
+      "tituloNoticia": "Covid 19",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "La COVID-19 afecta de distintas maneras en función de cada persona. La mayoría de las personas que se contagian presentan síntomas de intensidad leve o moderada, y se recuperan sin necesidad de hospitalización.",
+      "id": 18
+    },
+    {
+      "categoriaNoticia": "Salud",
+      "idCategoriaNoticia": "6",
+      "tituloNoticia": "Cuidados de Invierno",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "Para prevenir enfermedades respiratorias tales como la gripe, la bronquiolitis, la bronquitis y la neumonía, entre otras es importante que vos y los miembros de tu familia tengan las vacunas incluidas en el Calendario Nacional de Vacunación al día:\n\nGripe: dosis anual para el personal de salud, adultos mayores de 65 años, mujeres embarazadas, puérperas hasta 10 días posteriores del egreso de la maternidad (si no se vacunaron durante el embarazo) y personas con factores de riesgo.\n\nDos dosis para todos los niños y niñas entre 6 y 24 meses si es la primera vez que se vacunan separadas de 4 semanas.",
+      "id": 19
+    },
+    {
+      "categoriaNoticia": "Economia",
+      "tituloNoticia": "Las ventas en los supermercados bajaron 8,8% durante marzo",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "contenidoNoticia": "Las ventas en los supermercados bajaron 8,8% durante marzo - Nota de la LA GACETA https://www.lagaceta.com.ar/nota/895362/actualidad/ventas-supermercados-bajaron-88porciento-durante-marzo.html",
+      "id": 20
+    },
+    {
+      "categoriaNoticia": "Economia",
+      "idCategoriaNoticia": "5",
+      "tituloNoticia": "Menos traumas para monotributistas",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "El Gobierno reglamentó el Régimen de Sostenimiento e Inclusión para Pequeños Contribuyentes, que tiene como objetivo alivianar la carga de quienes, al convertirse en autónomos, acumulen deudas fiscales difíciles de afrontar. La iniciativa, reglamentada a través del decreto 337, estimula a que más trabajadores pasen voluntariamente al régimen general de trabajadores autónomos.\n\nEsta reglamentación se enmarca específicamente en la ley 24.977, aprobada en abril del vigente año, que había reformado el régimen del monotributo para ofrecer un conjunto de beneficios fiscales a quienes son excluidos del mismo, teniendo en cuenta las dificultades económicas agravadas por la situación sanitaria. Las modificaciones tienen como objetivo armonizar dicha transición tanto en términos administrativos como en los montos de las obligaciones que deben afrontar los monotributistas. La reforma ofrece reducciones del IVA y Ganancias por tres años para los contribuyentes que cambien de régimen voluntariamente.\n\nEs decir, si un monotributista se encuentra registrado en la categoría H y durante el 2020 superó el límite de facturación en un 20 por ciento, quedaría excluido del monotributo, pero como no superó el tope del 25 por ciento establecido en la ley tiene la opción de permanecer en el monotributo. Para seguir siendo monotributista deberá abonar alrededor de 70.000 pesos en concepto de impuesto integrado y aporte a la seguridad social. \n\nEn cambio, si hubiese sido excluido del monotributo, y en el caso en el que no tuviera facturas de compras realizadas acorde a su tarea, le correspondería ingresar más de 940.000 pesos en concepto de IVA y Ganancias. Por lo tanto, la nueva ley permite un el ahorro fiscal de 870.000 pesos. Ahora bien, si el contribuyente se pasó voluntariamente al régimen general y facturó hasta un 25 por ciento más que el tope puede volver a ser monotributista, lo que premia al contribuyente cumplidor. \n\nA su vez, la ley resuelve el problema transitorio de actualización del monotributo durante 2021 a través de la suspensión del índice de movilidad previsional subsanando cualquier inconveniente referido a las recategorizaciones de manera automática (alrededor del 35 por ciento). Para eso, en las próximas semanas la AFIP realizará una recategorización de oficio de todos los monotributistas para ubicarlos en la categoría que corresponda.\n\nSumado a eso establece un régimen permanente que le permite al contribuyente que pasa del monotributo al régimen general a utilizar como crédito fiscal los originados en las compras realizadas en los 12 meses anteriores al momento en el cual suceda dicho pase.\n\nPor último, los contribuyentes que se conviertan en autónomos de manera voluntaria tendrán un beneficio adicional que consiste en una reducción del saldo deudor en el IVA que será: del 50 por ciento el año posterior al pase de régimen, del 30 por ciento el siguiente y del 10 por ciento el siguiente. Así, el contribuyente que pasa voluntariamente tiene 4 años de beneficio, ya que en el primer año puede utilizar el crédito fiscal por las compras de los 12 meses previos. \n\nTanto aquellos que gocen de este beneficio como quienes hayan aplicado el Régimen Permanente de Transición recién podrían volver a registrarse como monotributistas después de que transcurra un año calendario completo desde el último período fiscal en el que hayan gozado de forma completa de alguno de estos dos beneficios.",
+      "id": 21
+    },
+    {
+      "categoriaNoticia": "Economia",
+      "idCategoriaNoticia": "5",
+      "tituloNoticia": "Ejecuciones fiscales para ricos que no quieren pagar",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "La AFIP habilitó las ejecuciones fiscales y la traba de medidas cautelares para las personas alcanzadas por el Aporte Solidario y Extraordinario que no pagaron dicho tributo. En realidad, el organismo excluyó a esos contribuyentes de las generales de la ley, que en el actual contexto de pandemia mantiene suspendidas las acciones legales por falta de pago contra miPymes y fondos depositados en entidades financieras. \n\nAl mismo tiempo, el organismo definió que aquellos contribuyentes con patrimonios superiores a los 200 millones de pesos que no hayan abonado el aporte podrán acceder a un plan de pagos para regularizar su situación. La posibilidad de ingresar a un plan para cancelar el capital y otro para las multas estará vigente hasta el 30 de septiembre.\n\nMediante la Resolución 4996, la AFIP definió que “resulta aconsejable excluir de la aplicación de la suspensión de la iniciación de los juicios de ejecución fiscal y la traba de medidas cautelares a los montos reclamados en concepto del aporte solidario y extraordinario”.\n\nHasta ahora, el aporte extraordinario logró recaudar 230 mil millones de pesos gracias al pago de su obligación de parte de alrededor de 10 mil personas, cerca del 80 por ciento del total de contribuyentes alcanzados por el tributo. En relación a los recursos tributarios generados entre enero y abril de este año, que totalizan 3,07 billones de pesos, el dinero que recaudó el aporte extraordinario equivale al 7,4 por ciento.\n\nDe todas formas, todavía resta contar con el aporte de unas 2500 personas alcanzadas por el tributo, para lo cual el organismo que encabeza Mercedes Marcó del Pont inició las fiscalizaciones correspondientes. “La mayoría de los casos son personas que no completaron sus declaraciones juradas y tampoco realizaron los pagos correspondientes aunque también existen casos donde se completó la declaración jurada pero no se canceló la obligación”, informó la AFIP. En el organismo resaltan que a partir de las tareas de fiscalización se pudo incrementar el monto recaudado en unos 7 mil millones de pesos.\n\nEn paralelo a la fiscalización, ahora se lanzaron posibles medidas sancionatorias y también de incentivo. Junto a la posibilidad del embargo y la traba de medidas cautelares, la resolución 4997 dispuso que aquellos contribuyentes que adeuden el aporte podrán regularizar su situación a través de dos planes de pagos: uno para el saldo resultante de la declaración jurada conjuntamente con sus intereses y el otro para las multas que surjan del proceso de fiscalización. La posibilidad de cancelar las deudas estará vigente hasta el 30 de septiembre de 2021. Los contribuyentes que opten por esa vía podrán cancelar los montos adeudados en planes de hasta tres cuotas: un adelanto del 30 por ciento y dos pagos mensuales de 35.\n\nAdemás de los contribuyentes que presentaron las declaraciones juradas y no pagaron y los que directamente no presentaron declaración jurada, están aquellos que prefirieron ir a la Justicia para no pagar. El listado completo de esos contribuyentes, cerca de 300, fue publicado el lunes pasado por este diario. Los multimillonarios litigantes consiguieron medidas cautelares para suspender los pagos de momento se cuentan con los dedos de una mano: hasta ahora solo prosperaron 4 medidas cautelares y fueron rechazadas 22. Entre los demandantes públicamente reconocidos está Alejandro Julio Saguier, dueño de La Nación; el gerente de Clarín y gran productor arrocero José Antonio Aranda; Héctor Magnetto, CEO y dueño de Clarín y Constancio Carlos Vigil, cabeza de Editorial Atlántida y Paparazzi. En la lista también aparecen apellidos de otras familias ricas como Coto, Werthein y Pérez Companc.\n\nEl aporte extraordinario fue sancionado por el Congreso y alcanza a los residentes en el país por la totalidad de sus bienes en el país y en el exterior y a las personas no residentes, por la totalidad de sus bienes en el país, siempre que los mismos superen la suma de 200 millones de pesos de pesos. La fecha a considerar para la valuación de los bienes el 18 de diciembre de 2020. Los fondos recaudados tienen destino específico para atender necesidades en el marco de la crisis de la pandemia y su carácter es extraordinario porque será por única vez, promete el gobierno.",
+      "id": 22
+    },
+    {
+      "categoriaNoticia": "Politica",
+      "idCategoriaNoticia": "7",
+      "tituloNoticia": "Coronavirus: Larreta pidió autorización a la Legislatura para negociar la compra de vacunas",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "El jefe de gobierno porteño, Horacio Rodríguez Larreta, envió a la Legislatura de la ciudad un proyecto de ley para que lo autorice a “iniciar negociaciones y celebrar los contratos necesarios” para la adquisición de vacunas contra el covid-19.\n\nEn el proyecto de ley que este miércoles ingresó al parlamento porteño, con las firmas de Larreta y varios ministros de su gabinete, se indicó que “resulta necesario facultar al Poder Ejecutivo a realizar las gestiones necesarias para adquirir mayor cantidad de dosis de vacunas” contra el coronavirus.\n\nSe trata, en rigor, de un paso formal que ya dieron otras jurisdicciones, como la provincia de Buenos Aires -donde la Legislatura ya aprobó la autorización para el gobernador Axel Kicillof- y también Jujuy, donde el mandatario radical Gerardo Morales reclama las mismas potestades para poder avanzar en la compra de un millón de dosis del laboratorio chino Sinopharm.\n\nEl gobernador de Jujuy, Gerardo Morales, quiere negociar directamente con Sinopharm.\nEl gobernador de Jujuy, Gerardo Morales, quiere negociar directamente con Sinopharm.\nArchivo\nEn ese contexto, la iniciativa de Larreta reclama “el marco jurídico para avanzar en las negociaciones pertinentes que este tipo de transacciones requiere en el mercado internacional”. Por eso, solicita el permiso para “iniciar negociaciones y celebrar los contratos, incluso en moneda extranjera”.\n\nEn los fundamentos se indica que “en consonancia con lo establecido en la ley nacional 27.573” se requiere también autorización “a fin de incluir en los acuerdos a suscribirse cláusulas de confidencialidad, condiciones de indemnidad patrimonial respecto de indemnizaciones y reclamaciones pecuniarias con y en favor de quienes participen en la investigación, desarrollo, fabricación, provisión y suministro de las vacunas”.\n\n\nVACUNAS. EE.UU. DIJO QUE PRIORIZARÁ A LOS PAÍSES MÁS GOLPEADOS Y ALIENTA LA EXPECTATIVA ARGENTINA\nEn otros de los artículos del proyecto, Rodríguez Larreta plantea que “las cláusulas o acuerdos de confidencialidad que se pudieran adoptar quedan expresamente exceptuados del deber de divulgación, de conformidad con lo establecido en el artículo 6 de la Ley 104”, el cual establece los límites en el Acceso a la Información .\n\nPor último, propone que “a fin de velar por la transparencia de los actos de gobierno, la creación de una Comisión Especial en la Legislatura para el seguimiento de los acuerdos aprobados y ante la cual el Ejecutivo deberá informar cada dos meses sobre las adquisiciones realizadas y la distribución territorial de las vacunas.",
+      "id": 23
+    },
+    {
+      "categoriaNoticia": "Politica",
+      "idCategoriaNoticia": "7",
+      "tituloNoticia": "El 72% de los argentinos desaprueba al Gobierno, según una encuesta",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "El 72% de los argentinos mayores de 16 años desaprueba la gestión del presidente Alberto Fernández y el porcentaje insatisfecho con la situación general del país trepa hasta el 88%. Los datos surgen de una encuesta realizada en el mes de mayo por la Universidad de San Andrés, en ocho regiones del país.\n\nSegún el relevamiento, la percepción global del Poder Ejecutivo nacional continúa en caída. La satisfacción era del 50% en mayo de 2020, y ese número cayó 38 puntos en un año; hoy, un 12% de los argentinos mira con buenos ojos la tarea del Poder Ejecutivo y un 80% la objeta.\n\n\nVACUNAS. EE.UU. DIJO QUE PRIORIZARÁ A LOS PAÍSES MÁS GOLPEADOS Y ALIENTA LA EXPECTATIVA ARGENTINA\nAún así, entre los tres poderes, la mayor desaprobación se enfoca en el Poder Legislativo, en particular, en el Senado, que preside Cristina Kirchner. Un 83% de los más de mil encuestados rechaza el labor de los legisladores de la Cámara alta y un 11% lo destaca. Apenas por debajo –82% y 12%, respectivamente– se ubica la Cámara baja, comandada por Sergio Massa.\n\nEncuesta de la Universidad de San Andrés\nEncuesta de la Universidad de San Andrés\nPor primera vez en mucho tiempo, la cúpula del Poder Judicial encabeza la lista de satisfacción, con un 15% de argentinos que asegura estar conforme con el desempeño de la Corte Suprema. Pese a esa suba, el porcentaje de reprobación del Tribunal Supremo es de 80%, igual al Poder Ejecutivo.\n\nLa gestión de Fernández\nCuando la lupa pasa de la percepción global del Poder Ejecutivo a la gestión de Alberto Fernández, surge otro dato notable en el informe de la Universidad de San Andrés: todos los segmentos sociales desaprueban al gobierno de Fernández en más de un 70%: la clase baja, en un 70%; la media baja, en un 75%; la media alta, en un 71%, y el segmento ABC1, en un 77%. Solo un 26% de los encuestados aprueba al Presidente. De nuevo, el dato registra una caída constante desde que comenzaron las restricciones por la cuarentena, cuando un 67% de los argentinos aprobaba al primer mandatario.\n\nEl 26% de apoyos globales que recibe la gestión de Fernández se explica principalmente por los votantes del Frente de Todos: un 71% la aprueba (un 30% destaca “mucho” al gobierno y un 41% lo apoya en “algo”). Sin embargo, un 28% de quienes lo votaron en octubre de 2019 hoy lo desaprueba. Entre los votantes de Mauricio Macri, solo el 2% ve con buenos ojos el gobierno presidencial.",
+      "id": 24
+    },
+    {
+      "categoriaNoticia": "Deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "Gerónimo Rulli, el héroe de Villarreal en la conquista de la Europa League: convirtió su penal y atajó el de De Gea",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "En una dramática definición por penales, Gerónimo Rulli fue el héroe de Villarreal en la obtención de la Europa League. El arquero argentino, en una serie que estaba igualada 10 a 10, con un pleno de aciertos de ambos lados, decidió la historia en la final disputada en Gdansk (Polonia) ante Manchester United al convertir su remate y atajar el de su colega David De Gea. Fue el primer título europeo en la historia del equipo español. Los 90 minutos y el alargue de 30 habían finalizado 1 a 1, con goles de Gerard Moreno y Edinson Cavani.\n\nActiva participación tuvo Rulli (29 años), el arquero surgido en Estudiantes de La Plata e instalado hace siete años en Europa. Suplente de Asenjo en la Liga de España, fue titular en la competencia continental. Disputó 13 partidos y recibió nueve goles, con seis vallas invictas.\n\nRulli, la clave del título en los penales\n\n\nLa maratónica definición por penales\n\n\nEl lateral argentino Juan Foyth sufrió un fuerte golpe en el rostro al chocar en una caída con el cuerpo de Paul Pogba. Tras ser atendido durante varios minutos en el campo, continuó jugando con una venda en la cabeza y un apósito en la nariz para contener la sangre. En resto del partido, el ex Estudiantes tuvo bastante trabajo por su sector, por donde se movían Rashford, Pogba y llegaba Shaw desde atrás. Tras ser amonestado en los últimos 10 minutos, Emery reemplazó a Foyth por Gaspar.",
+      "id": 25
+    },
+    {
+      "categoriaNoticia": "Deporte",
+      "idCategoriaNoticia": "1",
+      "tituloNoticia": "River: murió el chofer del ómnibus que trasladaba a los jugadores a los partidos",
+      "autorNoticia": "Florencia Norry",
+      "fechaNoticia": "26/05/2021",
+      "imagenNoticia": "",
+      "contenidoNoticia": "i ya de por sí los contagios masivos de Covid-19 en el plantel de River generaron consecuencias traumáticas, el mundo millonario recibió un cimbronazo en las últimas horas al conocerse que Gustavo Insúa, uno de los choferes que habitualmente conducía el ómnibus que trasladaba a los jugadores dirigidos por Marcelo Gallardo, murió a causa del coronavirus.\n\n\nCOPA LIBERTADORES: LOS QUE YA TIENEN SU PASE ASEGURADO A OCTAVOS DE FINAL, LOS QUE SE LO JUEGAN Y EL “PLENO ARGENTINO” SI SE CLASIFICA BOCA\nInsúa solía manejar el ómnibus de la empresa Vía Bariloche que traslada a los jugadores. River, en su momento, informó que el último partido en el que había trabajado Insúa había sido ante Banfield, el 2 de mayo, pero luego la familia del chofer confirmó que también había trasladado al plantel desde el aeropuerto de Ezieza al predio de esa misma localidad bonaerense cuando volvió del partido con Junior en Barranquilla, por la Copa Libertadores, el 13 de mayo, antes de que se desataran los contagios masivos previos al encuentro con Boca. Fue en ese viaje a Colombia cuando, se presume, el plantel de River se infectó masivamente.\n\nInsúa estaba internado en el Hospital Municipal de Trauma y Emergencias Dr. Federico Abete, de Pablo Nogués, en estado crítico. En los últimos días le había bajado la fiebre, pero continuaba en terapia intensiva.\n\n\nALEJANDRO MORALEZ: QUIÉN ES EL DEFENSOR COLOMBIANO AL QUE TODO RIVER LE AGRADECE Y SIENTE COMO UN “HÉROE”\nEl comunicado de River\nEsta tarde, River emitió un comunicado en sus canales oficiales respecto de la muerte de Insua. Dice lo siguiente:\n\n“El Club Atlético River Plate lamenta el fallecimiento de Gustavo Insúa, chofer de la empresa Vía Bariloche, quien formaba parte del equipo a cargo del traslado del plantel de Primera División de fútbol profesional.\n\nPese a todos los cuidados y protocolos sostenidos, tanto por el Club como por Vía Bariloche, Gustavo Insúa fue diagnosticado positivo de COVID-19 hace algunas semanas. Aunque recibió atención médica inmediata, su cuadro se agravó con complicaciones irreversibles y falleció en la mañana de este 26 de mayo.\n\nRiver Plate acompaña a su familia, compañeros de trabajo y seres queridos en este doloroso momento, el cual no hace más que afirmar la gravedad de la crisis sanitaria actual, enfrentando un virus que crece en su capacidad de contagio y letalidad.”",
+      "id": 26
+    },
+    {
+      "categoriaNoticia": "actualidad",
+      "idCategoriaNoticia": "2",
+      "tituloNoticia": "Actualidad",
+      "autorNoticia": "flornorry",
+      "fechaNoticia": "2021-06-04",
+      "imagenNoticia": "actualidad",
+      "contenidoNoticia": "actualidad",
+      "id": 27
+    },
+    {
+      "categoriaNoticia": "actualidad",
+      "idCategoriaNoticia": "2",
+      "tituloNoticia": "PRUEB EDITOR",
+      "autorNoticia": "FLRO",
+      "fechaNoticia": "2021-04-27",
+      "imagenNoticia": "FDFSDF",
+      "contenidoNoticia": "<p>PRUEBA EDITORE<strong>DSFSDFSDFSDFSDFSDF</strong></p>",
+      "id": 28
+    },
+    {
+      "categoriaNoticia": "Economia",
+      "idCategoriaNoticia": "5",
+      "tituloNoticia": "PRUEBA 2 ",
+      "autorNoticia": "LKAJSLKajsd|",
+      "fechaNoticia": "2021-05-03",
+      "imagenNoticia": "fsdf",
+      "contenidoNoticia": "<p>pruenba 2 <strong>ffgergerg</strong><i>ergergrg</i></p>",
+      "id": 29
+    },
+    {
+      "categoriaNoticia": "Video Juegos",
+      "tituloNoticia": "Se lanza Uncharted 4 para PC",
+      "autorNoticia": "Otto Cabanillas",
+      "fechaNoticia": "2021-05-31",
+      "contenidoNoticia": "<p>Prueba</p>",
+      "id": 30
     }
   ],
   "Categorias": [
     {
-      "nombreCategoria": "deporte",
+      "nombreCategoria": "Deporte",
+      "id": 1
+    },
+    {
+      "nombreCategoria": "Actualidad",
       "id": 2
     },
     {
-      "nombreCategoria": "prueba2",
+      "nombreCategoria": "Espectaculo",
       "id": 3
     },
     {
-      "nombreCategoria": "qqq",
+      "nombreCategoria": "Covid-19",
+      "id": 4
+    },
+    {
+      "nombreCategoria": "Economia",
+      "id": 5
+    },
+    {
+      "nombreCategoria": "Salud",
       "id": 6
     },
     {
-      "nombreCategoria": "nuevo",
+      "nombreCategoria": "Politica",
       "id": 7
     },
     {
-      "nombreCategoria": "nuevoooooo",
+      "nombreCategoria": "Video Juegos",
       "id": 8
+    },
+    {
+      "nombreCategoria": "Libros",
+      "id": 9
     }
   ]
 }
