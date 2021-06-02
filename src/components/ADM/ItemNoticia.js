@@ -94,14 +94,14 @@ const ItemNoticia = (props) => {
             <section className="d-flex flex-column">
               <Link
                 className="btn btn-info text-light"
-                to={"/Noticia/editar/" + props.dato.id}
+                to={"/Noticia/editar/" + props.dato._id}
               >
                 <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
               </Link>
               <Button
                 variant="danger"
                 className="my-2"
-                onClick={() => eliminarNoticia(props.dato.id)}
+                onClick={() => eliminarNoticia(props.dato._id)}
               >
                 <FontAwesomeIcon
                   icon={faTrashAlt}
@@ -110,7 +110,7 @@ const ItemNoticia = (props) => {
               <Button variant="success" className="my-2">
                 <FontAwesomeIcon
                   icon={faHighlighter}
-                  onClick={() => destacarNoticia(props.dato.id)}
+                  onClick={() => destacarNoticia(props.dato._id)}
                 ></FontAwesomeIcon>
               </Button>
             </section>
