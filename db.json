@@ -2,9 +2,8 @@
   "News": [
     {
       "categoriaNoticia": "Espectaculo",
-      "idCategoriaNoticia": "3",
       "tituloNoticia": "Cines",
-      "autorNoticia": "Florencia Norry",
+      "autorNoticia": "Florencia Norrycccc",
       "fechaNoticia": "20/05/2021",
       "contenidoNoticia": "stamos muy contentos de poder verte nuevamente frente a la gran pantalla!\nPara que podamos cuidarnos entre todos, te pedimos que nos ayudes a respetar las siguientes normas de cuidado e higiene:\n\n* RESPETÁ TU BUTACA\n\n* SENTATE JUNTO A TUS CONTACTOS DIRECTOS\n\n* USÁ TU TAPABOCAS EN TODO MOMENTO. SÓLO PODÉS QUITÁRTELO CUANDO ESTÉS CONSUMIENDO ALIMENTOS O BEBIDAS\n\n* CUANDO TERMINE LA FUNCIÓN, LLEVATE TUS RESIDUOS Y ARROJALOS EN LOS CESTOS DEL HALL\n\n* MANTENÉ EL DISTANCIAMIENTO SOCIAL SIEMPRE.\n\n* HIGIENIZÁ TUS MANOS DE FORMA FRECUENTE CON AGUA Y JABON O ALCOHOL EN GEL\n\n* COMPRÁ TUS ENTRADAS ONLINE Y HACÉ MENOS FILAS EN EL CINE.\n\nGracias!",
       "id": 4
@@ -171,16 +170,6 @@
       "fechaNoticia": "2021-05-31",
       "contenidoNoticia": "<p>Prueba</p>",
       "id": 30
-    },
-    {
-      "categoriaNoticia": "Deporte",
-      "idCategoriaNoticia": "1",
-      "tituloNoticia": "asdfasdf",
-      "autorNoticia": "asdfsadf",
-      "fechaNoticia": "2021-05-29",
-      "imagenNoticia": "",
-      "contenidoNoticia": "<p>asdfasfasdf</p>",
-      "id": 31
     }
   ],
   "Categorias": [

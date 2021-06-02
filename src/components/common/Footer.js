@@ -6,7 +6,7 @@ import logo from '../img/logo.svg'
 
 const Footer = () => {
   return (
-    <div className="bg-dark text-light  py-3">
+    <div className="bg-dark text-light py-3 mt-5">
       <Container>
         <article className="row">
           <div className="col-sm-12 col-md-4 col-lg-4">
@@ -22,7 +22,6 @@ const Footer = () => {
             <p>No te pierdas de nada!. Descarga nuestra app y mantenete Informado</p>
             <a href="*"><img src={AppleStore} alt="" /></a>
             <a href="*"><img src={googlePlay} alt="" className='my-2' /></a>
-            
           </div>
 
         </article>

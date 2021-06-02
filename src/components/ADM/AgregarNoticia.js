@@ -8,7 +8,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 const AgregarNoticia = (props) => {
   const [categoriaNoticia, setCategoriaNoticia] = useState("");
-  const [idCategoriaNoticia, setidCategoriaNoticia] = useState("");
+  const [idCategoriaNoticia, setidCategoriaNoticia] = useState(0);
   const [tituloNoticia, setTituloNoticia] = useState("");
   const [autorNoticia, setAutorNoticia] = useState("");
   const [fechaNoticia, setFechaNoticia] = useState("");
@@ -98,8 +98,8 @@ const AgregarNoticia = (props) => {
             custom
             onChange={(e) => setidCategoriaNoticia(e.target.value)}>
               <option>Seleccionar. . .</option>
-            {props.Categorias.map((categoria, indice) => (
-              <option value={categoria.id} key={indice}>{categoria.nombreCategoria}</option>
+            {props.Categorias.map((opcion, indice) => (
+              <option value={opcion.id} key={indice}>{opcion.nombreCategoria}</option>
               ))}
           </Form.Control>
         </Form.Group>
@@ -109,6 +109,7 @@ const AgregarNoticia = (props) => {
             type="text"
             placeholder="Ingrese el Titulo de la Noticia"
             onChange={(e) => setTituloNoticia(e.target.value)}
+            required
           />
         </Form.Group>
         <Form.Group className="fuente">
@@ -117,6 +118,7 @@ const AgregarNoticia = (props) => {
             type="text"
             placeholder="Ingrese al Autor de la Noticia"
             onChange={(e) => setAutorNoticia(e.target.value)}
+            required
           />
         </Form.Group>
         <Form.Group>
@@ -126,6 +128,7 @@ const AgregarNoticia = (props) => {
             size="sm"
             olaceholder="dd/mm/aa"
             onChange={(e) => setFechaNoticia(e.target.value)}
+            required
           />
         </Form.Group>
         <Form.Group>
@@ -141,15 +144,9 @@ const AgregarNoticia = (props) => {
           <CKEditor 
           editor={ClassicEditor}
           onChange={(e, editor) => setContenidoNoticia(editor.getData())}
-          // onChange={(e, editor) => setContenidoNoticia(e.target.value)}
+          required
           >
-
           </CKEditor>
-          {/* <Form.Control 
-            as="textarea"
-            rows={3}
-            
-          /> */}
         </Form.Group>
         <Button variant="primary" type="submit" className="my-4 fuente">
           Guardar

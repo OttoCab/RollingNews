@@ -4,20 +4,24 @@ import Swal from "sweetalert2";
 
 const AgregarCategoria = (props) => {
   const [nombreCategoria, setNombreCategoria] = useState("");
+  const [codCat, setCodCat] = useState(0);
   const [error, setError] = useState(false);
   const URLCat =process.env.REACT_APP_API_URL2;
-
+  
   const handleSubmit = async (e)=>{
     e.preventDefault();
     //validacion de datos 
+    
     if(nombreCategoria.trim() === ""){
       setError(true);
       return;
     }else{
-      setError(false);
+      setError(false);     
+      setCodCat(1);
       //se crea el objeto de las categorias
       const categoria = {
-        nombreCategoria
+        nombreCategoria,
+        codCat,
       }
       console.log(categoria);
       try{
@@ -47,7 +51,6 @@ const AgregarCategoria = (props) => {
           "error"
         );
       }
-
     }
   };
 

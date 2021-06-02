@@ -97,6 +97,9 @@
     text-decoration: none;
 }
 
+.containerCotizador{
+    background-color: salmon;
+}
 
 /* recordar que las Media Queries deben quedar al final de la hoja */
 
