@@ -6,8 +6,8 @@ import { campoRequerido } from "../common/helpers";
 
 //withRouter redirecciona
 const EditarNoticia = (props) => {
-  const codNoticia = useParams().idNoticia;
-  console.log(useParams().idNoticia);
+  const codNoticia = useParams().idNews;
+  console.log(useParams().idNews);
   // const [categoriaNoticia, setCategoriaNoticia] = useState("");
   const [error, setError] = useState(false);
   const [noticia, setNoticia] = useState({});

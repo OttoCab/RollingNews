@@ -174,10 +174,6 @@
   ],
   "Categorias": [
     {
-      "nombreCategoria": "Deporte",
-      "id": 1
-    },
-    {
       "nombreCategoria": "Actualidad",
       "id": 2
     },
@@ -208,6 +204,11 @@
     {
       "nombreCategoria": "Libros",
       "id": 9
+    },
+    {
+      "nombreCategoria": "Deporte",
+      "codCat": 0,
+      "id": 10
     }
   ]
 }
