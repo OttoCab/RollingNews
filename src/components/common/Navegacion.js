@@ -57,7 +57,7 @@ const Navegacion = (props) => {
           </NavLink>
         </Nav>
         <Nav>
-          <NavLink className="nav-link" exact={true} to="/registrarse">
+          <NavLink className="nav-link" exact={true} to="/Login">
             Registrarse
           </NavLink>
           <NavLink className="nav-link" exact={true} to="/suscripcion">
