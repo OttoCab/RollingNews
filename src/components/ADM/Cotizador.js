@@ -1,10 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-bootstrap';
+import './Cotizador.css';
 
-const cotizador = () => {
-    return (
-        <h1>Dolar 0,00%</h1>
 
-    );
+const URL_MONEDAS = process.env.REACT_APP_API_MONEDAS;
+
+const Cotizador = () => {
+
+    const [monedas, setMonedas] = useState([]);
+
+    useEffect(async () => {
+        try {
+            const respuesta = await fetch(URL_MONEDAS);
+            if (respuesta.status === 200) {
+                const data = await respuesta.json();
+                setMonedas([...data]);
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+    }, [])
+
+    if (monedas.length > 0) {
+        return (
+            < Carousel indicators={false} controls={false} interval="3000">
+                { monedas.map((moneda, index) => (
+                    <Carousel.Item key={index}>
+                        <p className='text-danger text-light'>
+                            <span>{moneda.casa.nombre}: </span>
+                            <span>Compra: $ {moneda.casa.compra} / </span>
+                            <span>Venta: $ {moneda.casa.venta}</span>
+                        </p>
+                    </Carousel.Item>
+                ))}
+            </Carousel>
+        )
+    } else {
+        return <></>;
+    }
 };
 
-export default cotizador;
+export default Cotizador;
