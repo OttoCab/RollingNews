@@ -15,7 +15,6 @@ const AgregarNoticia = (props) => {
   const [contenidoNoticia, setContenidoNoticia] = useState("");
   const [error, setError] = useState(false);
   const URL = process.env.REACT_APP_API_URL;
-  // const URLCat =process.env.REACT_APP_API_URL2;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +23,7 @@ const AgregarNoticia = (props) => {
       tituloNoticia.trim() === "" ||
       autorNoticia.trim() === "" ||
       fechaNoticia.trim() === "" ||
-      // imagenNoticia.trim() === ""||
+      imagenNoticia.trim() === ""||
       contenidoNoticia.trim() === ""
     ) {
       setError(true);

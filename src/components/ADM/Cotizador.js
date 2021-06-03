@@ -14,7 +14,6 @@ const Cotizador = () => {
                 const data = await respuesta.json();
                 setMonedas([...data]);
             }
-
         } catch (error) {
             console.log(error);
         }

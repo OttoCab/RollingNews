@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEdit, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import ReactHtmlParser from 'react-html-parser';
 
 const ItemCategoria = (props) => {
 
