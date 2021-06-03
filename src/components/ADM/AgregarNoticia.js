@@ -51,7 +51,7 @@ const AgregarNoticia = (props) => {
         });
         console.log(resultadoCat,"RESULTADO");
         // const nombreC = resultadoCat.nombreCategoria;
-        // setCategoriaNoticia(nombreC);gir
+        // setCategoriaNoticia(nombreC);
         noticia.categoriaNoticia = resultadoCat.nombreCategoria;
         const enviarNoticia = {
           method: "POST",
@@ -83,70 +83,6 @@ const AgregarNoticia = (props) => {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   if (
-  //     // categoriaNoticia.trim() === "" ||
-  //     tituloNoticia.trim() === "" ||
-  //     autorNoticia.trim() === "" ||
-  //     fechaNoticia.trim() === "" ||
-  //     // imagenNoticia.trim() === ""||
-  //     contenidoNoticia.trim() === ""
-  //   ){
-  //     setError(true);
-  //     return;
-  //   } else {
-  //     setError(false);
-  //     // objeto
-  //     const noticia = {
-  //       categoriaNoticia,
-  //       idCategoriaNoticia,
-  //       tituloNoticia,
-  //       autorNoticia,
-  //       fechaNoticia,
-  //       imagenNoticia,
-  //       contenidoNoticia,
-  //     };
-  //     console.log(noticia);
-
-  //     try {
-  //       console.log("noticiaID", noticia);
-  //       console.log("las categorias :", props.Categorias);
-  //       const resultadoCat = props.Categorias.find((categoria)=>{
-
-  //        return categoria.id == idCategoriaNoticia;
-  //       });
-  //       const nombreC = resultadoCat.nombreCategoria;
-  //       setCategoriaNoticia(nombreC);
-
-  //       const enviarNoticia = {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({...noticia,categoriaNoticia:nombreC}),
-  //       };
-  //       const respuesta = await fetch(URL, enviarNoticia);
-  //       console.log(nombreC, "GUARDADA");
-  //       if (respuesta.status === 201) {
-  //         Swal.fire(
-  //           "Producto agregado!",
-  //           "Se agrego un nuevo producto!",
-  //           "success"
-  //         );
-  //         //actualiza la lista de noticias
-  //         props.consultarAPI();
-  //       }
-  //     } catch (error) {
-  //       console.log(error);
-  //       Swal.fire(
-  //         "Ocurrio un error!",
-  //         "Intentelo de nuevo mas tarde!",
-  //         "error"
-  //       );
-  //     }
-  //   }
-  // };
 
   return (
     <Container>

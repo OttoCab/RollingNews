@@ -4,11 +4,13 @@ import ItemNoticia from "./ItemNoticia";
 import {useParams} from 'react-router-dom';
 
 const DetalleCategoria = (props) => {
-  const {idCategoriaNoticia} = useParams();
-  const categoriaNFiltradas = props.noticias.filter((nota)=> nota.idCategoriaNoticia === idCategoriaNoticia);
-  
+  const {idCategoria} = useParams();
+  const categoriaNFiltradas = props.noticias.filter((nota)=> nota.idCategoriaNoticia === idCategoria);
+  console.log(categoriaNFiltradas, "FILTRO");
+
   return (
     <Container>
+      <h1>desde detalle</h1>
       <section className="row">
       {categoriaNFiltradas.map((detalleCat, indice) => (
         <ItemNoticia
