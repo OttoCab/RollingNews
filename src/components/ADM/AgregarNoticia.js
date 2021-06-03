@@ -51,7 +51,7 @@ const AgregarNoticia = (props) => {
         });
         console.log(resultadoCat,"RESULTADO");
         // const nombreC = resultadoCat.nombreCategoria;
-        // setCategoriaNoticia(nombreC);
+        // setCategoriaNoticia(nombreC);gir
         noticia.categoriaNoticia = resultadoCat.nombreCategoria;
         const enviarNoticia = {
           method: "POST",
