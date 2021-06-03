@@ -53,13 +53,13 @@ const ItemCategoria = (props) => {
         <span className="font-weight-bold">{props.categoria.nombreCategoria}</span>
       </p>
       <div>
-        <Link className="btn btn-success text-light" to={"/Categorias/detalleCategoria/" + props.categoria.id}>
+        <Link className="btn btn-success text-light" to={"/Categorias/detalleCategoria/" + props.categoria._id}>
           <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
         </Link>
-        <Button variant="danger" className="mx-2" onClick={() => eliminarCategoria(props.categoria.id)} >
+        <Button variant="danger" className="mx-2" onClick={() => eliminarCategoria(props.categoria._id)} >
           <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
         </Button>
-        <Link className="btn btn-info text-light" to={"/Categorias/editar/" + props.categoria.id}>
+        <Link className="btn btn-info text-light" to={"/Categorias/editar/" + props.categoria._id}>
           <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
         </Link>
       </div>
