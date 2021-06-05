@@ -170,13 +170,19 @@
       "fechaNoticia": "2021-05-31",
       "contenidoNoticia": "<p>Prueba</p>",
       "id": 30
+    },
+    {
+      "categoriaNoticia": "Video Juego",
+      "idCategoriaNoticia": "11",
+      "tituloNoticia": "video juego",
+      "autorNoticia": "flor norry",
+      "fechaNoticia": "2021-06-02",
+      "imagenNoticia": "",
+      "contenidoNoticia": "<p><strong>asadsdsadasd</strong><i><strong>fggfdgf</strong></i></p>",
+      "id": 31
     }
   ],
   "Categorias": [
-    {
-      "nombreCategoria": "Deporte",
-      "id": 1
-    },
     {
       "nombreCategoria": "Actualidad",
       "id": 2
@@ -208,6 +214,10 @@
     {
       "nombreCategoria": "Libros",
       "id": 9
+    },
+    {
+      "nombreCategoria": "Video Juego",
+      "id": 11
     }
   ]
 }

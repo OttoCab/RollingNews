@@ -1,4 +1,4 @@
-import React, {useState}from "react";
+import React, { useState } from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
@@ -8,7 +8,8 @@ import {
   faTrashAlt,
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
-import ReactHtmlParser from 'react-html-parser';
+import ReactHtmlParser from "react-html-parser";
+
 
 const ItemNoticia = (props) => {
   const [destacado, setDestacado] = useState();
@@ -66,7 +67,15 @@ const ItemNoticia = (props) => {
       cancelButtonText: "No!",
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log(destacado);
+        // <Inicio>
+        //   {setDestacado.map((detalleCat, indice) => (
+        //     <ItemNoticia
+        //       key={indice}
+        //       dato={detalleCat}
+        //       Categorias={props.Categorias}
+        //     ></ItemNoticia>
+        //   ))}
+        // </Inicio>;
       } else {
         // faHighlighter.innerHTML = '';
         // faHighlighter.variant="success";
@@ -88,29 +97,29 @@ const ItemNoticia = (props) => {
                 </Card.Title>
                 <Card.Text>{props.dato.categoriaNoticia}</Card.Text>
 
-                <Card.Text>{ReactHtmlParser(props.dato.contenidoNoticia)}</Card.Text>
+                <Card.Text>
+                  {ReactHtmlParser(props.dato.contenidoNoticia)}
+                </Card.Text>
               </Card.Body>
             </div>
             <section className="d-flex flex-column">
               <Link
                 className="btn btn-info text-light"
-                to={"/Noticia/editar/" + props.dato.id}
+                to={"/Noticia/editar/" + props.dato._id}
               >
                 <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
               </Link>
               <Button
                 variant="danger"
                 className="my-2"
-                onClick={() => eliminarNoticia(props.dato.id)}
+                onClick={() => eliminarNoticia(props.dato._id)}
               >
-                <FontAwesomeIcon
-                  icon={faTrashAlt}
-                ></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
               </Button>
               <Button variant="success" className="my-2">
                 <FontAwesomeIcon
                   icon={faHighlighter}
-                  onClick={() => destacarNoticia(props.dato.id)}
+                  onClick={() => destacarNoticia(props.dato._id)}
                 ></FontAwesomeIcon>
               </Button>
             </section>

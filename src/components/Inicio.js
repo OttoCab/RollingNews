@@ -190,7 +190,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                             </h4>
                             <CardDeck className="container my-3 row">
                                 {props.noticias.filter((cat) => {
-                                    if (cat.idCategoriaNoticia === "2") {
+                                    if (cat.idCategoriaNoticia === "60b7d6acfeb96a24dce5c898") {
                                         return cat
                                     }
                                 })
@@ -271,7 +271,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                             </h4>
                             <CardDeck className="container my-3 row">
                                 {props.noticias.filter((cat) => {
-                                    if (cat.idCategoriaNoticia === "1") {
+                                    if (cat.idCategoriaNoticia === "60b58135d63ea4368c0cf559") {
                                         return cat
                                     }
                                 })

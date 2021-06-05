@@ -25,7 +25,7 @@ const ListaNoticia = (props) => {
             }else if(palabra.contenidoNoticia.toLowerCase().includes(buscar.toLowerCase())){
               return palabra
             }
-          }).map((nota, indice) => (
+          }).map((nota,indice) => (
             <ItemNoticia
               key={indice}
               dato={nota}

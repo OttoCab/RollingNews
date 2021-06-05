@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Container, Form, Button, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { useParams, withRouter } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { campoRequerido } from "../common/helpers";
 
 const EditarCategoria = (props) => {
