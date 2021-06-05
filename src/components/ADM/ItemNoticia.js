@@ -12,7 +12,6 @@ import ReactHtmlParser from "react-html-parser";
 import Inicio from '../Inicio';
 
 const ItemNoticia = (props) => {
-  const [destacado, setDestacado] = useState(false);
   const URL = process.env.REACT_APP_API_URL;
   const eliminarNoticia = (idNoticia) => {
     console.log(idNoticia);
@@ -54,9 +53,9 @@ const ItemNoticia = (props) => {
     });
   };
 
+
   const destacarNoticia = (idN) => {
     console.log(idN);
-    setDestacado(idN);
     Swal.fire({
       title: "¿Va a destacar esta Noticia?",
       icon: "warning",
@@ -66,39 +65,73 @@ const ItemNoticia = (props) => {
       confirmButtonText: "Si!",
       cancelButtonText: "No!",
     }).then(async(result) => {
+      const URL = `${process.env.REACT_APP_API_URL}/${idN}`;
       if (result.isConfirmed) {
         try{
-          const respuesta = await fetch(URL);
-          console.log(respuesta,"fsdfdf");
+          const respuesta = await fetch(URL,{
+            method:"PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body:JSON.stringify({destacada:true})
+          });
           if(respuesta.status === 200){
             const noticiasDestacadas = await respuesta.json();
-            setDestacado(noticiasDestacadas);
-            console.log(noticiasDestacadas);
-            for(let i in noticiasDestacadas){
-              if(noticiasDestacadas[i]._id === idN){
-                if(noticiasDestacadas[i].destacado === false){
-                  noticiasDestacadas[i].destacado = true;
-                  for(let i in noticiasDestacadas){
-                    if(noticiasDestacadas[i].idN != idN){
-                      noticiasDestacadas[i].destacado = false;
-                    }
-                  }
-                  setDestacado(noticiasDestacadas[i]);
-                  console.log(noticiasDestacadas[i],"DESTACADO");
-                  // <Inicio dato={noticiasDestacadas[i]}></Inicio>
-                }
-              }
-            }
+            console.log(noticiasDestacadas,"NOTICIA DESTACADA");
           }
         }catch(error){
           console.log(error);
         }
       } else {
-        // faHighlighter.innerHTML = '';
-        // faHighlighter.variant="success";
+ 
       }
     });
   };
+
+
+  // const destacarNoticia = (idN) => {
+  //   console.log(idN);
+  //   setDestacado(idN);
+  //   Swal.fire({
+  //     title: "¿Va a destacar esta Noticia?",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Si!",
+  //     cancelButtonText: "No!",
+  //   }).then(async(result) => {
+  //     if (result.isConfirmed) {
+  //       try{
+  //         const respuesta = await fetch(URL);
+  //         console.log(respuesta,"fsdfdf");
+  //         if(respuesta.status === 200){
+  //           const noticiasDestacadas = await respuesta.json();
+  //           setDestacado(noticiasDestacadas);
+  //           console.log(noticiasDestacadas);
+  //           for(let i in noticiasDestacadas){
+  //             if(noticiasDestacadas[i]._id === idN){
+  //               if(noticiasDestacadas[i].destacado === false){
+  //                 noticiasDestacadas[i].destacado = true;
+  //                 for(let i in noticiasDestacadas){
+  //                   if(noticiasDestacadas[i].idN != idN){
+  //                     noticiasDestacadas[i].destacado = false;
+  //                   }
+  //                 }
+  //               }
+  //               console.log(noticiasDestacadas[i],"DESTACADO");
+  //               setDestacado(noticiasDestacadas[i]);
+  //             }
+  //           }
+  //         }
+  //       }catch(error){
+  //         console.log(error);
+  //       }
+  //     } else {
+ 
+  //     }
+  //   });
+  // };
 
 
 
