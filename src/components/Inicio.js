@@ -35,7 +35,7 @@ const Inicio = (props) => {
                             <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
                             <div className="card-img-overlay d-flex align-items-end">
                                 <div className="flex-column cardBackground px-3 py-2">
-                                    <Card.Title>El gobierno bonaerense confirmó que el domingo se terminará el confinamiento estricto.</Card.Title>
+                                    <Card.Title>{politica}</Card.Title>
                                     <Card.Text className="card-text">Se podrá circular libremente durante el día sin permiso. Comercios no esenciales, bares y restaurantes podrán atender al público de acuerdo a los protocolos vigentes en cada municipio.
 El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que no habrá cambios con respecto a la hoja de ruta prevista en el DNU presidencial que impuso el último confinamiento estricto.</Card.Text>
                                     <Button variant="outline-danger" className="customButton">Ver más...</Button>

@@ -9,10 +9,11 @@ import {
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactHtmlParser from "react-html-parser";
-
+import Inicio from '../Inicio';
 
 const ItemNoticia = (props) => {
-  const [destacado, setDestacado] = useState();
+  const [destacado, setDestacado] = useState(false);
+  const URL = process.env.REACT_APP_API_URL;
   const eliminarNoticia = (idNoticia) => {
     console.log(idNoticia);
     Swal.fire({
@@ -56,7 +57,6 @@ const ItemNoticia = (props) => {
   const destacarNoticia = (idN) => {
     console.log(idN);
     setDestacado(idN);
-    console.log(destacado);
     Swal.fire({
       title: "¿Va a destacar esta Noticia?",
       icon: "warning",
@@ -65,23 +65,42 @@ const ItemNoticia = (props) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Si!",
       cancelButtonText: "No!",
-    }).then((result) => {
+    }).then(async(result) => {
       if (result.isConfirmed) {
-        // <Inicio>
-        //   {setDestacado.map((detalleCat, indice) => (
-        //     <ItemNoticia
-        //       key={indice}
-        //       dato={detalleCat}
-        //       Categorias={props.Categorias}
-        //     ></ItemNoticia>
-        //   ))}
-        // </Inicio>;
+        try{
+          const respuesta = await fetch(URL);
+          console.log(respuesta,"fsdfdf");
+          if(respuesta.status === 200){
+            const noticiasDestacadas = await respuesta.json();
+            setDestacado(noticiasDestacadas);
+            console.log(noticiasDestacadas);
+            for(let i in noticiasDestacadas){
+              if(noticiasDestacadas[i]._id === idN){
+                if(noticiasDestacadas[i].destacado === false){
+                  noticiasDestacadas[i].destacado = true;
+                  for(let i in noticiasDestacadas){
+                    if(noticiasDestacadas[i].idN != idN){
+                      noticiasDestacadas[i].destacado = false;
+                    }
+                  }
+                  setDestacado(noticiasDestacadas[i]);
+                  console.log(noticiasDestacadas[i],"DESTACADO");
+                  // <Inicio dato={noticiasDestacadas[i]}></Inicio>
+                }
+              }
+            }
+          }
+        }catch(error){
+          console.log(error);
+        }
       } else {
         // faHighlighter.innerHTML = '';
         // faHighlighter.variant="success";
       }
     });
   };
+
+
 
   return (
     <div className="col-sm-12 my-3">
