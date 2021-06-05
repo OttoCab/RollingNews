@@ -15,15 +15,6 @@
     line-height: 20px;
 }
 
-.covidIcon {
-    transition: 500ms;
-}
-
-.covidIcon:hover {
-    scale: 1.1;
-    rotate: 360deg;
-}
-
 .bolder-numbers {
     font-size: 160%;
     font-weight: bolder;
@@ -77,7 +68,7 @@
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #e52d27 0%, #b31217 51%, #e52d27 100%);
+    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
@@ -94,12 +85,12 @@
     background-position: right center;
     /* change the direction of the change here */
     color: #fff;
-    text-decoration: none;
 }
 
-.containerCotizador{
+.containerCotizador {
     background-color: salmon;
 }
+
 
 /* recordar que las Media Queries deben quedar al final de la hoja */
 

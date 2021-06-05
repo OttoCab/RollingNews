@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import Defecto from './assets/img/defecto800x600.jpg';
 import imgPrueba from './assets/img/imagenNoticias.jpg';
 import autorMini from './assets/img/authors/ema.jpg';
 import './assets/css/detalles.css';
@@ -9,7 +8,7 @@ import './assets/css/detalles.css';
 const Detalles = () => {
     return (
         <Container className="mt-3 mb-5">
-            <NavLink to="/" className="navigation">RollingNEWS</NavLink> <NavLink to="*" className="navigation">Nombre de la categoría</NavLink>
+            <NavLink to="/" className="navigation">RollingNEWS</NavLink> / <NavLink to="*" className="navigation">Nombre de la categoría</NavLink>
             <hr/>
             <section className="row mt-5">
                 <article className="col-md-8">

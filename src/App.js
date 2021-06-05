@@ -18,6 +18,7 @@ import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
 import Suscripcion from './components/Suscripcion';
+import Detalles from './components/Detalles';
 
 
 
@@ -54,6 +55,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
+        </Route>
+        <Route exact path="/detalles">
+          <Detalles></Detalles>
         </Route>
         <Route exact path="/Noticias">
           <ListaNoticia noticias={noticias} consultarAPI={consultarAPI}>

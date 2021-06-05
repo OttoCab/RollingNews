@@ -32,7 +32,7 @@ const Inicio = (props) => {
                         <Card className="customCard-main bg-dark text-light shadow">
                             {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-                            <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
+                            <img src={politica} alt="No se encontró imagen" className="img-fluid"></img>
                             <div className="card-img-overlay d-flex align-items-end">
                                 <div className="flex-column cardBackground px-3 py-2">
                                     <Card.Title>El gobierno bonaerense confirmó que el domingo se terminará el confinamiento estricto.</Card.Title>
@@ -47,7 +47,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                         <Card className="customCard-sub text-light bg-dark my-sm-5 my-lg-0 my-3 shadow">
                             {/*La imagen de las cards secundarias deben tener una resolución exacta de 800 x 394, si la imagen
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-                            <Card.Img src={actualidad} alt="No se encontró imagen"></Card.Img>
+                            <img src={actualidad} alt="No se encontró imagen" className="img-fluid"></img>
                             <div className="card-img-overlay d-flex align-items-end">
                                 <div className="cardBackground px-3 pt-2">
                                     <Card.Title>Covid-19</Card.Title>
@@ -57,7 +57,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                             </div>
                         </Card>
                         <Card className="customCard-sub text-light bg-dark my-sm-5 my-lg-0 mt-lg-4 shadow">
-                            <Card.Img src={economia} alt="No se encontró imagen"></Card.Img>
+                            <img src={economia} alt="No se encontró imagen" className="img-fluid"></img>
                             <div className="card-img-overlay d-flex align-items-end">
                                 <div className="cardBackground cardBackground px-3 py-2">
                                     <Card.Title>Cepo a las exportaciones de carne</Card.Title>
@@ -119,7 +119,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                         <Card className="shadow d-flex bg-dark-gray">
                             <Card.Body className="row align-items-center">
                                 <div className="col-3 text-center">
-                                    <img src={covidimg} className="covidIcon"></img>
+                                    <img src={covidimg}></img>
                                 </div>
                                 <div className="col-8">
                                     <h2 className="font-weight-bolder mb-4">¡Cuidate!</h2>
@@ -284,7 +284,9 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                                     ))}
                             </CardDeck>
                         </Card>
-                        <Button className="mt-4" variant="outline-danger btn-grad" block><h5>Ver todas las categorías</h5></Button>
+                        <NavLink to="/Categorias" className="text-decoration-none">
+                            <Button className="mt-4 btn-grad" variant="info" block><h5>Ver todas las categorías</h5></Button>
+                        </NavLink>
                     </div>
                     <NavLink className="col-lg-3 non-display" to="*">
                         <img className="w-100" src={adBanner4}></img>
