@@ -78,12 +78,32 @@ const ItemNoticia = (props) => {
           if(respuesta.status === 200){
             const noticiasDestacadas = await respuesta.json();
             console.log(noticiasDestacadas,"NOTICIA DESTACADA");
+            Swal.fire(
+              "¡Destacada!",
+              "La noticia fue destacada!",
+              "success"
+            );
+            props.consultarAPI();
           }
         }catch(error){
           console.log(error);
         }
       } else {
- 
+        const respuesta = await fetch(URL,{
+          method:"PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify({destacada:false})
+        });
+    
+          Swal.fire(
+            "La noticia dejo de destacarse",
+            "La noticia sera eliminada de la pagina principal!",
+            "success"
+          );
+          props.consultarAPI();
+        
       }
     });
   };

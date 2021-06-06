@@ -18,8 +18,6 @@ import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
 import Suscripcion from './components/Suscripcion';
-import Swal from "sweetalert2";
-
 
 
 function App() {
