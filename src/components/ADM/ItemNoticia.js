@@ -9,7 +9,6 @@ import {
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactHtmlParser from "react-html-parser";
-import Inicio from '../Inicio';
 
 const ItemNoticia = (props) => {
   const URL = process.env.REACT_APP_API_URL;
@@ -96,7 +95,6 @@ const ItemNoticia = (props) => {
           },
           body:JSON.stringify({destacada:false})
         });
-    
           Swal.fire(
             "La noticia dejo de destacarse",
             "La noticia sera eliminada de la pagina principal!",
@@ -107,53 +105,6 @@ const ItemNoticia = (props) => {
       }
     });
   };
-
-
-  // const destacarNoticia = (idN) => {
-  //   console.log(idN);
-  //   setDestacado(idN);
-  //   Swal.fire({
-  //     title: "¿Va a destacar esta Noticia?",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Si!",
-  //     cancelButtonText: "No!",
-  //   }).then(async(result) => {
-  //     if (result.isConfirmed) {
-  //       try{
-  //         const respuesta = await fetch(URL);
-  //         console.log(respuesta,"fsdfdf");
-  //         if(respuesta.status === 200){
-  //           const noticiasDestacadas = await respuesta.json();
-  //           setDestacado(noticiasDestacadas);
-  //           console.log(noticiasDestacadas);
-  //           for(let i in noticiasDestacadas){
-  //             if(noticiasDestacadas[i]._id === idN){
-  //               if(noticiasDestacadas[i].destacado === false){
-  //                 noticiasDestacadas[i].destacado = true;
-  //                 for(let i in noticiasDestacadas){
-  //                   if(noticiasDestacadas[i].idN != idN){
-  //                     noticiasDestacadas[i].destacado = false;
-  //                   }
-  //                 }
-  //               }
-  //               console.log(noticiasDestacadas[i],"DESTACADO");
-  //               setDestacado(noticiasDestacadas[i]);
-  //             }
-  //           }
-  //         }
-  //       }catch(error){
-  //         console.log(error);
-  //       }
-  //     } else {
- 
-  //     }
-  //   });
-  // };
-
-
 
   return (
     <div className="col-sm-12 my-3">

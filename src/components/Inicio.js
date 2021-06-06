@@ -15,7 +15,7 @@ import "./assets/css/inicio.css";
 import ItemNoticiaInicio from "./ADM/ItemNoticiaInicio";
 // import ItemNoticia from './ADM/ItemNoticia';
 import actualidad from "../components/assets/img/actualidad.jpg";
-import politica from "../components/assets/img/politica.jpg";
+// import politica from "../components/assets/img/politica.jpg";
 import economia from "../components/assets/img/economia.jpg";
 import TiempoMoneda from "./ADM/TiempoMoneda";
 
@@ -308,7 +308,7 @@ const Inicio = (props) => {
               <CardDeck className="container my-3 row">
                 {props.noticias
                   .filter((cat) => {
-                    if (cat.idCategoriaNoticia === "60b58135d63ea4368c0cf559") {
+                    if (cat.idCategoriaNoticia === "60bd5558f7e1e80decc9b981") {
                       return cat;
                     }
                   })

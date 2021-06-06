@@ -11,7 +11,7 @@ const ItemCategoria = (props) => {
     console.log(idCategoria);
     Swal.fire({
       title: "¿Quiere eliminar esta Categoria?",
-      text: "No puede volver atras esta accion!",
+      text: "¡Se Eliminaran todas las Noticias relacionadas con la categoria!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
