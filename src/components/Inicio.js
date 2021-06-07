@@ -56,48 +56,7 @@ const Inicio = (props) => {
                 </Container>
             </section>
             <Container className="my-5 base-container">
-                <section className="row texts-small scale-texts mb-5">
-                    <div className="col-lg-7 col-sm-12">
-                        <Card className="customCard-main bg-dark text-light shadow">
-                            {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
-                        tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-                            <img src={politica} alt="No se encontró imagen" className="img-fluid"></img>
-                            <div className="card-img-overlay d-flex align-items-end">
-                                <div className="flex-column cardBackground px-3 py-2">
-                                    <Card.Title>El gobierno bonaerense confirmó que el domingo se terminará el confinamiento estricto.</Card.Title>
-                                    <Card.Text className="card-text">Se podrá circular libremente durante el día sin permiso. Comercios no esenciales, bares y restaurantes podrán atender al público de acuerdo a los protocolos vigentes en cada municipio.
-El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que no habrá cambios con respecto a la hoja de ruta prevista en el DNU presidencial que impuso el último confinamiento estricto.</Card.Text>
-                                    <Button variant="outline-danger" className="customButton">Ver más...</Button>
-                                </div>
-                            </div>
-                        </Card>
-                    </div>
-                    <div className="col-lg-5 col-sm-12">
-                        <Card className="customCard-sub text-light bg-dark my-sm-5 my-lg-0 my-3 shadow">
-                            {/*La imagen de las cards secundarias deben tener una resolución exacta de 800 x 394, si la imagen
-                        tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-                            <img src={actualidad} alt="No se encontró imagen" className="img-fluid"></img>
-                            <div className="card-img-overlay d-flex align-items-end">
-                                <div className="cardBackground px-3 pt-2">
-                                    <Card.Title>Covid-19</Card.Title>
-                                    <Card.Text className="card-text">A principios de mayo, el país superó los 3 millones de contagiados: actualmente la cifra llega a 3.663.215. Se produjeron 76.135 muertes por COVID-19. El número de recuperados llega a 3.219.474, mientras que los casos activos pasaron a ser 367.606.</Card.Text>
-                                    <Button variant="outline-danger" className="customButton">Ver más...</Button>
-                                </div>
-                            </div>
-                        </Card>
-                        <Card className="customCard-sub text-light bg-dark my-sm-5 my-lg-0 mt-lg-4 shadow">
-                            <img src={economia} alt="No se encontró imagen" className="img-fluid"></img>
-                            <div className="card-img-overlay d-flex align-items-end">
-                                <div className="cardBackground cardBackground px-3 py-2">
-                                    <Card.Title>Cepo a las exportaciones de carne</Card.Title>
-                                    <Card.Text className="card-text">La Mesa de Enlace endurece su reclamo y extiende el paro hasta el miércoles próximoLos dirigentes que representan a los productores no consiguieron hasta el momento que el Gobierno deje sin efecto las restricciones para exportar.</Card.Text>
-                                    <Button variant="outline-danger" className="customButton">Ver más...</Button>
-                                </div>
-                            </div>
-                        </Card>
-                    </div>
-                </section>
-                <hr />
+            <hr />
                 <NavLink className="my-3" to="*">
                     <Card.Img src={adBanner1}></Card.Img>
                 </NavLink>
