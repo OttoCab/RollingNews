@@ -2,10 +2,11 @@ import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import logo from "../img/logo.svg";
+import '../assets/css/navegacion.css';
 
 const Navegacion = (props) => {
   return (
-    <Navbar bg="info" variant="dark" expand="lg">
+    <Navbar variant="dark" expand="lg" className="background pt-5">
       <Navbar.Brand href="/">
         <img src={logo} alt="logo del RollongNews"></img>
       </Navbar.Brand>

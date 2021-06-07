@@ -3,6 +3,14 @@
     font-family: 'Merriweather', serif;
 }
 
+body {
+    background-color: #ececec;
+}
+
+.size-adjust-car {
+    height: 35rem;
+}
+
 .texts-small {
     font-size: 80%;
 }
@@ -88,7 +96,13 @@
 }
 
 .containerCotizador {
-    background-color: salmon;
+    background-color: #434343;
+}
+
+.tag {
+    clip-path: polygon(100% 0, 89% 50%, 100% 100%, 0 100%, 0 0);
+    border-top: solid;
+    border-bottom: solid;
 }
 
 

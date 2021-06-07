@@ -24,7 +24,7 @@ const Cotizador = () => {
             < Carousel indicators={false} controls={false} interval="3000">
                 { monedas.map((moneda, index) => (
                     <Carousel.Item key={index}>
-                        <p className='text-danger text-light'>
+                        <p className='text-light'>
                             <span>{moneda.casa.nombre}: </span>
                             <span>Compra: $ {moneda.casa.compra} / </span>
                             <span>Venta: $ {moneda.casa.venta}</span>
