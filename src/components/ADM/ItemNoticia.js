@@ -56,7 +56,6 @@ const ItemNoticia = (props) => {
 
   const destacarNoticia = (idN) => {
     console.log(idN);
-    setDestacado(idN);
     Swal.fire({
       title: "¿Va a destacar esta Noticia?",
       icon: "warning",
@@ -66,40 +65,49 @@ const ItemNoticia = (props) => {
       confirmButtonText: "Si!",
       cancelButtonText: "No!",
     }).then(async(result) => {
+      //llama a la noticia con el parametro idN
+      const URL = `${process.env.REACT_APP_API_URL}/${idN}`;
       if (result.isConfirmed) {
         try{
-          const respuesta = await fetch(URL);
-          console.log(respuesta,"fsdfdf");
+          //realiza la consulta a la api
+          const respuesta = await fetch(URL,{
+            method:"PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            //cambia el valor de parametro a true y se guarda en el state
+            body:JSON.stringify({destacada:true}),
+          });          
           if(respuesta.status === 200){
-            const noticiasDestacadas = await respuesta.json();
-            setDestacado(noticiasDestacadas);
-            console.log(noticiasDestacadas);
-            for(let i in noticiasDestacadas){
-              if(noticiasDestacadas[i]._id === idN){
-                if(noticiasDestacadas[i].destacado === false){
-                  noticiasDestacadas[i].destacado = true;
-                  for(let i in noticiasDestacadas){
-                    if(noticiasDestacadas[i].idN != idN){
-                      noticiasDestacadas[i].destacado = false;
-                    }
-                  }
-                  setDestacado(noticiasDestacadas[i]);
-                  console.log(noticiasDestacadas[i],"DESTACADO");
-                  // <Inicio dato={noticiasDestacadas[i]}></Inicio>
-                }
-              }
-            }
+            // const noticiasDestacadas = await respuesta.json();
+            Swal.fire(
+              "¡Destacada!",
+              "La noticia fue destacada!",
+              "success"
+              );  
+              props.consultarAPI();
           }
         }catch(error){
           console.log(error);
         }
       } else {
-        // faHighlighter.innerHTML = '';
-        // faHighlighter.variant="success";
+        //para sacar una noticia de destacado, se realiza la consulta PUT y se cambia el valor del parametroa false
+        const respuesta = await fetch(URL,{
+          method:"PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body:JSON.stringify({destacada:false})
+        });
+          Swal.fire(
+            "La noticia dejo de destacarse",
+            "La noticia sera eliminada de la pagina principal!",
+            "success"
+          );
+          props.consultarAPI();
       }
     });
   };
-
 
 
   return (
