@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import Error404 from './components/Error404'
 import Inicio from './components/Inicio.js';
-import Login from './components/ADM/Login.js';
+import Login from './components/common/Login';
 import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
@@ -58,6 +58,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
+        </Route>
+        <Route exact path="/detalles">
+          <Detalles></Detalles>
         </Route>
         <Route exact path="/Noticias">
           <ListaNoticia noticias={noticias} consultarAPI={consultarAPI}>

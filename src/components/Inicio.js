@@ -22,9 +22,39 @@ import TiempoMoneda from './ADM/TiempoMoneda';
 const Inicio = (props) => {
     return (
         <>
-            <Container fluid className="containerCotizador">
+            <Container fluid className="containerCotizador pt-2">
                 <TiempoMoneda></TiempoMoneda>
             </Container>
+            <section>
+                <Container className="my-5 base-container">
+                    <Carousel fade>
+                        <Carousel.Item className="size-adjust-car">
+                            <span className="position-absolute bg-warning mt-4 px-5 py-1 tag">Destacado</span>
+                            <img className="d-block w-100" src="https://img.lagaceta.com.ar/fotos/notas/2021/06/04/argentina-se-suma-produccion-sputnik-v-896799-231540.jpg" alt="First slide"/>
+                            <Carousel.Caption>
+                                <h3>First slide label</h3>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className="size-adjust-car">
+                            <span className="position-absolute bg-warning mt-4 px-5 py-1 tag">Destacado</span>
+                            <img className="d-block w-100" src="https://img.lagaceta.com.ar/fotos/notas/2021/05/30/avance-llegan-215-millones-vacunas-astrazeneca-pais-superara-175-millones-dosis-895957-191703.jpg" alt="Second slide"/>
+                            <Carousel.Caption>
+                                <h3>Second slide label</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item className="size-adjust-car">
+                            <span className="position-absolute bg-warning mt-4 px-5 py-1 tag">Destacado</span>
+                            <img className="d-block w-100" src="https://img.lagaceta.com.ar/fotos/notas/2021/05/30/avance-llegan-215-millones-vacunas-astrazeneca-pais-superara-175-millones-dosis-895957-191703.jpg" alt="Third slide"/>
+                            <Carousel.Caption>
+                                <h3>Third slide label</h3>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
+                </Container>
+            </section>
             <Container className="my-5 base-container">
                 <h1 className="titles">Ultima hora...</h1>
                 <section className="row texts-small scale-texts mb-5">
@@ -119,7 +149,7 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                         <Card className="shadow d-flex bg-dark-gray">
                             <Card.Body className="row align-items-center">
                                 <div className="col-3 text-center">
-                                    <img src={covidimg} className="covidIcon"></img>
+                                    <img src={covidimg}></img>
                                 </div>
                                 <div className="col-8">
                                     <h2 className="font-weight-bolder mb-4">¡Cuidate!</h2>
@@ -284,7 +314,9 @@ El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que
                                     ))}
                             </CardDeck>
                         </Card>
-                        <Button className="mt-4" variant="outline-danger btn-grad" block><h5>Ver todas las categorías</h5></Button>
+                        <NavLink to="/Categorias" className="text-decoration-none">
+                            <Button className="mt-4 btn-grad" variant="info" block><h5>Ver todas las categorías</h5></Button>
+                        </NavLink>
                     </div>
                     <NavLink className="col-lg-3 non-display" to="*">
                         <img className="w-100" src={adBanner4}></img>

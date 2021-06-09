@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap'
-import Cotizador from './Cotizador';
-import Clima from './Clima';
+import Cotizador from '../APIs/Cotizador';
+import Clima from '../APIs/Clima';
 
 const TiempoMoneda = () => {
     return (
         <Container>
             <Row>
-                <Col><Cotizador></Cotizador></Col>
-                <Col><Clima></Clima></Col>
+                <Col xs={4}><Cotizador/></Col>
+                <Col><Clima/></Col>
             </Row>
         </Container>
     );
