@@ -13,11 +13,11 @@ import { useState, useEffect } from "react";
 import React from "react";
 import Error404 from './components/Error404'
 import Inicio from './components/Inicio.js';
-import Login from './components/ADM/Login.js';
+import Login from './components/common/Login';
 import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
-import Suscripcion from './components/Suscripcion';
+import Suscripcion from './components/common/Suscripcion';
 import Detalles from './components/Detalles';
 
 
