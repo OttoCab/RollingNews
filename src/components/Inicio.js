@@ -18,7 +18,7 @@ import actualidad from "../components/assets/img/actualidad.jpg";
 import politica from "../components/assets/img/politica.jpg";
 import economia from "../components/assets/img/economia.jpg";
 import TiempoMoneda from "./ADM/TiempoMoneda";
-import ItemNoticiaDestacada from "./ADM/ItemNoticiaDestacada";
+import ItemNoticiaDestacada from "../components/ADM/ItemNoticiaDestacada";
 
 const Inicio = (props) => {
   return (
@@ -29,19 +29,19 @@ const Inicio = (props) => {
       <section>
         <Container className="my-5 base-container">
           {/* <Carousel fade> */}
-          {props.noticiasDestacadas.map((detalleCat, indice) => (
+                <ItemNoticiaDestacada
+                  noticiasDestacadas={props.noticiasDestacadas}
+                ></ItemNoticiaDestacada>
+
+          {/* {props.noticiasDestacadas.map((detalleCat, indice) => (
                 <ItemNoticiaDestacada
                   key={indice}
                   dato={detalleCat}
                   Categorias={props.Categorias}
                 ></ItemNoticiaDestacada>
-              ))}
-              
+              ))} */}
 
-              
-
-
-            {/* <Carousel.Item className="size-adjust-car">
+          {/* <Carousel.Item className="size-adjust-car">
               <span className="position-absolute bg-warning mt-4 px-5 py-1 tag">
                 Destacado
               </span>
@@ -57,7 +57,7 @@ const Inicio = (props) => {
                 </p>
               </Carousel.Caption>
             </Carousel.Item> */}
-            {/* <Carousel.Item className="size-adjust-car">
+          {/* <Carousel.Item className="size-adjust-car">
               <span className="position-absolute bg-warning mt-4 px-5 py-1 tag">
                 Destacado
               </span>
@@ -108,13 +108,22 @@ const Inicio = (props) => {
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
               <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
               <div className="card-img-overlay d-flex align-items-end">
-                                <div className="flex-column cardBackground px-3 py-2">
-                                    <Card.Title>{politica}</Card.Title>
-                                    <Card.Text className="card-text">Se podrá circular libremente durante el día sin permiso. Comercios no esenciales, bares y restaurantes podrán atender al público de acuerdo a los protocolos vigentes en cada municipio.
-El jefe de Gabinete de la provincia de Buenos Aires, Carlos Bianco, informó que no habrá cambios con respecto a la hoja de ruta prevista en el DNU presidencial que impuso el último confinamiento estricto.</Card.Text>
-                                    <Button variant="outline-danger" className="customButton">Ver más...</Button>
-                                </div>
-                            </div>
+                <div className="flex-column cardBackground px-3 py-2">
+                  <Card.Title>{politica}</Card.Title>
+                  <Card.Text className="card-text">
+                    Se podrá circular libremente durante el día sin permiso.
+                    Comercios no esenciales, bares y restaurantes podrán atender
+                    al público de acuerdo a los protocolos vigentes en cada
+                    municipio. El jefe de Gabinete de la provincia de Buenos
+                    Aires, Carlos Bianco, informó que no habrá cambios con
+                    respecto a la hoja de ruta prevista en el DNU presidencial
+                    que impuso el último confinamiento estricto.
+                  </Card.Text>
+                  <Button variant="outline-danger" className="customButton">
+                    Ver más...
+                  </Button>
+                </div>
+              </div>
             </Card>
           </div>
           <div className="col-lg-5 col-sm-12">
