@@ -17,8 +17,9 @@ import Login from './components/common/Login';
 import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
-import Suscripcion from './components/Suscripcion';
+import Suscripcion from '../src/components/common/Suscripcion';
 import Swal from "sweetalert2";
+import Detalles from '../src/components/Detalles';
 
 
 
@@ -27,7 +28,8 @@ function App() {
   const URLCat = process.env.REACT_APP_API_URL2;
   const [noticias, setNoticias] = useState([]);
   const [Categorias, setCategoria] = useState([]);
-  
+  const [noticiasDestacadas, setNoticiasDestacadas] = useState([]);
+  console.log(noticiasDestacadas,"NOTICAD");
 
   useEffect(() => {
     consultarAPI();
@@ -44,20 +46,20 @@ function App() {
         const listaCategorias = await respuesta2.json();
         setNoticias(listaNoticias);
         setCategoria(listaCategorias);
+        const destacadas= listaNoticias.filter((nota)=>(nota.destacada == true)).slice(0,3);
+        setNoticiasDestacadas(destacadas);
       }
     } catch (error) {
       console.log(error);
     }
   };
 
-  
-
   return (
     <Router>
       <Navegacion Categorias={Categorias}></Navegacion>
       <Switch>
         <Route exact path="/">
-          <Inicio noticias={noticias} consultarAPI={consultarAPI}></Inicio>
+          <Inicio noticias={noticias} consultarAPI={consultarAPI} noticiasDestacadas={noticiasDestacadas}></Inicio>
         </Route>
         <Route exact path="/detalles">
           <Detalles></Detalles>
