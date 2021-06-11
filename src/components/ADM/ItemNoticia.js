@@ -77,8 +77,10 @@ const ItemNoticia = (props) => {
             },
             //cambia el valor de parametro a true y se guarda en el state
             body:JSON.stringify({destacada:true}),
+            // botonDestacado.className= "red"
           });          
           if(respuesta.status === 200){
+      
             // const noticiasDestacadas = await respuesta.json();
             Swal.fire(
               "¡Destacada!",
@@ -108,6 +110,11 @@ const ItemNoticia = (props) => {
       }
     });
   };
+
+
+  const cambioColor=(destacada)=>{
+    console.log(destacada); 
+  }
 
 
   return (
@@ -143,10 +150,11 @@ const ItemNoticia = (props) => {
               >
                 <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
               </Button>
-              <Button variant="success" className="my-2">
+              <Button className="my-2 boton" color={(props.destacada === true ? 'primary' : 'default')}>
                 <FontAwesomeIcon
                   icon={faHighlighter}
                   onClick={() => destacarNoticia(props.dato._id)}
+                  
                 ></FontAwesomeIcon>
               </Button>
             </section>
