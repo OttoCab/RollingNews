@@ -15,22 +15,14 @@ import "./assets/css/inicio.css";
 import ItemNoticiaInicio from "./ADM/ItemNoticiaInicio";
 // import ItemNoticia from './ADM/ItemNoticia';
 import actualidad from "../components/assets/img/actualidad.jpg";
-// import politica from "../components/assets/img/politica.jpg";
+import politica from "../components/assets/img/politica.jpg";
 import economia from "../components/assets/img/economia.jpg";
 import TiempoMoneda from "./ADM/TiempoMoneda";
-<<<<<<< HEAD
-=======
 import ItemNoticiaDestacada from "../components/ADM/ItemNoticiaDestacada";
->>>>>>> dev
 
 const Inicio = (props) => {
   return (
     <>
-<<<<<<< HEAD
-      <Container fluid className="containerCotizador">
-        <TiempoMoneda></TiempoMoneda>
-      </Container>
-=======
       <Container fluid className="containerCotizador pt-2">
         <TiempoMoneda></TiempoMoneda>
       </Container>
@@ -100,26 +92,10 @@ const Inicio = (props) => {
           {/* </Carousel> */}
         </Container>
       </section>
->>>>>>> dev
       <Container className="my-5 base-container">
         <h1 className="titles">Ultima hora...</h1>
         <section className="row texts-small scale-texts mb-5">
           <div className="col-lg-7 col-sm-12">
-<<<<<<< HEAD
-            <Card>
-              {props.noticiasDestacadas.map((detalleCat, indice) => (
-                  <ItemNoticiaInicio
-                    key={indice}
-                    dato={detalleCat}
-                    Categorias={props.Categorias}
-                  ></ItemNoticiaInicio>
-                ))}
-
-              {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
-                        tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
-              {/* <Card.Img src={politica} alt="No se encontró imagen"></Card.Img> */}
-              {/* <div className="card-img-overlay d-flex align-items-end">
-=======
             <Card className="customCard-main bg-dark text-light shadow">
               {/* {props.noticiasDestacadas.map((detalleCat, indice) => (
                 <ItemNoticiaInicio
@@ -132,7 +108,6 @@ const Inicio = (props) => {
                         tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
               <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
               <div className="card-img-overlay d-flex align-items-end">
->>>>>>> dev
                 <div className="flex-column cardBackground px-3 py-2">
                   <Card.Title>{politica}</Card.Title>
                   <Card.Text className="card-text">
@@ -148,11 +123,7 @@ const Inicio = (props) => {
                     Ver más...
                   </Button>
                 </div>
-<<<<<<< HEAD
-              </div> */}
-=======
               </div>
->>>>>>> dev
             </Card>
           </div>
           <div className="col-lg-5 col-sm-12">
@@ -246,11 +217,7 @@ const Inicio = (props) => {
             <Card className="shadow d-flex bg-dark-gray">
               <Card.Body className="row align-items-center">
                 <div className="col-3 text-center">
-<<<<<<< HEAD
-                  <img src={covidimg} className="covidIcon"></img>
-=======
                   <img src={covidimg}></img>
->>>>>>> dev
                 </div>
                 <div className="col-8">
                   <h2 className="font-weight-bolder mb-4">¡Cuidate!</h2>
@@ -407,11 +374,7 @@ const Inicio = (props) => {
               <CardDeck className="container my-3 row">
                 {props.noticias
                   .filter((cat) => {
-<<<<<<< HEAD
-                    if (cat.idCategoriaNoticia === "60bd5558f7e1e80decc9b981") {
-=======
                     if (cat.idCategoriaNoticia === "60b58135d63ea4368c0cf559") {
->>>>>>> dev
                       return cat;
                     }
                   })
@@ -424,17 +387,11 @@ const Inicio = (props) => {
                   ))}
               </CardDeck>
             </Card>
-<<<<<<< HEAD
-            <Button className="mt-4" variant="outline-danger btn-grad" block>
-              <h5>Ver todas las categorías</h5>
-            </Button>
-=======
             <NavLink to="/Categorias" className="text-decoration-none">
               <Button className="mt-4 btn-grad" variant="info" block>
                 <h5>Ver todas las categorías</h5>
               </Button>
             </NavLink>
->>>>>>> dev
           </div>
           <NavLink className="col-lg-3 non-display" to="*">
             <img className="w-100" src={adBanner4}></img>
