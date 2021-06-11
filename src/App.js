@@ -13,11 +13,18 @@ import { useState, useEffect } from "react";
 import React from "react";
 import Error404 from './components/Error404'
 import Inicio from './components/Inicio.js';
-import Login from './components/ADM/Login.js';
+import Login from './components/common/Login';
 import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
+<<<<<<< HEAD
 import Suscripcion from './components/Suscripcion';
+=======
+import Suscripcion from '../src/components/common/Suscripcion';
+import Swal from "sweetalert2";
+import Detalles from '../src/components/Detalles';
+
+>>>>>>> dev
 
 
 function App() {
@@ -51,13 +58,22 @@ function App() {
     }
   };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
   return (
     <Router>
       <Navegacion Categorias={Categorias}></Navegacion>
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} consultarAPI={consultarAPI} noticiasDestacadas={noticiasDestacadas}></Inicio>
+<<<<<<< HEAD
+=======
+        </Route>
+        <Route exact path="/detalles">
+          <Detalles></Detalles>
+>>>>>>> dev
         </Route>
         <Route exact path="/Noticias">
           <ListaNoticia noticias={noticias} consultarAPI={consultarAPI}>

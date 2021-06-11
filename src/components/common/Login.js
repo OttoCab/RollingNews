@@ -7,7 +7,7 @@ const Login = () => {
 
   return (
     <Container>
-      <Form className="py-3 px-5 login mt-5">
+      <Form className="py-3 px-5 login mt-3">
         <Form.Group className="mb-3">
           <Form.Label>Usuario</Form.Label>
           <Form.Control type="text" placeholder="Ingresar Usuario" />

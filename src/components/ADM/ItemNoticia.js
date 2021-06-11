@@ -139,10 +139,11 @@ const ItemNoticia = (props) => {
               >
                 <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
               </Button>
-              <Button variant="success" className="my-2">
+              <Button className="my-2 boton" color={(props.destacada === true ? 'primary' : 'default')}>
                 <FontAwesomeIcon
                   icon={faHighlighter}
                   onClick={() => destacarNoticia(props.dato._id)}
+                  
                 ></FontAwesomeIcon>
               </Button>
             </section>
