@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Card, Button, CardGroup } from "react-bootstrap";
+import { Card, Button, CardGroup, Alert } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEdit,
@@ -9,6 +9,7 @@ import {
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactHtmlParser from "react-html-parser";
+
 
 const ItemNoticia = (props) => {
   const URL = process.env.REACT_APP_API_URL;
@@ -72,16 +73,15 @@ const ItemNoticia = (props) => {
             headers: {
               "Content-Type": "application/json",
             },
-            body:JSON.stringify({destacada:true})
+            body:JSON.stringify({destacada:true}),
           });
           if(respuesta.status === 200){
             const noticiasDestacadas = await respuesta.json();
-            console.log(noticiasDestacadas,"NOTICIA DESTACADA");
             Swal.fire(
               "¡Destacada!",
               "La noticia fue destacada!",
               "success"
-            );
+              );
             props.consultarAPI();
           }
         }catch(error){
@@ -101,10 +101,10 @@ const ItemNoticia = (props) => {
             "success"
           );
           props.consultarAPI();
-        
       }
     });
   };
+
 
   return (
     <div className="col-sm-12 my-3">
@@ -139,11 +139,11 @@ const ItemNoticia = (props) => {
               >
                 <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
               </Button>
-              <Button className="my-2 boton" color={(props.destacada === true ? 'primary' : 'default')}>
+              <Button className="my-2 boton" >
                 <FontAwesomeIcon
+                  // color={(props.destacada ? 'red' : 'boton')}
                   icon={faHighlighter}
                   onClick={() => destacarNoticia(props.dato._id)}
-                  
                 ></FontAwesomeIcon>
               </Button>
             </section>
