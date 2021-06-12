@@ -109,7 +109,6 @@ const Inicio = (props) => {
               <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
               <div className="card-img-overlay d-flex align-items-end">
                 <div className="flex-column cardBackground px-3 py-2">
-                  <Card.Title>{politica}</Card.Title>
                   <Card.Text className="card-text">
                     Se podrá circular libremente durante el día sin permiso.
                     Comercios no esenciales, bares y restaurantes podrán atender
