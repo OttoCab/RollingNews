@@ -4,6 +4,7 @@ import nosotros3 from "./assets/img/nosotros3.jpg";
 import flor from "./assets/img/authors/flor.jpg";
 import ema from "./assets/img/authors/ema.jpg";
 import otto from "./assets/img/authors/otto.jpeg";
+import agu from "./assets/img/authors/agu.jpg";
 import { Carousel, Container, Card } from "react-bootstrap";
 import "./assets/css/admin.css";
 import "./assets/css/adn.css";
@@ -68,13 +69,12 @@ const ADN = () => {
             </Card.Body>
           </Card>
           <Card className="bordes col-sm-12 col-md-6 col-lg-4">
-            <Card.Img className="fotos" src={ema} />
+            <Card.Img className="fotos" src={agu} />
             <Card.Body>
               <Card.Text>
-                Mi Nombre es Florencia Norry, soy estudiante de Ingenieria en
-                Sistemas proxima a recibirme de Ananlista en Sistemas y tambien
-                estudio en Rolling News, soy amante de los gatos y mi hobbie es
-                Jugar al voley.
+                Mi Nombre es Daniel Agustin Llebeili, soy estudiante de tercero en Ingenieria en
+                Sistemas , me interesa aprender mas sobre la programacion en general.
+                Me gusta ver series, jugar "jueguitos" de pc y pasar tiempo con amigos.
               </Card.Text>
             </Card.Body>
           </Card>
