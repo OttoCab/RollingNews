@@ -1,153 +1,155 @@
 import React, { Fragment, useState } from "react";
-import { Form, Button, Container, Alert } from "react-bootstrap";
-import Swal from 'sweetalert2';
-import emailjs from 'emailjs-com';
+import { Container } from "react-bootstrap";
+import {Formulario, Label, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from '../ADM/Formulario';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+import Input from '../ADM/Input';
+
+// import Swal from 'sweetalert2';
+// import emailjs from 'emailjs-com';
 
 const Suscripcion = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [email, setEmail] = useState("");
-  const [intereses, setIntereses] = useState("");
-  const [error, setError] = useState(false);
 
-  const cambiarIntereses = (e) => {
-    setIntereses(e.target.value);
-  };
+	const [nombre, cambiarNombre] = useState({campo: '', valido: null});
+  const [direccion, cambiarDireccion] = useState({campo: '', valido: null});
+  const [localidad, cambiarLocalidad] = useState({campo: '', valido: null});
+	const [correo, cambiarCorreo] = useState({campo: '', valido: null});
+	const [telefono, cambiarTelefono] = useState({campo: '', valido: null});
+  const [codPostal, cambiarcodPostal] = useState({campo: '', valido: null});
+	const [terminos, cambiarTerminos] = useState(false);
+	const [formularioValido, cambiarFormularioValido] = useState(null);
 
-  const handleSubmit = async (e) => { 
-    e.preventDefault();
-    console.log("desde enviar email");
+	const expresiones = {
+		usuario: /^[a-zA-Z0-9_-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    direccion: /^[a-zA-Z0-9\. ]{4,30}$/, // Letras, numeros, guion y guion_bajo
+		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+		password: /^.{4,12}$/, // 4 a 12 digitos.
+    codPostal: /^.{4}$/, // 4 digitos.
+		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+		telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+	}
 
-    emailjs.sendForm('service_5z6qqnp', 'template_of2fgix', e.target, 'user_SCNjIfPVylGGEcXRytpin')
+	const onChangeTerminos = (e) => {
+		cambiarTerminos(e.target.checked);
+	}
 
-    .then((result) => {
-       
-    }, (error) => {
-        alert(error.message)
-        
-    });
-    e.target.reset()
+	const onSubmit = (e) => {
+		e.preventDefault();
 
+		if(
+			nombre.valido === 'true' &&
+			correo.valido === 'true' &&
+			telefono.valido === 'true' &&
+			terminos
+		){
+			cambiarFormularioValido(true);
+			cambiarNombre({campo: '', valido: null});
+      cambiarDireccion({campo: '', valido: null});
+      cambiarLocalidad({campo: '', valido: null});
+      cambiarcodPostal({campo: '', valido: null});
+			cambiarCorreo({campo: '', valido: null});
+			cambiarTelefono({campo: '', valido: null});
 
-    if (
-      nombre.trim() === "" ||
-      apellido.trim() === "" ||
-      email.trim() === "" ||
-      intereses.trim === ""
-    ) {
-      setError(true);
-      return;
-    } else {
-      setError(false);
-      Swal.fire({
-        title: "Gracias por Suscribirte",
-        text: "Recibiras las notificaciones a tu correo electronico!",
-        icon: "success",
-        //   showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        //   cancelButtonColor: "#d33",
-        confirmButtonText: "salir",
-        //   cancelButtonText: "No!",
-      }).then((result) => {
-        if (result.isConfirmed) {
-        } else {
-        }
-      });
-    }
-  };
+			// ... 
+		} else {
+			cambiarFormularioValido(false);
+			return;
+		}
+	}
 
   return (
     <Fragment>
       <Container>
-        <h1 className="text-center my-4">Suscribite a RollingNews</h1>
-        <Form className="my-4 px-5 py-5" onSubmit={handleSubmit}>
-          <Form.Group>
-            <Form.Label>Nombre</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Juan"
-               onChange={(e) => setNombre(e.target.value)}
-               required
-               name="nombre"
-            />
-          </Form.Group>
+      <Formulario action="" onSubmit={onSubmit}>
+				<Input
+					estado={nombre}
+					cambiarEstado={cambiarNombre}
+					tipo="text"
+					label="Nombre y apellido"
+					placeholder="John Doe"
+					name="nombre"
+					leyendaError="El nombre solo puede contener letras y espacios."
+					expresionRegular={expresiones.nombre}
+				/>
 
-          <Form.Group>
-            <Form.Label>Apellido</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Perez"
-              onChange={(e) => setApellido(e.target.value)}
-              required
-              name="apellido"
-            />
-          </Form.Group>
+<Input
+					estado={direccion}
+					cambiarEstado={cambiarDireccion}
+					tipo="text"
+					label="Direccion"
+					placeholder="Av. Avellaneda x"
+					name="direccion"
+					leyendaError="La direccion no puede contener: *,-,_,etc "
+					expresionRegular={expresiones.direccion}
+				/>
 
-          <Form.Group>
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="email@email"
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              name="email"
-            />
-          </Form.Group>
+<Input
+					estado={localidad}
+					cambiarEstado={cambiarLocalidad}
+					tipo="text"
+					label="Localidad"
+					placeholder="San Miguel de Tucuman"
+					name="localidad"
+					leyendaError="La localidad solo puede contener letras y espacios."
+					expresionRegular={expresiones.nombre}
+				/>
 
-          <h3 className="text-center my-4">Intereses</h3>
-          <Form.Group className="d-flex justify-content-center">
-            <Form.Check
-              name="categoria"
-              type="radio"
-              label="Economia"
-              value="economia"
-              onChange={cambiarIntereses}
-              inline  
-            />
-            <Form.Check
-              name="categoria"
-              type="radio"
-              label="Deportes"
-              value="deportes"
-              onChange={cambiarIntereses}
-              inline
-             
-            />
-            <Form.Check
-              name="categoria"
-              type="radio"
-              label="Espectaculo"
-              value="espectaculo"
-              onChange={cambiarIntereses}
-              inline
-            />
-            <Form.Check
-              name="categoria"
-              type="radio"
-              label="Salud"
-              value="salud"
-              onChange={cambiarIntereses}
-              inline
-            />
-            <Form.Check
-              name="categoria"
-              type="radio"
-              label="Video Juegos"
-              value="video juegos"
-              onChange={cambiarIntereses}
-              inline
-            />
-          </Form.Group>
-          <Button variant="danger" type="submit" size="lg" type="submit" block>
-            Suscribirse
-          </Button>
-          {
-            // operador ternario
-            error === true ? (
-              <Alert variant="warning">Todos los campos son obligatorios</Alert>
-            ) : null
-          }
-        </Form>
+<Input
+					estado={codPostal}
+					cambiarEstado={cambiarcodPostal}
+					tipo="numero"
+					label="Codigo Postal"
+					placeholder="4000"
+					name="codPostal"
+					leyendaError="El codigo postal solo puede contener numeros hasta 4"
+					expresionRegular={expresiones.codPostal}
+				/>
+
+				<Input
+					estado={telefono}
+					cambiarEstado={cambiarTelefono}
+					tipo="text"
+					label="Teléfono"
+					placeholder="4491234567"
+					name="telefono"
+					leyendaError="El telefono solo puede contener numeros y el maximo son 14 dígitos."
+					expresionRegular={expresiones.telefono}
+				/>
+
+<Input
+					estado={correo}
+					cambiarEstado={cambiarCorreo}
+					tipo="email"
+					label="Correo Electrónico"
+					placeholder="john@correo.com"
+					name="correo"
+					leyendaError="El correo solo puede contener letras, numeros, puntos, guiones y guion bajo."
+					expresionRegular={expresiones.correo}
+				/>
+
+				<ContenedorTerminos>
+					<Label>
+						<input 
+							type="checkbox"
+							name="terminos"
+							id="terminos"
+							checked={terminos} 
+							onChange={onChangeTerminos}
+						/>
+						Acepto los Terminos y Condiciones
+					</Label>
+				</ContenedorTerminos>
+				{formularioValido === false && <MensajeError>
+					<p>
+						<FontAwesomeIcon icon={faExclamationTriangle}/>
+						<b>Error:</b> Por favor rellena el formulario correctamente.
+					</p>
+				</MensajeError>}
+				<ContenedorBotonCentrado>
+					<Boton type="submit">Enviar</Boton>
+					{formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+				</ContenedorBotonCentrado>
+			</Formulario>
       </Container>
     </Fragment>
   );
