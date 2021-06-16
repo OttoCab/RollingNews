@@ -35,7 +35,7 @@ const ItemCategoria = (props) => {
           if (respond.status === 200) {
             Swal.fire(
               "Eliminada",
-              "La categoria fue correctamente eliminada",
+              "La categoria y las noticias fueron correctamente eliminadas",
               "success"
             );
             props.consultarAPI();
