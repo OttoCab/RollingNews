@@ -40,17 +40,11 @@ const AgregarNoticia = (props) => {
         imagenNoticia,
         contenidoNoticia,
       };
-      console.log(noticia);
 
       try {
-        console.log("noticiaID", noticia);
-        console.log("las categorias :", props.Categorias);
         const resultadoCat = props.Categorias.find((categoria) => {
           return categoria._id == idCategoriaNoticia;
         });
-        console.log(resultadoCat,"RESULTADO");
-        // const nombreC = resultadoCat.nombreCategoria;
-        // setCategoriaNoticia(nombreC);
         noticia.categoriaNoticia = resultadoCat.nombreCategoria;
         const enviarNoticia = {
           method: "POST",

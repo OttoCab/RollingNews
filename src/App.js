@@ -18,7 +18,6 @@ import ADN from './components/ADN.js';
 import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
 import Suscripcion from '../src/components/common/Suscripcion';
-import Swal from "sweetalert2";
 import Detalles from '../src/components/Detalles';
 
 
@@ -29,7 +28,7 @@ function App() {
   const [noticias, setNoticias] = useState([]);
   const [Categorias, setCategoria] = useState([]);
   const [noticiasDestacadas, setNoticiasDestacadas] = useState([]);
-  console.log(noticiasDestacadas,"NOTICAD");
+ 
 
   useEffect(() => {
     consultarAPI();
@@ -39,8 +38,6 @@ function App() {
     try {
       const respuesta = await fetch(URL);
       const respuesta2 = await fetch(URLCat);
-      console.log(respuesta);
-      console.log(respuesta2);
       if (respuesta.status === 200) {
         const listaNoticias = await respuesta.json();
         const listaCategorias = await respuesta2.json();
@@ -69,7 +66,7 @@ function App() {
           </ListaNoticia>
         </Route>
         <Route exact path="/Categorias">
-          <ListaCategorias Categorias={Categorias} consultarAPI={consultarAPI}>          
+          <ListaCategorias Categorias={Categorias} consultarAPI={consultarAPI} noticias={noticias}>          
           </ListaCategorias>
         </Route>
         <Route exact path="/Noticia/nuevo">

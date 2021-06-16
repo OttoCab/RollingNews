@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Card, Button, CardGroup, Alert } from "react-bootstrap";
+import React from "react";
+import { Card, Button, CardGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { Link, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEdit,
@@ -9,10 +9,9 @@ import {
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactHtmlParser from "react-html-parser";
+import '../assets/css/admin.css';
 
-
-const ItemNoticia = (props) => {
-  const URL = process.env.REACT_APP_API_URL;
+const ItemNoticia = (props) => {  
   const eliminarNoticia = (idNoticia) => {
     console.log(idNoticia);
     Swal.fire({
@@ -52,8 +51,7 @@ const ItemNoticia = (props) => {
       }
     });
   };
-
-
+ 
   const destacarNoticia = (idN) => {
     console.log(idN);
     Swal.fire({
@@ -64,47 +62,44 @@ const ItemNoticia = (props) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Si!",
       cancelButtonText: "No!",
-    }).then(async(result) => {
+    }).then(async (result) => {
       const URL = `${process.env.REACT_APP_API_URL}/${idN}`;
       if (result.isConfirmed) {
-        try{
-          const respuesta = await fetch(URL,{
-            method:"PUT",
+        try {
+          const respuesta = await fetch(URL, {
+            method: "PUT",
             headers: {
               "Content-Type": "application/json",
             },
-            body:JSON.stringify({destacada:true}),
+            body: JSON.stringify({ destacada: true }),
           });
-          if(respuesta.status === 200){
+          if (respuesta.status === 200) {
+            document.getElementById("botonDestacado").style.backgroundColor="red";
             const noticiasDestacadas = await respuesta.json();
-            Swal.fire(
-              "¡Destacada!",
-              "La noticia fue destacada!",
-              "success"
-              );
+            Swal.fire("¡Destacada!", "La noticia fue destacada!", "success");
             props.consultarAPI();
           }
-        }catch(error){
+        } catch (error) {
           console.log(error);
         }
       } else {
-        const respuesta = await fetch(URL,{
-          method:"PUT",
+        const respuesta = await fetch(URL, {
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
-          body:JSON.stringify({destacada:false})
+          body: JSON.stringify({ destacada: false }),
         });
-          Swal.fire(
-            "La noticia dejo de destacarse",
-            "La noticia sera eliminada de la pagina principal!",
-            "success"
-          );
-          props.consultarAPI();
+        Swal.fire(
+          "La noticia dejo de destacarse",
+          "La noticia sera eliminada de la pagina principal!",
+          "success"
+        );
+        props.consultarAPI();
+        
       }
     });
   };
-
 
   return (
     <div className="col-sm-12 my-3">
@@ -119,7 +114,6 @@ const ItemNoticia = (props) => {
                   </span>
                 </Card.Title>
                 <Card.Text>{props.dato.categoriaNoticia}</Card.Text>
-
                 <Card.Text>
                   {ReactHtmlParser(props.dato.contenidoNoticia)}
                 </Card.Text>
@@ -139,12 +133,13 @@ const ItemNoticia = (props) => {
               >
                 <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>
               </Button>
-              <Button className="my-2 boton" >
-                <FontAwesomeIcon
-                  // color={(props.destacada ? 'red' : 'boton')}
-                  icon={faHighlighter}
-                  onClick={() => destacarNoticia(props.dato._id)}
-                ></FontAwesomeIcon>
+              <Button
+                id="botonDestacado"
+                className="my-2 boton"
+                onClick={() => destacarNoticia(props.dato._id)}
+              >
+                {/* {props.destacada === true ? "className=red" : null} */}
+                <FontAwesomeIcon icon={faHighlighter}></FontAwesomeIcon>
               </Button>
             </section>
           </div>

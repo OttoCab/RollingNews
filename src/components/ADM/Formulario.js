@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const colores = {
 	borde: "#0075FF",
 	error: "#bb2929",
-	exito: "#1ed12d"
+	exito: "#1ed12d",
+	
 }
 
 const Formulario = styled.form`
@@ -157,5 +158,5 @@ export {
 	ContenedorBotonCentrado,
 	Boton,
 	MensajeExito,
-	MensajeError
+	MensajeError,
 };
