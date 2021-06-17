@@ -5,7 +5,7 @@ const ItemNoticiaDestacada = (props) => {
   return (
     <Carousel fade>
       {props.noticiasDestacadas.map((destacado, indice) => (
-          <Carousel.Item className="size-adjust-car">
+          <Carousel.Item key={indice} className="size-adjust-car">
           <span className="position-absolute bg-warning mt-4 px-5 py-1 tag">
             Destacado
           </span>

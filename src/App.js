@@ -56,7 +56,7 @@ function App() {
       <Navegacion Categorias={Categorias}></Navegacion>
       <Switch>
         <Route exact path="/">
-          <Inicio noticias={noticias} consultarAPI={consultarAPI} noticiasDestacadas={noticiasDestacadas}></Inicio>
+          <Inicio noticias={noticias} Categorias={Categorias} consultarAPI={consultarAPI} noticiasDestacadas={noticiasDestacadas}></Inicio>
         </Route>
         <Route exact path="/detalles">
           <Detalles></Detalles>

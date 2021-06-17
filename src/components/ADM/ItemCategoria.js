@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ListGroup, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,10 +6,8 @@ import {
   faEye,
   faEdit,
   faTrashAlt,
-  faToiletPaperSlash,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
 const ItemCategoria = (props) => {
   const eliminarCategoria = (idCategoria) => {
@@ -53,7 +51,7 @@ const ItemCategoria = (props) => {
   };
 
     const eliminarNoticias = (idCategoria)=>{
-      const noticiaFiltrada = props.noticias.filter(
+       props.noticias.filter(
         (nota) => nota.idCategoriaNoticia === idCategoria
         ).map(async(notaFiltrada)=>{
           const notiFinal = notaFiltrada._id;

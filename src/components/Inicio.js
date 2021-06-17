@@ -20,7 +20,9 @@ import economia from "../components/assets/img/economia.jpg";
 import TiempoMoneda from "./ADM/TiempoMoneda";
 import ItemNoticiaDestacada from "../components/ADM/ItemNoticiaDestacada";
 
+
 const Inicio = (props) => {
+
   return (
     <>
       <Container fluid className="containerCotizador pt-2">
@@ -97,15 +99,6 @@ const Inicio = (props) => {
         <section className="row texts-small scale-texts mb-5">
           <div className="col-lg-7 col-sm-12">
             <Card className="customCard-main bg-dark text-light shadow">
-              {/* {props.noticiasDestacadas.map((detalleCat, indice) => (
-                <ItemNoticiaInicio
-                  key={indice}
-                  dato={detalleCat}
-                  Categorias={props.Categorias}
-                ></ItemNoticiaInicio>
-              ))} */}
-              {/*La imagen de la card principal debe tener una resolución exacta de 800 x 600, si la imagen
-                        tiene otra resolución, las cards pueden mostrarse de manera inadecuada*/}
               <Card.Img src={politica} alt="No se encontró imagen"></Card.Img>
               <div className="card-img-overlay d-flex align-items-end">
                 <div className="flex-column cardBackground px-3 py-2">
@@ -288,7 +281,7 @@ const Inicio = (props) => {
               <CardDeck className="container my-3 row">
                 {props.noticias
                   .filter((cat) => {
-                    if (cat.idCategoriaNoticia === "60b7d6acfeb96a24dce5c898") {
+                    if (cat.categoriaNoticia === "Actualidad") {
                       return cat;
                     }
                   })
@@ -307,11 +300,11 @@ const Inicio = (props) => {
               </h4>
               <CardDeck className="container my-3 row">
                 {props.noticias
-                  .filter((cat) => {
-                    if (cat.idCategoriaNoticia === "6") {
-                      return cat;
-                    }
-                  })
+                 .filter((cat) => {
+                  if (cat.categoriaNoticia === "Salud") {
+                    return cat;
+                  }
+                })
                   .map((detalleCat, indice) => (
                     <ItemNoticiaInicio
                       key={indice}
@@ -328,7 +321,7 @@ const Inicio = (props) => {
               <CardDeck className="container my-3 row">
                 {props.noticias
                   .filter((cat) => {
-                    if (cat.idCategoriaNoticia === "5") {
+                    if (cat.categoriaNoticia === "Economia") {
                       return cat;
                     }
                   })
@@ -353,7 +346,7 @@ const Inicio = (props) => {
               <CardDeck className="container my-3 row">
                 {props.noticias
                   .filter((cat) => {
-                    if (cat.idCategoriaNoticia === "7") {
+                    if (cat.categoriaNoticia === "Politica") {
                       return cat;
                     }
                   })
@@ -372,11 +365,11 @@ const Inicio = (props) => {
               </h4>
               <CardDeck className="container my-3 row">
                 {props.noticias
-                  .filter((cat) => {
-                    if (cat.idCategoriaNoticia === "60b58135d63ea4368c0cf559") {
-                      return cat;
-                    }
-                  })
+                .filter((cat) => {
+                  if (cat.categoriaNoticia === "Deportes") {
+                    return cat;
+                  }
+                })
                   .map((detalleCat, indice) => (
                     <ItemNoticiaInicio
                       key={indice}
