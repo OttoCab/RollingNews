@@ -33,20 +33,6 @@ body {
     border-radius: 25px;
 }
 
-.customCard-main {
-    height: 29.8rem;
-}
-
-.customCard-sub {
-    height: 13.7rem;
-}
-
-.cardBackground {
-    background-color: #343a40cc;
-    box-shadow: rgba(0, 0, 0, 0.411);
-    border-radius: 0.8rem;
-}
-
 .advice {
     font-size: 125%;
 }
@@ -69,10 +55,6 @@ body {
 
 .containerAnimation:hover {
     background-color: #fcdede;
-}
-
-.imagen {
-    opacity: 0.7;
 }
 
 .btn-grad {
@@ -103,6 +85,18 @@ body {
     clip-path: polygon(100% 0, 89% 50%, 100% 100%, 0 100%, 0 0);
     border-top: solid;
     border-bottom: solid;
+    position: absolute;
+}
+
+.overlay-car:before {
+    content: '';
+    position: absolute;
+    background: rgb(19, 19, 19);
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0.8520542005864846) 0%, rgba(27, 27, 27, 0) 14%, rgba(55, 55, 55, 0) 50%, rgba(23, 23, 23, 0) 83%, rgba(17, 17, 17, 0.8520542005864846) 100%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 
