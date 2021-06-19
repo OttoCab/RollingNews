@@ -12,6 +12,7 @@ const ListaCategorias = (props) => {
             key={categoria._id}
             categoria={categoria}
             consultarAPI={props.consultarAPI}
+            noticias={props.noticias}
           ></ItemCategoria>
         ))}
       </ListGroup>

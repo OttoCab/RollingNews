@@ -14,9 +14,6 @@ import "./assets/css/inicio.css";
 // import { useParams } from "react-router-dom";
 import ItemNoticiaInicio from "./ADM/ItemNoticiaInicio";
 // import ItemNoticia from './ADM/ItemNoticia';
-import actualidad from "../components/assets/img/actualidad.jpg";
-import politica from "../components/assets/img/politica.jpg";
-import economia from "../components/assets/img/economia.jpg";
 import TiempoMoneda from "./ADM/TiempoMoneda";
 import ItemNoticiaDestacada from "../components/ADM/ItemNoticiaDestacada";
 

@@ -23,7 +23,6 @@ const AgregarCategoria = (props) => {
         nombreCategoria,
         codCat,
       }
-      console.log(categoria);
       try{
         const enviarCategoria = {
           method: "POST",
@@ -33,7 +32,6 @@ const AgregarCategoria = (props) => {
           body:JSON.stringify(categoria)
         }
         const respuesta = await fetch(URLCat, enviarCategoria);
-        console.log(respuesta); 
         if(respuesta.status === 201){
           Swal.fire(
             "Categoria agregada!",

@@ -11,3 +11,15 @@ form{
 .fuente{
     font-family: 'KoHo', sans-serif;
 }
+
+.boton{
+    background-color: darkgreen;
+}
+
+.boton2{
+    background-color: red;
+}
+
+.boton3{
+    background-color: blueviolet;
+}
