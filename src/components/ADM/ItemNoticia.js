@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEdit,
@@ -9,9 +9,13 @@ import {
   faHighlighter,
 } from "@fortawesome/free-solid-svg-icons";
 import ReactHtmlParser from "react-html-parser";
-import '../assets/css/admin.css';
+import "../assets/css/admin.css";
 
-const ItemNoticia = (props) => {  
+const ItemNoticia = (props) => {
+  // useEffect(async () => {
+  //   cambioColor();
+  // }, []);
+
   const eliminarNoticia = (idNoticia) => {
     console.log(idNoticia);
     Swal.fire({
@@ -51,7 +55,7 @@ const ItemNoticia = (props) => {
       }
     });
   };
- 
+
   const destacarNoticia = (idN) => {
     console.log(idN);
     Swal.fire({
@@ -73,8 +77,9 @@ const ItemNoticia = (props) => {
             },
             body: JSON.stringify({ destacada: true }),
           });
+          cambioColor(idN);
+          // document.getElementById("botonDestacado").style.backgroundColor="red";
           if (respuesta.status === 200) {
-            document.getElementById("botonDestacado").style.backgroundColor="red";
             const noticiasDestacadas = await respuesta.json();
             Swal.fire("¡Destacada!", "La noticia fue destacada!", "success");
             props.consultarAPI();
@@ -96,9 +101,17 @@ const ItemNoticia = (props) => {
           "success"
         );
         props.consultarAPI();
-        
       }
     });
+    cambioColor(idN);
+  };
+
+  const cambioColor = (botonDestacado) => {
+    props.noticiasDestacadas
+    .map((destac)=>{
+      const destacada = destac.destacada;
+      console.log(destacada,"desde cambio"); 
+    })
   };
 
   return (

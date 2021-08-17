@@ -219,5 +219,12 @@
       "nombreCategoria": "Video Juego",
       "id": 11
     }
+  ],
+
+  "Usuarios": [
+    {
+      "usuario": "admin",
+      "clave":"1234"
+    }
   ]
 }

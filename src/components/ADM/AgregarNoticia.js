@@ -123,7 +123,7 @@ const AgregarNoticia = (props) => {
           <Form.Control
             type="date"
             size="sm"
-            olaceholder="dd/mm/aa"
+            placeholder="dd/mm/aa"
             onChange={(e) => setFechaNoticia(e.target.value)}
             required
           />

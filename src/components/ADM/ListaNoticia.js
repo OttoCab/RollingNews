@@ -30,6 +30,7 @@ const ListaNoticia = (props) => {
               key={indice}
               dato={nota}
               consultarAPI={props.consultarAPI}
+              noticiasDestacadas={props.noticiasDestacadas}
             ></ItemNoticia>
           ))}
       </section>

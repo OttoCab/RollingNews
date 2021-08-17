@@ -25,9 +25,12 @@ import Detalles from '../src/components/Detalles';
 function App() {
   const URL = process.env.REACT_APP_API_URL;
   const URLCat = process.env.REACT_APP_API_URL2;
+  const URLusr = process.env.REACT_APP_API_URL3;
   const [noticias, setNoticias] = useState([]);
   const [Categorias, setCategoria] = useState([]);
   const [noticiasDestacadas, setNoticiasDestacadas] = useState([]);
+  const [usuarios, setUsuarios] = useState ([]);
+  const [adminUser, setAdminUser] = useState(false);
  
 
   useEffect(() => {
@@ -38,11 +41,17 @@ function App() {
     try {
       const respuesta = await fetch(URL);
       const respuesta2 = await fetch(URLCat);
+      // const respuesta3 = await fetch(URLusr);
+      console.log(respuesta);
+      console.log(respuesta2);
+      // console.log(respuesta3);
       if (respuesta.status === 200) {
         const listaNoticias = await respuesta.json();
         const listaCategorias = await respuesta2.json();
+        // const listaUsuarios = await respuesta3.json();
         setNoticias(listaNoticias);
         setCategoria(listaCategorias);
+        // setUsuarios(listaUsuarios);
         const destacadas= listaNoticias.filter((nota)=>(nota.destacada == true)).slice(0,3);
         setNoticiasDestacadas(destacadas);
       }
@@ -53,7 +62,7 @@ function App() {
 
   return (
     <Router>
-      <Navegacion Categorias={Categorias}></Navegacion>
+      <Navegacion Categorias={Categorias} adminUser={adminUser} setAdminUser={setAdminUser}></Navegacion>
       <Switch>
         <Route exact path="/">
           <Inicio noticias={noticias} Categorias={Categorias} consultarAPI={consultarAPI} noticiasDestacadas={noticiasDestacadas}></Inicio>
@@ -62,7 +71,7 @@ function App() {
           <Detalles></Detalles>
         </Route>
         <Route exact path="/Noticias">
-          <ListaNoticia noticias={noticias} consultarAPI={consultarAPI}>
+          <ListaNoticia noticias={noticias} consultarAPI={consultarAPI} noticiasDestacadas={noticiasDestacadas}>
           </ListaNoticia>
         </Route>
         <Route exact path="/Categorias">
@@ -92,7 +101,7 @@ function App() {
           <Contacto></Contacto>
         </Route>
         <Route exact path='/Login'>
-          <Login></Login>
+          <Login usuarios={usuarios} setAdminUser={setAdminUser}></Login>
         </Route>
         <Route exact path='/ADN'>
           <ADN></ADN>

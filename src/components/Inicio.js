@@ -366,7 +366,7 @@ const Inicio = (props) => {
               <CardDeck className="container my-3 row">
                 {props.noticias
                 .filter((cat) => {
-                  if (cat.categoriaNoticia === "Deportes") {
+                  if (cat.categoriaNoticia === "Deporte") {
                     return cat;
                   }
                 })
