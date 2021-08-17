@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 .titles {
-    font-family: 'Merriweather', serif;
+    font-family: 'Lato', sans-serif!important;
+}
+
+.title-line {
+    background-color: rgb(221, 221, 221);
+    height: 0.2rem;
+    border-radius: 0;
 }
 
 body {
@@ -33,20 +39,6 @@ body {
     border-radius: 25px;
 }
 
-.customCard-main {
-    height: 29.8rem;
-}
-
-.customCard-sub {
-    height: 13.7rem;
-}
-
-.cardBackground {
-    background-color: #343a40cc;
-    box-shadow: rgba(0, 0, 0, 0.411);
-    border-radius: 0.8rem;
-}
-
 .advice {
     font-size: 125%;
 }
@@ -69,10 +61,6 @@ body {
 
 .containerAnimation:hover {
     background-color: #fcdede;
-}
-
-.imagen {
-    opacity: 0.7;
 }
 
 .btn-grad {
@@ -103,6 +91,18 @@ body {
     clip-path: polygon(100% 0, 89% 50%, 100% 100%, 0 100%, 0 0);
     border-top: solid;
     border-bottom: solid;
+    position: absolute;
+}
+
+.overlay-car {
+    content: '';
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.630765685180322) 0%, rgba(0, 0, 0, 0) 7%, rgba(55, 55, 55, 0) 50%, rgba(23, 23, 23, 0) 52%, rgba(17, 17, 17, 0.8520542005864846) 100%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 
