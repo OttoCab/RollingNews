@@ -223,8 +223,8 @@
 
   "Usuarios": [
     {
-      "usuario": "admin",
-      "clave":"1234"
+      "nombreUsuario": "admin",
+      "nombreClave": "1234"
     }
   ]
 }

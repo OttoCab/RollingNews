@@ -15,26 +15,28 @@ const Login = (props) => {
   const handleSubmit = (e)=>{
     e.preventDefault();
 
-    // if(usr.trim() === '' || clave.trim() === ''){
-    //   setError(true);
-    //   return;
-    // }else{
-    //   setError(false);
-    // }
-    // const administrador = props.usuarios.find((usuario)=>usuario.usuario === usr);
-    // if(typeof administrador === 'undefined'){
-    //   setError(true);
-    //   return;
-    // }else{
-    //   if(administrador.clave === clave){
-    //     history.push('/adm');
-    //     props.setAdminUser(true);
-    //     console.log("correcto");
-    //   }else{
-    //     setError(false);
-    //   }
-    // }
-  }
+    if(usr.trim() ==='' || clave.trim() === ''){
+      setError(true);
+      console.log(setError, "es true");
+      return;
+    }else{
+      setError(false);
+      console.log(setError, "es false");
+    }
+    const administrador = props.usuarios.find((paramUsuario)=>paramUsuario.nombreUsuario === usr);
+    if(typeof administrador === 'undefined'){
+      setError(true);
+      return;
+    }else{
+      if(administrador.nombreClave === clave){
+        history.push('/Noticia/nuevo');
+        props.setAdminUser(true);
+      }else{
+        setError(false);
+      }
+    }
+
+  };
 
 
 
@@ -56,6 +58,9 @@ const Login = (props) => {
           Ingresar
         </Button>
       </Form>
+      {error ? (
+        <Alert variant="warning" className="m-auto">Verifique los datos ingresados</Alert>
+      ): null}
     </Container>
   );
 };

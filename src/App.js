@@ -19,6 +19,7 @@ import Contacto from './components/Contacto.js';
 import Navegacion from "./components/common/Navegacion";
 import Suscripcion from '../src/components/common/Suscripcion';
 import Detalles from '../src/components/Detalles';
+import AdminUsuarios from "./components/ADM/AdminUsuarios";
 
 
 
@@ -28,8 +29,8 @@ function App() {
   const URLusr = process.env.REACT_APP_API_URL3;
   const [noticias, setNoticias] = useState([]);
   const [Categorias, setCategoria] = useState([]);
-  const [noticiasDestacadas, setNoticiasDestacadas] = useState([]);
   const [usuarios, setUsuarios] = useState ([]);
+  const [noticiasDestacadas, setNoticiasDestacadas] = useState([]);
   const [adminUser, setAdminUser] = useState(false);
  
 
@@ -41,17 +42,17 @@ function App() {
     try {
       const respuesta = await fetch(URL);
       const respuesta2 = await fetch(URLCat);
-      // const respuesta3 = await fetch(URLusr);
+      const respuesta3 = await fetch(URLusr);
       console.log(respuesta);
       console.log(respuesta2);
-      // console.log(respuesta3);
+      console.log(respuesta3);
       if (respuesta.status === 200) {
         const listaNoticias = await respuesta.json();
         const listaCategorias = await respuesta2.json();
-        // const listaUsuarios = await respuesta3.json();
+        const listaUsuarios = await respuesta3.json();
         setNoticias(listaNoticias);
         setCategoria(listaCategorias);
-        // setUsuarios(listaUsuarios);
+        setUsuarios(listaUsuarios);
         const destacadas= listaNoticias.filter((nota)=>(nota.destacada == true)).slice(0,3);
         setNoticiasDestacadas(destacadas);
       }
@@ -108,6 +109,9 @@ function App() {
         </Route>
         <Route exact path='/suscripcion'>
           <Suscripcion></Suscripcion>
+        </Route>
+        <Route exact path='/usuarios' >
+          <AdminUsuarios usuarios={usuarios} consultarAPI={consultarAPI}></AdminUsuarios>
         </Route>
         <Route path='*'>
           <Error404></Error404>
